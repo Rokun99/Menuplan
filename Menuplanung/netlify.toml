@@ -1,23 +1,22 @@
 # Netlify build configuration file
 
 [build]
-  # Build command for the frontend application
   command = "npm run build"
-  # Directory to publish the frontend
   publish = "dist"
 
 [build.environment]
-  # Specify the Node.js version to use for the build
   NODE_VERSION = "20"
 
 # Configuration for Netlify Serverless Functions
 [functions]
-  # This tells the function bundler to treat @google/genai as an external package
-  # and not try to bundle it, which resolves the error.
-  external_node_modules = ["@google/genai"]
-  # Explicitly set the bundler to esbuild for better performance and compatibility
+  # Wichtig: Hier muss die korrekte Google-Bibliothek stehen
+  external_node_modules = ["@google/generative-ai"]
   node_bundler = "esbuild"
 
-  # Increase resources for the specific 'generate' function to prevent timeouts or memory errors
+  # Ressourcen für die Hauptfunktion
   [functions.generate]
-    memory = 1024 # MB
+    memory = 1024
+
+  # Ressourcen für die Vorschlags-Funktion
+  [functions.generate-suggestion]
+    memory = 1024
