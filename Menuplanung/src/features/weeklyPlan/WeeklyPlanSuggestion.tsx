@@ -24,44 +24,65 @@ const MEAL_TYPES = {
 };
 const HEADER_LABELS: Record<string, string> = { suppe: 'Suppe', menu: 'Menu', vegi: 'Vegi', dessert: 'Dessert' };
 
-const getSample = (list: Recipe[] | undefined, max = 20): Recipe[] => { // Increased sample size
+// Levenshtein distance to check for similarity between strings
+const levenshteinDistance = (a: string, b: string): number => {
+  if (a.length === 0) return b.length;
+  if (b.length === 0) return a.length;
+  const matrix = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(null));
+  for (let i = 0; i <= a.length; i += 1) matrix[0][i] = i;
+  for (let j = 0; j <= b.length; j += 1) matrix[j][0] = j;
+  for (let j = 1; j <= b.length; j += 1) {
+    for (let i = 1; i <= a.length; i += 1) {
+      const substituteCost = a[i - 1] === b[j - 1] ? 0 : 1;
+      matrix[j][i] = Math.min(
+        matrix[j - 1][i] + 1,
+        matrix[j][i - 1] + 1,
+        matrix[j - 1][i - 1] + substituteCost
+      );
+    }
+  }
+  return matrix[b.length][a.length];
+};
+
+const getSample = (list: Recipe[] | undefined, max = 15): Recipe[] => { // Balanced sample size
   if (!list || list.length === 0) return [];
   return [...list].sort(() => 0.5 - Math.random()).slice(0, max);
 };
 
 const createDailySchema = () => ({
-    type: "object",
-    properties: {
-      mittag: { type: "object", properties: { suppe: { type: "string" }, dessert: { type: "string" }, menu: { type: "string" }, vegi: { type: "string" } }, required: ["suppe", "dessert", "menu", "vegi"] },
-      abend: { type: "object", properties: { menu: { type: "string" }, vegi: { type: "string" } }, required: ["menu", "vegi"] },
-    },
-    required: ["mittag", "abend"],
+  type: "object",
+  properties: {
+    mittag: { type: "object", properties: { suppe: { type: "string" }, dessert: { type: "string" }, menu: { type: "string" }, vegi: { type: "string" } }, required: ["suppe", "dessert", "menu", "vegi"] },
+    abend: { type: "object", properties: { menu: { type: "string" }, vegi: { type: "string" } }, required: ["menu", "vegi"] },
+  },
+  required: ["mittag", "abend"],
 });
 
 const createDailyPromptObject = (day: string, season: string, planSoFar: Partial<IdealPlan>, samples: any) => {
-    const allPreviouslyPlannedDishes = Object.values(planSoFar).flatMap(d => [ d.mittag.suppe, d.mittag.dessert, d.mittag.menu, d.mittag.vegi, d.abend.menu, d.abend.vegi ]);
-    const rules = [
-      `**SAISONALITÄT:** Bevorzuge Gerichte, die zur Jahreszeit '${season}' passen.`,
-      `**STRIKTE ABWECHSLUNG (WICHTIGSTE REGEL):** Wiederhole ABSOLUT KEIN Gericht, das bereits geplant wurde. Verbotene Gerichte sind: ${JSON.stringify(allPreviouslyPlannedDishes)}`,
-      "**DATENBANK:** Nutze NUR Gerichte aus dem Rezept-Auszug.",
-      "**STRUKTUR:** Fülle IMMER alle Felder aus.",
-      "**FLEISCH-LIMIT:** Plane max. 3-4 Fleischgerichte in der GANZEN Woche.",
-      "**VEGI-TAG:** EIN Tag der Woche muss ein Vegi-Tag sein.",
-      "**VEGI-ABENDESSEN-REGEL:** Wenn 'abend.menu' vegetarisch ist, MUSS 'abend.vegi' exakt das gleiche Gericht sein."
-    ];
-    if (day === 'Freitag') {
-      rules.push("**FISCH-FREITAG (STRIKT):** Das `mittag.menu` MUSS ein Fischgericht sein.");
-    } else {
-      rules.push("**KEIN FISCH:** An diesem Tag darf KEIN Fischgericht geplant werden.");
-    }
-    return {
-        role: "KI-Küchenchef für ein Schweizer Altersheim mit Fokus auf hohe Qualität und Abwechslung",
-        task: "Erstelle den Menüplan für EINEN EINZELNEN Tag und befolge die Regeln strikt.",
-        context: { day_to_plan: day, season: season, plan_so_far_this_week: planSoFar },
-        rules: rules,
-        data_source_sample: samples,
-        output_format_instruction: `Generiere den **vollständigen** JSON-Plan NUR für den Tag **${day}**. Halte dich exakt an die Regeln.`
-    };
+  const allPreviouslyPlannedDishes = Object.values(planSoFar).flatMap(d => [ d.mittag.suppe, d.mittag.dessert, d.mittag.menu, d.mittag.vegi, d.abend.menu, d.abend.vegi ]);
+  const rules = [
+    `**SAISONALITÄT:** Bevorzuge Gerichte, die zur Jahreszeit '${season}' passen.`,
+    `**STRIKTE ABWECHSLUNG (WICHTIGSTE REGEL):** Wiederhole ABSOLUT KEIN Gericht, das bereits geplant wurde. Verbotene Gerichte sind: ${JSON.stringify(allPreviouslyPlannedDishes)}. Keine ähnlichen Gerichte (z.B. keine zwei Suppen mit Karotten)!`,
+    "**DATENBANK:** Nutze NUR Gerichte aus dem Rezept-Auszug.",
+    "**STRUKTUR:** Fülle IMMER alle Felder aus.",
+    "**FLEISCH-LIMIT:** Plane max. 3-4 Fleischgerichte in der GANZEN Woche.",
+    "**VEGI-TAG:** EIN Tag der Woche muss ein Vegi-Tag sein.",
+    "**VEGI-ABENDESSEN-REGEL:** Wenn 'abend.menu' vegetarisch ist, MUSS 'abend.vegi' exakt das gleiche Gericht sein.",
+    "**KEINE BACKSLASHES ODER SONDERZEICHEN:** Verwende reine Textnamen ohne \\, /, Zeilenumbrüche oder ähnliches!"
+  ];
+  if (day === 'Freitag') {
+    rules.push("**FISCH-FREITAG (STRIKT):** Das `mittag.menu` MUSS ein Fischgericht sein.");
+  } else {
+    rules.push("**KEIN FISCH:** An diesem Tag darf KEIN Fischgericht geplant werden.");
+  }
+  return {
+    role: "KI-Küchenchef für ein Schweizer Altersheim mit Fokus auf hohe Qualität und Abwechslung",
+    task: "Erstelle den Menüplan für EINEN EINZELNEN Tag und befolge die Regeln strikt.",
+    context: { day_to_plan: day, season: season, plan_so_far_this_week: planSoFar },
+    rules: rules,
+    data_source_sample: samples,
+    output_format_instruction: `Generiere den **vollständigen** JSON-Plan NUR für den Tag **${day}**. Halte dich exakt an die Regeln.`
+  };
 };
 
 /* ---- COMPONENT ---- */
@@ -85,63 +106,94 @@ export const WeeklyPlanSuggestion: React.FC<WeeklyPlanSuggestionProps> = ({ curr
       mittagessen: { suppe: getSample(recipes.mittagessen.suppe, 12), dessert: getSample(recipes.mittagessen.dessert, 12), menu: getSample(recipes.mittagessen.menu, 20), vegi: getSample(recipes.mittagessen.vegi, 20), fisch: getSample(recipes.mittagessen.fisch, 10) },
       abendessen: { menu: getSample(recipes.abendessen.menu, 20), vegi: getSample(recipes.abendessen.vegi, 20) },
     };
-    
+
     const fullPlan: Partial<IdealPlan> = {};
-    
+
     try {
       for (const day of DAYS) {
         const dailySchema = createDailySchema();
 
-        // --- VALIDATION AND RETRY LOGIC ---
         let dayPlan: DayPlan | null = null;
         let attempts = 0;
-        const maxAttempts = 3;
+        const maxAttempts = 5; // Increased for robustness
+        const baseDelay = 2000; // 2 seconds base delay for retries
 
         const hasRepetitions = (newDayPlan: DayPlan, existingPlan: Partial<IdealPlan>) => {
-            const allExistingDishes = Object.values(existingPlan).flatMap(d => [d.mittag.suppe, d.mittag.dessert, d.mittag.menu, d.mittag.vegi, d.abend.menu, d.abend.vegi]);
-            const newDishes = [newDayPlan.mittag.suppe, newDayPlan.mittag.dessert, newDayPlan.mittag.menu, newDayPlan.mittag.vegi, newDayPlan.abend.menu, newDayPlan.abend.vegi];
-            // Check for any new dish that is already in the existing list
-            return newDishes.some(dish => allExistingDishes.includes(dish));
+          const allExistingDishes = Object.values(existingPlan).flatMap(d => [d.mittag.suppe, d.mittag.dessert, d.mittag.menu, d.mittag.vegi, d.abend.menu, d.abend.vegi]);
+          const newDishes = [newDayPlan.mittag.suppe, newDayPlan.mittag.dessert, newDayPlan.mittag.menu, newDayPlan.mittag.vegi, newDayPlan.abend.menu, newDayPlan.abend.vegi];
+          
+          // Strict check for exact matches and similarity
+          return newDishes.some(newDish => allExistingDishes.some(existing => {
+            if (existing === newDish) return true; // Exactly the same
+            // Consider dishes too similar if their difference is small (e.g., "Karottensuppe" vs "Karotten-Suppe")
+            return levenshteinDistance(newDish, existing) < 5; 
+          }));
         };
 
         while (attempts < maxAttempts) {
-            console.log(`Generating plan for ${day}, attempt ${attempts + 1}`);
-            
-            // Create the prompt, modifying it for retries
-            let dailyPromptObject = createDailyPromptObject(day, getSeason(currentDate), fullPlan, samples);
-            if (attempts > 0) {
-                dailyPromptObject.rules.push(`**RETRY-ANWEISUNG (SEHR WICHTIG):** Dein letzter Versuch für ${day} wurde wegen Wiederholungen abgelehnt. Generiere einen komplett NEUEN, EINZIGARTIGEN Plan mit Gerichten, die du vorher noch nicht verwendet hast!`);
-            }
+          console.log(`Generating plan for ${day}, attempt ${attempts + 1}`);
 
-            const res = await fetch('/.netlify/functions/generate', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ prompt: JSON.stringify(dailyPromptObject), schema: dailySchema }),
-            });
+          let dailyPromptObject = createDailyPromptObject(day, getSeason(currentDate), fullPlan, samples);
+          if (attempts > 0) {
+            dailyPromptObject.rules.push(`**RETRY-ANWEISUNG (SEHR WICHTIG):** Dein letzter Versuch hatte Wiederholungen oder Formatfehler. Generiere einen KOMPLETT NEUEN Plan mit 100% EINZIGARTIGEN Gerichten! Keine Backslashes!`);
+          }
 
-            if (!res.ok) {
-                if (attempts === maxAttempts - 1) throw new Error(`API-Fehler für ${day} nach ${maxAttempts} Versuchen.`);
-                attempts++;
-                continue; // Start next attempt
-            }
-            
-            const data = await res.json();
-            const potentialPlan: DayPlan = JSON.parse(data.text.trim());
+          const res = await fetch('/.netlify/functions/generate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ prompt: JSON.stringify(dailyPromptObject), schema: dailySchema }),
+          });
 
-            // Validate the plan for structure and repetitions
-            if (potentialPlan.mittag && potentialPlan.abend && !hasRepetitions(potentialPlan, fullPlan)) {
-                dayPlan = potentialPlan;
-                break; // Valid plan found, exit loop
-            } else {
-                console.warn(`Ungültiger oder repetitiver Plan für ${day}.`, potentialPlan);
-                attempts++;
+          if (!res.ok) {
+            if (res.status === 429) {
+              const delayTime = baseDelay * Math.pow(2, attempts);
+              console.log(`Rate-Limit reached. Waiting ${delayTime/1000} seconds...`);
+              await new Promise(resolve => setTimeout(resolve, delayTime));
+            } else if (attempts === maxAttempts - 1) {
+              const errorBody = await res.text();
+              throw new Error(`API-Fehler für ${day} nach ${maxAttempts} Versuchen. Status: ${res.status}. Body: ${errorBody}`);
             }
+            attempts++;
+            continue;
+          }
+
+          const data = await res.json();
+          let potentialText = data.text.trim();
+          
+          // Sanitize the text before parsing
+          potentialText = potentialText
+            .replace(/\\/g, '')  // Remove backslashes
+            .replace(/\\n/g, ' ').replace(/\n/g, ' ')
+            .replace(/\\r/g, '').replace(/\r/g, '')
+            .replace(/\\t/g, ' ').replace(/\t/g, '')
+            .replace(/\\"/g, '"'); // Fix escaped quotes
+
+          let potentialPlan;
+          try {
+            potentialPlan = JSON.parse(potentialText);
+          } catch (parseErr) {
+            console.warn(`Parse error for ${day}:`, parseErr, "Raw text:", potentialText);
+            attempts++;
+            continue;
+          }
+
+          // Full validation
+          if (potentialPlan.mittag && potentialPlan.abend && 
+              potentialPlan.mittag.suppe && potentialPlan.mittag.dessert && 
+              potentialPlan.mittag.menu && potentialPlan.mittag.vegi &&
+              potentialPlan.abend.menu && potentialPlan.abend.vegi &&
+              !hasRepetitions(potentialPlan, fullPlan)) {
+            dayPlan = potentialPlan;
+            break;
+          } else {
+            console.warn(`Invalid or repetitive plan for ${day}.`);
+            attempts++;
+          }
         }
 
         if (!dayPlan) {
-            throw new Error(`Konnte nach ${maxAttempts} Versuchen keinen gültigen, abwechslungsreichen Plan für ${day} erstellen.`);
+          throw new Error(`Konnte nach ${maxAttempts} Versuchen keinen gültigen Plan für ${day} erstellen.`);
         }
-        // --- END OF RETRY LOGIC ---
 
         fullPlan[day] = dayPlan;
         setIdealPlan({ ...fullPlan });
