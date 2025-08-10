@@ -15,3 +15,9 @@
   # This tells the function bundler to treat @google/genai as an external package
   # and not try to bundle it, which resolves the error.
   external_node_modules = ["@google/genai"]
+  # Explicitly set the bundler to esbuild for better performance and compatibility
+  node_bundler = "esbuild"
+
+  # Increase resources for the specific 'generate' function to prevent timeouts or memory errors
+  [functions.generate]
+    memory = 1024 # MB
