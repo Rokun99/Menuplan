@@ -5,7 +5,7 @@ import { getSeason, formatDate } from '../../utils/dateHelpers';
 import { LoadingSpinner } from '../../components/LoadingSpinner';
 import { evaluateDishInContext } from '../../rules/nutritionRules';
 
-// Entfernt: import { Type } from '@google/genai';
+// Veraltete Google-spezifische Importe wurden entfernt
 
 interface SelectionModalProps {
     isOpen: boolean;
@@ -93,32 +93,36 @@ export const SelectionModal: React.FC<SelectionModalProps> = ({ isOpen, onClose,
     const filteredItems = recipeCategoryList.filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase()));
 
     const generateSuggestions = async () => {
-        if (!target) return;
-        setIsLoading(true);
-        setError('');
-        setSuggestions([]);
-
-        const promptObject = {
-            task: "Generiere kreative Vorschläge für die ausgewählte Kategorie",
-            category: categoryName,
-            mealType: target.mealType,
-            existingOptions: recipeCategoryList.map(r => r.name),
-            rules: [
-                "Vorschläge müssen zur Kategorie passen",
-                "Keine Wiederholung von existierenden Optionen",
-                "Rezepte sollten für ein Schweizer Altersheim geeignet sein",
-                "Kreative und abwechslungsreiche Ideen"
-            ]
-        };
+        if (!categoryName) {
+            setError("Bitte wählen Sie eine Kategorie aus.");
+            return;
+        }
 
         try {
-            // Aufruf der neuen Netlify Function
-            const res = await fetch('/.netlify/functions/generate-suggestions', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({ promptObject }),
+            setIsLoading(true);
+            setError("");
+            
+            const promptObject = {
+                task: "Generiere kreative Menüvorschläge",
+                category: categoryName,
+                mealType: target.mealType,
+                existingOptions: recipeCategoryList.map(r => r.name),
+                rules: [
+                    "Gib genau 5-7 kreative Vorschläge zurück",
+                    "Vorschläge müssen zur Kategorie passen",
+                    "Keine Wiederholung von existierenden Optionen",
+                    "Rezepte sollten für ein Schweizer Altersheim geeignet sein"
+                ]
+            };
+            
+            // Ruft die neue, universelle Funktion auf
+            const res = await fetch('/.netlify/functions/generate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                // Wichtig: 'prompt' als Schlüssel verwenden, damit die Funktion es erkennt
+                body: JSON.stringify({ prompt: JSON.stringify(promptObject) }),
             });
 
             if (!res.ok) {
