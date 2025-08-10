@@ -33,9 +33,8 @@ export const handler: Handler = async (event) => {
       console.log("Parsed body:", parsedBody);
       
       // Versucht, den Prompt aus verschiedenen möglichen Schlüsseln zu extrahieren
-      // NEU: Akzeptiert sowohl 'prompt' als auch 'promptObject'
       promptObject = parsedBody.promptObject || 
-                     parsedBody.prompt || // Akzeptiert den vom Frontend gesendeten Schlüssel
+                     parsedBody.prompt || 
                      parsedBody.query || 
                      parsedBody.text;
                      
@@ -76,16 +75,18 @@ export const handler: Handler = async (event) => {
     // Google AI dynamisch importieren und initialisieren
     const { GoogleGenerativeAI } = await import('@google/generative-ai');
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    
+    // NEU: Gemini 1.5 Pro verwenden für bessere Regelbefolgung und Qualität
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro-latest" });
     
     // Anfrage an Google AI senden
-    console.log("Sending prompt to Google AI:", promptObject);
+    console.log("Sending prompt to Google AI with Gemini 2.5 Pro...");
     let generationResult;
     
     // Konfiguration für mehr Kreativität
     const generationConfig = {
-      temperature: 0.9, // Höherer Wert für mehr Kreativität
-      maxOutputTokens: 2048,
+      temperature: 0.9, // Hoher Wert für mehr Kreativität und Abwechslung
+      maxOutputTokens: 4096, // Erhöhtes Limit für komplexere Pläne
     };
     
     if (schema) {
