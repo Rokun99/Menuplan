@@ -1,78 +1,111 @@
 import { Handler } from '@netlify/functions';
-
-// Da wir den dynamischen Import verwenden, importieren wir die Typen hier nicht direkt
+// Der dynamische Import wird unten verwendet, daher ist kein Top-Level-Import nötig.
 // import { GoogleGenerativeAI } from '@google/generative-ai';
 
 export const handler: Handler = async (event) => {
-  // Nur POST-Anfragen erlauben
+  // CORS-Header, um Anfragen von jeder Domain zu erlauben (wichtig für lokale Entwicklung)
+  const headers = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Content-Type': 'application/json'
+  };
+
+  // Behandelt die Pre-Flight-Anfrage des Browsers für CORS
+  if (event.httpMethod === 'OPTIONS') {
+    return { statusCode: 200, headers, body: '' };
+  }
+
+  // Erlaubt nur POST-Anfragen für die eigentliche Ausführung
   if (event.httpMethod !== 'POST') {
-    return { statusCode: 405, body: 'Method Not Allowed' };
+    return { statusCode: 405, headers, body: JSON.stringify({ error: 'Method Not Allowed' }) };
   }
 
   try {
-    console.log("Function execution started.");
-    console.log("Raw request body:", event.body);
+    console.log("Function called with raw body:", event.body);
     
-    // Den Request-Body sicher parsen
-    const body = JSON.parse(event.body || '{}');
-    console.log("Parsed request body:", body);
-
-    // Prüfen, ob das erwartete 'promptObject' im Body vorhanden ist
-    if (!body.promptObject) {
-      console.error("Error: 'promptObject' is missing from the request body.");
+    // Sicheres Parsen des Request-Bodys mit Fallback-Werten
+    let parsedBody = {};
+    let promptObject = null;
+    let schema = null;
+    
+    try {
+      parsedBody = JSON.parse(event.body || '{}');
+      console.log("Parsed body:", parsedBody);
+      
+      // Versucht, den Prompt aus verschiedenen möglichen Schlüsseln zu extrahieren
+      promptObject = parsedBody.promptObject || 
+                     parsedBody.prompt || 
+                     parsedBody.query || 
+                     parsedBody.text ||
+                     "Erstelle einen Menüplan"; // Fallback-Prompt
+                     
+      schema = parsedBody.schema || parsedBody.responseSchema || null;
+    } catch (parseError) {
+      console.error("JSON Parse Error:", parseError);
       return { 
         statusCode: 400, 
-        body: JSON.stringify({ 
-          error: "Request body must contain a 'promptObject'.",
-          receivedData: body // Senden Sie die empfangenen Daten zurück, um das Debugging zu erleichtern
-        }) 
+        headers,
+        body: JSON.stringify({ error: "Invalid JSON in request body" }) 
       };
     }
     
-    // API-Schlüssel aus den Umgebungsvariablen holen und prüfen
+    // API-Schlüssel prüfen
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) {
-      console.error("API key is missing.");
+      console.error("API key is missing from environment variables.");
       return { 
         statusCode: 500, 
-        body: JSON.stringify({ error: "GEMINI_API_KEY is not configured in Netlify environment variables." }) 
+        headers,
+        body: JSON.stringify({ error: "API key is missing" }) 
       };
     }
-    console.log("API key found.");
-
-    // Das Google AI Paket dynamisch importieren
+    
+    // Google AI dynamisch importieren und initialisieren
     const { GoogleGenerativeAI } = await import('@google/generative-ai');
     const genAI = new GoogleGenerativeAI(apiKey);
-    
-    // Ein stabiles und effizientes Modell verwenden
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-    console.log("Google AI model initialized.");
     
-    // Sicherstellen, dass der Prompt-Inhalt ein String ist
-    const promptContent = typeof body.promptObject === 'string' 
-      ? body.promptObject 
-      : JSON.stringify(body.promptObject);
-      
-    console.log("Generating content for the prompt...");
-    const result = await model.generateContent(promptContent);
-    const response = result.response;
-    const text = response.text();
+    // Anfrage an Google AI senden
+    console.log("Sending prompt to Google AI:", promptObject);
+    let generationResult;
     
-    console.log("Successfully generated content.");
+    if (schema) {
+      // Generierung mit einem spezifischen JSON-Schema für strukturierte Antworten
+      console.log("Generating with schema.");
+      generationResult = await model.generateContent({
+        contents: [{ role: "user", parts: [{ text: JSON.stringify(promptObject) }] }],
+        generationConfig: {
+          temperature: 0.7,
+          maxOutputTokens: 2048,
+          responseMimeType: "application/json",
+          responseSchema: schema
+        }
+      });
+    } else {
+      // Standard-Textgenerierung ohne Schema
+      console.log("Generating without schema.");
+      generationResult = await model.generateContent(
+        typeof promptObject === 'string' ? promptObject : JSON.stringify(promptObject)
+      );
+    }
+    
+    const text = generationResult.response.text();
+    console.log("Response from Google AI:", text.substring(0, 150) + "...");
+    
+    // Erfolgreiche Antwort zurücksenden
     return {
       statusCode: 200,
-      headers: { 'Content-Type': 'application/json' },
+      headers,
       body: JSON.stringify({ text })
     };
 
   } catch (error) {
-    // Detailliertes Fehler-Logging für alle anderen Fehler
-    console.error("An unexpected error occurred in the function:", error);
+    console.error("Unhandled function error:", error);
     return {
       statusCode: 500,
+      headers,
       body: JSON.stringify({ 
-        error: "An internal error occurred.",
-        details: error instanceof Error ? error.message : String(error)
+        error: error instanceof Error ? error.message : String(error) 
       })
     };
   }
