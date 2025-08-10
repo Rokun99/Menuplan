@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f1f5f9; /* Light gray background */
+}
+.planner-grid, .planner-grid-abend {
+    display: grid;
+    border: 1px solid #e2e8f0;
+}
+.planner-grid {
+     grid-template-columns: 1.2fr 2fr 2fr 2fr 2fr;
+}
+.planner-grid-abend {
+    grid-template-columns: 1.2fr 2fr 2fr 2fr;
+}
+.planner-header {
+    padding: 0.4rem 0.75rem;
+    font-weight: 600;
+    color: white;
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid #e2e8f0;
+    text-align: center;
+    font-size: 0.8rem;
+}
+.planner-cell {
+    padding: 0;
+    border-right: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    min-height: 70px;
+    position: relative;
+    background-color: white;
+}
+.planner-cell:last-child, .planner-header:last-child {
+    border-right: 0;
+}
+/* Refined color palette */
+.header-planung { background-color: #7c2d12; } /* Dark Orange */
+.header-menu { background-color: #047857; } /* Dark Green */
+.header-abend { background-color: #f8fafc; color: #1e2d3b; font-weight: 600; border-bottom: 2px solid #e2e8f0;}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+.animate-spin { animation: spin 1s linear infinite; }
+
+.loading-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    border-radius: 0.5rem;
+    backdrop-filter: blur(2px);
+}
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e2e8f0;
+    border-top: 4px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+.editable-cell-container:hover .edit-icon {
+    opacity: 1;
+}
+
+/* Nutrition Status Indicator */
+.nutrition-status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+.status-good { background-color: #22c55e; }
+.status-average { background-color: #f59e0b; }
+.status-bad { background-color: #ef4444; }
+.status-neutral { background-color: #e2e8f0; }
+
+
+/* Nutrition Tooltip */
+.nutrition-tooltip {
+    position: absolute;
+    bottom: 1.75rem; /* Position it reliably above the indicator */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1e293b;
+    color: white;
+    padding: 0.5rem; /* Reduced padding */
+    border-radius: 0.375rem; /* Smaller radius */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15); /* More subtle shadow */
+    width: max-content;
+    min-width: 250px;
+    max-width: 320px;
+    z-index: 30;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+    font-size: 0.6875rem; /* 11px, down from 12px */
+    pointer-events: none;
+    line-height: 1.4; /* Improve readability for small font */
+}
+.has-tooltip:hover .nutrition-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+.nutrition-tooltip h4 {
+    font-weight: 600;
+    margin-bottom: 0.375rem;
+    color: #f1f5f9;
+    font-size: 0.75rem; /* 12px */
+}
+.nutrition-tooltip ul {
+    list-style: none;
+    padding: 0;
+}
+.nutrition-tooltip li {
+    padding: 0.125rem 0; /* Tighter list */
+    display: flex;
+    align-items: center;
+}
+.tooltip-warning {
+    color: #fcd34d;
+}
+.tooltip-suggestion {
+    color: #a7f3d0;
+}
+.tooltip-warning::before, .tooltip-suggestion::before {
+    content: '⚠️';
+    margin-right: 0.5rem;
+    font-size: 0.875rem; /* Smaller icon */
+}
+.tooltip-suggestion::before {
+    content: '💡';
+}
+
+/* Traffic Light for selection modal */
+.traffic-light {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+}
+.traffic-light-green { background-color: #22c55e; }
+.traffic-light-yellow { background-color: #f59e0b; }
+.traffic-light-red { background-color: #ef4444; }
+.traffic-light-gray { background-color: #9ca3af; }
