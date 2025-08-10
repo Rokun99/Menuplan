@@ -11,6 +11,13 @@ export default defineConfig(({ mode }) => {
       // Füge das React-Plugin hinzu
       react()
     ],
+    build: {
+      rollupOptions: {
+        // Diese Zeile teilt Vite mit, das @google/genai-Paket nicht zu bündeln.
+        // Dies löst das Kompatibilitätsproblem mit dem Build-Tool.
+        external: ['@google/genai']
+      }
+    },
     define: {
       // Stelle den API-Schlüssel sicher für den Frontend-Code bereit
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
