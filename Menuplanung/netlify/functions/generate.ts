@@ -20,7 +20,7 @@ export const handler: Handler = async (event) => {
   try {
     // OpenAI-Client initialisieren
     const openai = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY // Dein neuer API-Schlüssel
+      apiKey: process.env.OPENAI_API_KEY
     });
     
     // Körper parsen und Prompt-Inhalt extrahieren
@@ -40,22 +40,22 @@ export const handler: Handler = async (event) => {
         ? promptContent 
         : JSON.stringify(promptContent);
 
-    // NEU: Explizite Anweisung für das JSON-Format zum Prompt hinzufügen
-    promptString += `\n\nDeine Antwort MUSS exakt folgendes JSON-Format haben, ohne jeglichen Zusatztext oder Erklärungen:
+    // Explizite Anweisung für das JSON-Format zum Prompt hinzufügen
+    promptString += `\n\nWICHTIG: Deine Antwort MUSS exakt folgendes Format haben:
     {
       "mittag": {
-        "suppe": "Name der Suppe",
-        "dessert": "Name des Desserts",
-        "menu": "Name des Hauptgerichts",
-        "vegi": "Name des vegetarischen Gerichts"
+        "suppe": "Name der Suppe (ein kurzer, präziser Name ohne Zeilenumbrüche oder Backslashes)",
+        "dessert": "Name des Desserts (ein kurzer, präziser Name ohne Zeilenumbrüche oder Backslashes)",
+        "menu": "Name des Hauptgerichts (ein kurzer, präziser Name ohne Zeilenumbrüche oder Backslashes)",
+        "vegi": "Name des vegetarischen Gerichts (ein kurzer, präziser Name ohne Zeilenumbrüche oder Backslashes)"
       },
       "abend": {
-        "menu": "Name des Abendessen-Hauptgerichts",
-        "vegi": "Name des vegetarischen Abendessens"
+        "menu": "Name des Abendessen-Hauptgerichts (ein kurzer, präziser Name ohne Zeilenumbrüche oder Backslashes)",
+        "vegi": "Name des vegetarischen Abendessens (ein kurzer, präziser Name ohne Zeilenumbrüche oder Backslashes)"
       }
     }
     
-    WICHTIG: Gib NUR das pure JSON-Objekt zurück!`;
+    WICHTIG: KEINE Zeilenumbrüche oder Backslashes (\\) in den Texten!`;
     
     console.log("Sending request to OpenAI...");
 
@@ -65,7 +65,7 @@ export const handler: Handler = async (event) => {
       messages: [
         {
           role: "system",
-          content: "Du bist ein KI-Küchenchef für ein Schweizer Altersheim. Deine Aufgabe ist es, genaue Menüpläne nach den angegebenen Regeln zu erstellen. Deine Antworten MÜSSEN ein valides JSON-Objekt sein, exakt im vorgegebenen Format, ohne Zusatztexte."
+          content: "Du bist ein KI-Küchenchef für ein Schweizer Altersheim. Erstelle kurze, präzise Gerichte ohne Zeilenumbrüche oder Sonderzeichen. Verwende NUR EINFACHE TEXT-STRINGS als Werte im JSON."
         },
         {
           role: "user", 
@@ -76,45 +76,66 @@ export const handler: Handler = async (event) => {
       temperature: 0.7
     });
     
-    // Antwort extrahieren
-    const responseText = completion.choices[0].message.content;
+    // Antwort extrahieren und bereinigen
+    let responseText = completion.choices[0].message.content || '{}';
+    
+    // Problematische Zeichen entfernen, die das Parsing stören könnten
+    responseText = responseText
+      .replace(/\\n/g, ' ')      // Zeilenumbrüche durch Leerzeichen ersetzen
+      .replace(/\\"/g, '"')      // Escaped quotes korrigieren
+      .replace(/\\r/g, '')       // Carriage returns entfernen
+      .replace(/\\t/g, ' ');      // Tabs durch Leerzeichen ersetzen
 
-    // NEU: Validierung der Antwortstruktur
     try {
-      const parsedResponse = JSON.parse(responseText || '{}');
+      const parsedResponse = JSON.parse(responseText);
       
-      // Prüfen, ob alle benötigten Felder vorhanden sind
-      if (!parsedResponse.mittag || !parsedResponse.abend || 
-          !parsedResponse.mittag.suppe || !parsedResponse.mittag.dessert || 
-          !parsedResponse.mittag.menu || !parsedResponse.mittag.vegi ||
-          !parsedResponse.abend.menu || !parsedResponse.abend.vegi) {
+      // Rekursive Funktion zur Bereinigung aller Textfelder im Objekt
+      const cleanTextFields = (obj: any) => {
+        Object.keys(obj).forEach(key => {
+          if (typeof obj[key] === 'string') {
+            // Entfernt verbleibende Backslashes und trimmt Leerzeichen
+            obj[key] = obj[key].replace(/\\/g, '').trim();
+          } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+            cleanTextFields(obj[key]);
+          }
+        });
+        return obj;
+      };
+      
+      const cleanedResponse = cleanTextFields(parsedResponse);
+      
+      // Validieren der Struktur
+      if (!cleanedResponse.mittag || !cleanedResponse.abend || 
+          !cleanedResponse.mittag.suppe || !cleanedResponse.mittag.dessert || 
+          !cleanedResponse.mittag.menu || !cleanedResponse.mittag.vegi ||
+          !cleanedResponse.abend.menu || !cleanedResponse.abend.vegi) {
         
-        console.error("Invalid response structure from OpenAI:", responseText);
+        console.error("Invalid response structure after cleaning:", JSON.stringify(cleanedResponse));
         return {
           statusCode: 500,
           headers,
           body: JSON.stringify({ 
             error: "OpenAI generated an invalid response structure",
-            response: responseText
+            response: cleanedResponse
           })
         };
       }
       
-      // Korrekte Antwort zurückgeben
+      // Bereinigtes und validiertes JSON zurückgeben
       return {
         statusCode: 200,
         headers,
-        body: JSON.stringify({ text: responseText })
+        body: JSON.stringify({ text: JSON.stringify(cleanedResponse) })
       };
 
     } catch (parseError) {
-      console.error("Invalid JSON in response from OpenAI:", responseText);
+      console.error("Invalid JSON in response after cleaning:", responseText);
       return {
         statusCode: 500,
         headers,
         body: JSON.stringify({ 
           error: "OpenAI did not return valid JSON",
-          response: responseText
+          responseText: responseText
         })
       };
     }
