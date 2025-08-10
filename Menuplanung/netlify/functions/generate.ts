@@ -33,13 +33,26 @@ export const handler: Handler = async (event) => {
       console.log("Parsed body:", parsedBody);
       
       // Versucht, den Prompt aus verschiedenen möglichen Schlüsseln zu extrahieren
+      // NEU: Akzeptiert sowohl 'prompt' als auch 'promptObject'
       promptObject = parsedBody.promptObject || 
-                     parsedBody.prompt || 
+                     parsedBody.prompt || // Akzeptiert den vom Frontend gesendeten Schlüssel
                      parsedBody.query || 
-                     parsedBody.text ||
-                     "Erstelle einen Menüplan"; // Fallback-Prompt
+                     parsedBody.text;
                      
       schema = parsedBody.schema || parsedBody.responseSchema || null;
+
+      if (!promptObject) {
+        console.error("Error: Prompt data is missing from the request body.");
+        return { 
+          statusCode: 400, 
+          headers,
+          body: JSON.stringify({ 
+            error: "Request body must contain a 'promptObject' or 'prompt' key.",
+            receivedData: parsedBody
+          }) 
+        };
+      }
+
     } catch (parseError) {
       console.error("JSON Parse Error:", parseError);
       return { 
@@ -69,14 +82,19 @@ export const handler: Handler = async (event) => {
     console.log("Sending prompt to Google AI:", promptObject);
     let generationResult;
     
+    // Konfiguration für mehr Kreativität
+    const generationConfig = {
+      temperature: 0.9, // Höherer Wert für mehr Kreativität
+      maxOutputTokens: 2048,
+    };
+    
     if (schema) {
       // Generierung mit einem spezifischen JSON-Schema für strukturierte Antworten
       console.log("Generating with schema.");
       generationResult = await model.generateContent({
         contents: [{ role: "user", parts: [{ text: JSON.stringify(promptObject) }] }],
         generationConfig: {
-          temperature: 0.7,
-          maxOutputTokens: 2048,
+          ...generationConfig,
           responseMimeType: "application/json",
           responseSchema: schema
         }
@@ -84,9 +102,10 @@ export const handler: Handler = async (event) => {
     } else {
       // Standard-Textgenerierung ohne Schema
       console.log("Generating without schema.");
-      generationResult = await model.generateContent(
-        typeof promptObject === 'string' ? promptObject : JSON.stringify(promptObject)
-      );
+      generationResult = await model.generateContent({
+          contents: [{ role: "user", parts: [{ text: typeof promptObject === 'string' ? promptObject : JSON.stringify(promptObject) }] }],
+          generationConfig: generationConfig
+      });
     }
     
     const text = generationResult.response.text();
