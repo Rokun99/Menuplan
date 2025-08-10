@@ -16,4 +16,5 @@
 # Falls Sie API-Schlüssel im Frontend verstecken möchten
 [build.environment]
   # Hier keine sensiblen Daten eintragen! Diese werden in der UI konfiguriert
-  NODE_VERSION = "18" # Oder die Node-Version, die Sie verwenden
+  NODE_VERSION = "20" # Oder die Node-Version, die Sie verwenden
+
