@@ -1,118 +1,64 @@
 import { Handler } from '@netlify/functions';
-// Der dynamische Import wird unten verwendet, daher ist kein Top-Level-Import nötig.
-// import { GoogleGenerativeAI } from '@google/generative-ai';
+import OpenAI from 'openai';
 
 export const handler: Handler = async (event) => {
-  // CORS-Header, um Anfragen von jeder Domain zu erlauben (wichtig für lokale Entwicklung)
+  // CORS-Header für die Kompatibilität
   const headers = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Headers': 'Content-Type',
     'Content-Type': 'application/json'
   };
 
-  // Behandelt die Pre-Flight-Anfrage des Browsers für CORS
   if (event.httpMethod === 'OPTIONS') {
     return { statusCode: 200, headers, body: '' };
   }
-
-  // Erlaubt nur POST-Anfragen für die eigentliche Ausführung
+  
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, headers, body: JSON.stringify({ error: 'Method Not Allowed' }) };
   }
 
   try {
-    console.log("Function called with raw body:", event.body);
+    // OpenAI-Client initialisieren
+    const openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY // Dein neuer API-Schlüssel
+    });
     
-    // Sicheres Parsen des Request-Bodys mit Fallback-Werten
-    let parsedBody = {};
-    let promptObject = null;
-    let schema = null;
-    
-    try {
-      parsedBody = JSON.parse(event.body || '{}');
-      console.log("Parsed body:", parsedBody);
-      
-      // Versucht, den Prompt aus verschiedenen möglichen Schlüsseln zu extrahieren
-      promptObject = parsedBody.promptObject || 
-                     parsedBody.prompt || 
-                     parsedBody.query || 
-                     parsedBody.text;
-                     
-      schema = parsedBody.schema || parsedBody.responseSchema || null;
+    // Körper parsen und Prompt-Inhalt extrahieren
+    const body = JSON.parse(event.body || '{}');
+    const promptContent = body.promptObject || body.prompt;
 
-      if (!promptObject) {
-        console.error("Error: Prompt data is missing from the request body.");
-        return { 
-          statusCode: 400, 
-          headers,
-          body: JSON.stringify({ 
-            error: "Request body must contain a 'promptObject' or 'prompt' key.",
-            receivedData: parsedBody
-          }) 
-        };
-      }
-
-    } catch (parseError) {
-      console.error("JSON Parse Error:", parseError);
+    if (!promptContent) {
       return { 
         statusCode: 400, 
         headers,
-        body: JSON.stringify({ error: "Invalid JSON in request body" }) 
+        body: JSON.stringify({ error: "Request body must contain 'promptObject' or 'prompt'." }) 
       };
     }
     
-    // API-Schlüssel prüfen
-    const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) {
-      console.error("API key is missing from environment variables.");
-      return { 
-        statusCode: 500, 
-        headers,
-        body: JSON.stringify({ error: "API key is missing" }) 
-      };
-    }
-    
-    // Google AI dynamisch importieren und initialisieren
-    const { GoogleGenerativeAI } = await import('@google/generative-ai');
-    const genAI = new GoogleGenerativeAI(apiKey);
-    
-    // KORREKTUR: Wechsel zum Flash-Modell, um Ratenbegrenzungen zu vermeiden
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
-    
-    // Anfrage an Google AI senden
-    console.log("Sending prompt to Google AI with Gemini 1.5 Flash...");
-    let generationResult;
-    
-    // Konfiguration für mehr Kreativität
-    const generationConfig = {
-      temperature: 0.8, // Leicht reduzierte Temperatur für das Flash-Modell
-      maxOutputTokens: 4096, // Erhöhtes Limit für komplexere Pläne
-    };
-    
-    if (schema) {
-      // Generierung mit einem spezifischen JSON-Schema für strukturierte Antworten
-      console.log("Generating with schema.");
-      generationResult = await model.generateContent({
-        contents: [{ role: "user", parts: [{ text: JSON.stringify(promptObject) }] }],
-        generationConfig: {
-          ...generationConfig,
-          responseMimeType: "application/json",
-          responseSchema: schema
+    console.log("Sending request to OpenAI...");
+
+    // OpenAI API-Aufruf mit JSON-Modus
+    const completion = await openai.chat.completions.create({
+      model: "gpt-3.5-turbo-0125", // Kostengünstiges und zuverlässiges Modell für JSON
+      messages: [
+        {
+          role: "system",
+          content: "Du bist ein KI-Küchenchef, der Menüpläne für ein Schweizer Altersheim erstellt. Deine Ausgaben müssen immer exakt dem angeforderten JSON-Schema entsprechen. Gib NUR das JSON-Objekt zurück, ohne zusätzlichen Text oder Erklärungen."
+        },
+        {
+          role: "user", 
+          content: typeof promptContent === 'string' 
+            ? promptContent 
+            : JSON.stringify(promptContent)
         }
-      });
-    } else {
-      // Standard-Textgenerierung ohne Schema
-      console.log("Generating without schema.");
-      generationResult = await model.generateContent({
-          contents: [{ role: "user", parts: [{ text: typeof promptObject === 'string' ? promptObject : JSON.stringify(promptObject) }] }],
-          generationConfig: generationConfig
-      });
-    }
+      ],
+      response_format: { type: "json_object" }, // Erzwingt eine JSON-Antwort
+      temperature: 0.7
+    });
     
-    const text = generationResult.response.text();
-    console.log("Response from Google AI:", text.substring(0, 150) + "...");
+    // Antwort extrahieren
+    const text = completion.choices[0].message.content;
     
-    // Erfolgreiche Antwort zurücksenden
     return {
       statusCode: 200,
       headers,
@@ -120,7 +66,7 @@ export const handler: Handler = async (event) => {
     };
 
   } catch (error) {
-    console.error("Unhandled function error:", error);
+    console.error("Function error:", error);
     return {
       statusCode: 500,
       headers,
