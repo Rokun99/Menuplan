@@ -24,7 +24,7 @@ const MEAL_TYPES = {
 };
 const HEADER_LABELS: Record<string, string> = { suppe: 'Suppe', menu: 'Menu', vegi: 'Vegi', dessert: 'Dessert' };
 
-const getSample = (list: Recipe[] | undefined, max = 15): Recipe[] => {
+const getSample = (list: Recipe[] | undefined, max = 20): Recipe[] => { // Increased sample size
   if (!list || list.length === 0) return [];
   return [...list].sort(() => 0.5 - Math.random()).slice(0, max);
 };
@@ -82,18 +82,17 @@ export const WeeklyPlanSuggestion: React.FC<WeeklyPlanSuggestionProps> = ({ curr
     }
 
     const samples = {
-      mittagessen: { suppe: getSample(recipes.mittagessen.suppe, 10), dessert: getSample(recipes.mittagessen.dessert, 10), menu: getSample(recipes.mittagessen.menu, 15), vegi: getSample(recipes.mittagessen.vegi, 15), fisch: getSample(recipes.mittagessen.fisch, 8) },
-      abendessen: { menu: getSample(recipes.abendessen.menu, 15), vegi: getSample(recipes.abendessen.vegi, 15) },
+      mittagessen: { suppe: getSample(recipes.mittagessen.suppe, 12), dessert: getSample(recipes.mittagessen.dessert, 12), menu: getSample(recipes.mittagessen.menu, 20), vegi: getSample(recipes.mittagessen.vegi, 20), fisch: getSample(recipes.mittagessen.fisch, 10) },
+      abendessen: { menu: getSample(recipes.abendessen.menu, 20), vegi: getSample(recipes.abendessen.vegi, 20) },
     };
     
     const fullPlan: Partial<IdealPlan> = {};
     
     try {
       for (const day of DAYS) {
-        const dailyPromptObject = createDailyPromptObject(day, getSeason(currentDate), fullPlan, samples);
         const dailySchema = createDailySchema();
 
-        // --- NEUE VALIDIERUNGS- UND RETRY-LOGIK ---
+        // --- VALIDATION AND RETRY LOGIC ---
         let dayPlan: DayPlan | null = null;
         let attempts = 0;
         const maxAttempts = 3;
@@ -101,11 +100,19 @@ export const WeeklyPlanSuggestion: React.FC<WeeklyPlanSuggestionProps> = ({ curr
         const hasRepetitions = (newDayPlan: DayPlan, existingPlan: Partial<IdealPlan>) => {
             const allExistingDishes = Object.values(existingPlan).flatMap(d => [d.mittag.suppe, d.mittag.dessert, d.mittag.menu, d.mittag.vegi, d.abend.menu, d.abend.vegi]);
             const newDishes = [newDayPlan.mittag.suppe, newDayPlan.mittag.dessert, newDayPlan.mittag.menu, newDayPlan.mittag.vegi, newDayPlan.abend.menu, newDayPlan.abend.vegi];
+            // Check for any new dish that is already in the existing list
             return newDishes.some(dish => allExistingDishes.includes(dish));
         };
 
         while (attempts < maxAttempts) {
             console.log(`Generating plan for ${day}, attempt ${attempts + 1}`);
+            
+            // Create the prompt, modifying it for retries
+            let dailyPromptObject = createDailyPromptObject(day, getSeason(currentDate), fullPlan, samples);
+            if (attempts > 0) {
+                dailyPromptObject.rules.push(`**RETRY-ANWEISUNG (SEHR WICHTIG):** Dein letzter Versuch für ${day} wurde wegen Wiederholungen abgelehnt. Generiere einen komplett NEUEN, EINZIGARTIGEN Plan mit Gerichten, die du vorher noch nicht verwendet hast!`);
+            }
+
             const res = await fetch('/.netlify/functions/generate', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -115,15 +122,16 @@ export const WeeklyPlanSuggestion: React.FC<WeeklyPlanSuggestionProps> = ({ curr
             if (!res.ok) {
                 if (attempts === maxAttempts - 1) throw new Error(`API-Fehler für ${day} nach ${maxAttempts} Versuchen.`);
                 attempts++;
-                continue; // Nächsten Versuch starten
+                continue; // Start next attempt
             }
             
             const data = await res.json();
             const potentialPlan: DayPlan = JSON.parse(data.text.trim());
 
+            // Validate the plan for structure and repetitions
             if (potentialPlan.mittag && potentialPlan.abend && !hasRepetitions(potentialPlan, fullPlan)) {
                 dayPlan = potentialPlan;
-                break; // Gültiger Plan gefunden, Schleife beenden
+                break; // Valid plan found, exit loop
             } else {
                 console.warn(`Ungültiger oder repetitiver Plan für ${day}.`, potentialPlan);
                 attempts++;
@@ -133,7 +141,7 @@ export const WeeklyPlanSuggestion: React.FC<WeeklyPlanSuggestionProps> = ({ curr
         if (!dayPlan) {
             throw new Error(`Konnte nach ${maxAttempts} Versuchen keinen gültigen, abwechslungsreichen Plan für ${day} erstellen.`);
         }
-        // --- ENDE DER NEUEN LOGIK ---
+        // --- END OF RETRY LOGIC ---
 
         fullPlan[day] = dayPlan;
         setIdealPlan({ ...fullPlan });
