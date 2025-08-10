@@ -77,10 +77,10 @@ export const handler: Handler = async (event) => {
     const genAI = new GoogleGenerativeAI(apiKey);
     
     // NEU: Gemini 1.5 Pro verwenden für bessere Regelbefolgung und Qualität
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-pro-latest" });
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest" });
     
     // Anfrage an Google AI senden
-    console.log("Sending prompt to Google AI with Gemini 2.5 Pro...");
+    console.log("Sending prompt to Google AI with Gemini 1.5 Pro...");
     let generationResult;
     
     // Konfiguration für mehr Kreativität
