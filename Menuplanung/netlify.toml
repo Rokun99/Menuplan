@@ -1,20 +1,17 @@
-# netlify.toml
-[build]
-  # Der Befehl zum Bauen Ihres Projekts
-  command = "npm install && npm run build"
-  
-  # Das Verzeichnis, aus dem die Dateien veröffentlicht werden
-  publish = "dist"
-  
-  # Das Verzeichnis, in dem Ihre Netlify Functions liegen
-  functions = "netlify/functions"
-# Redirect-Regel für Single-Page-Applications
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-# Falls Sie API-Schlüssel im Frontend verstecken möchten
-[build.environment]
-  # Hier keine sensiblen Daten eintragen! Diese werden in der UI konfiguriert
-  NODE_VERSION = "20" # Oder die Node-Version, die Sie verwenden
+# Netlify build configuration file
 
+[build]
+  # Build command for the frontend application
+  command = "npm run build"
+  # Directory to publish the frontend
+  publish = "dist"
+
+[build.environment]
+  # Specify the Node.js version to use for the build
+  NODE_VERSION = "20"
+
+# Configuration for Netlify Serverless Functions
+[functions]
+  # This tells the function bundler to treat @google/genai as an external package
+  # and not try to bundle it, which resolves the error.
+  external_node_modules = ["@google/genai"]
