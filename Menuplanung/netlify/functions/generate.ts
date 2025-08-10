@@ -57,7 +57,7 @@ export const handler: Handler = async (event) => {
     
     WICHTIG: KEINE Zeilenumbrüche oder Backslashes (\\) in den Texten!`;
     
-    console.log("Sending request to OpenAI...");
+    console.log("Sending request to OpenAI for weekly plan...");
 
     // OpenAI API-Aufruf mit JSON-Modus
     const completion = await openai.chat.completions.create({
@@ -65,7 +65,15 @@ export const handler: Handler = async (event) => {
       messages: [
         {
           role: "system",
-          content: "Du bist ein KI-Küchenchef für ein Schweizer Altersheim. Erstelle kurze, präzise Gerichte ohne Zeilenumbrüche oder Sonderzeichen. Verwende NUR EINFACHE TEXT-STRINGS als Werte im JSON."
+          content: `Du bist ein KI-Küchenchef für ein Schweizer Altersheim.
+  
+          WICHTIGSTE REGELN:
+          1. ABSOLUTE ABWECHSLUNG: Jedes Gericht MUSS einzigartig sein, besonders das 'abend.vegi' Gericht!
+          2. KEINE WIEDERHOLUNGEN: Nutze NIE das gleiche Gericht mehrmals in einer Woche.
+          3. PRÄZISE NAMEN: Kurze, präzise Gerichte ohne Sonderzeichen, Backslashes oder Zeilenumbrüche.
+          4. VIELFALT: Jeder Tag soll komplett unterschiedliche Gerichte haben.
+          
+          Deine Aufgabe ist maximale Abwechslung zu garantieren. Deine Antworten MÜSSEN ein valides JSON-Objekt sein, exakt im vorgegebenen Format, ohne Zusatztexte.`
         },
         {
           role: "user", 
@@ -73,27 +81,18 @@ export const handler: Handler = async (event) => {
         }
       ],
       response_format: { type: "json_object" },
-      temperature: 0.7
+      temperature: 0.8
     });
     
     // Antwort extrahieren und bereinigen
-    let responseText = completion.choices[0].message.content || '{}';
+    const responseText = completion.choices[0].message.content || '{}';
     
-    // Problematische Zeichen entfernen, die das Parsing stören könnten
-    responseText = responseText
-      .replace(/\\n/g, ' ')      // Zeilenumbrüche durch Leerzeichen ersetzen
-      .replace(/\\"/g, '"')      // Escaped quotes korrigieren
-      .replace(/\\r/g, '')       // Carriage returns entfernen
-      .replace(/\\t/g, ' ');      // Tabs durch Leerzeichen ersetzen
-
     try {
       const parsedResponse = JSON.parse(responseText);
       
-      // Rekursive Funktion zur Bereinigung aller Textfelder im Objekt
       const cleanTextFields = (obj: any) => {
         Object.keys(obj).forEach(key => {
           if (typeof obj[key] === 'string') {
-            // Entfernt verbleibende Backslashes und trimmt Leerzeichen
             obj[key] = obj[key].replace(/\\/g, '').trim();
           } else if (typeof obj[key] === 'object' && obj[key] !== null) {
             cleanTextFields(obj[key]);
@@ -104,24 +103,10 @@ export const handler: Handler = async (event) => {
       
       const cleanedResponse = cleanTextFields(parsedResponse);
       
-      // Validieren der Struktur
-      if (!cleanedResponse.mittag || !cleanedResponse.abend || 
-          !cleanedResponse.mittag.suppe || !cleanedResponse.mittag.dessert || 
-          !cleanedResponse.mittag.menu || !cleanedResponse.mittag.vegi ||
-          !cleanedResponse.abend.menu || !cleanedResponse.abend.vegi) {
-        
-        console.error("Invalid response structure after cleaning:", JSON.stringify(cleanedResponse));
-        return {
-          statusCode: 500,
-          headers,
-          body: JSON.stringify({ 
-            error: "OpenAI generated an invalid response structure",
-            response: cleanedResponse
-          })
-        };
+      if (!cleanedResponse.mittag || !cleanedResponse.abend) {
+        throw new Error("Invalid structure");
       }
       
-      // Bereinigtes und validiertes JSON zurückgeben
       return {
         statusCode: 200,
         headers,
