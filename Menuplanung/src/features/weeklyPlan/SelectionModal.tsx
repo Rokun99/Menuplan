@@ -3,8 +3,7 @@ import clsx from 'clsx';
 import { RecipeDatabase, Recipe, MittagessenCategory, AbendessenCategory } from '../../hooks/useRecipes';
 import { getSeason, formatDate } from '../../utils/dateHelpers';
 import { LoadingSpinner } from '../../components/LoadingSpinner';
-import { evaluateDishInContext, DishEvaluationResult } from '../../rules/nutritionRules';
-import { Type } from '@google/genai';
+import { evaluateDishInContext } from '../../rules/nutritionRules';
 
 interface SelectionModalProps {
     isOpen: boolean;
@@ -96,60 +95,30 @@ export const SelectionModal: React.FC<SelectionModalProps> = ({ isOpen, onClose,
         setIsLoading(true);
         setError('');
         setSuggestions([]);
-        const season = getSeason(currentDate);
-        const dayData = menuData[target.day] || {};
-        const weekContext = Object.fromEntries(Object.entries(menuData).filter(([key]) => key !== 'wochenhitAbend' && !key.startsWith('wochenhitMittag')).map(([day, data]: [string, any]) => [day, { mittag: data.mittag, abend: data.abend }]));
-        
-        const { day, mealType, category } = target;
-        let fridayRule = "";
-        if (day === 'Freitag') {
-            if (mealType === 'mittag' && category === 'menu') {
-                fridayRule = `**Strikte Spezialregel für Freitag:** Dies ist der Hauptgang am Mittag. Der Vorschlag MUSS ein Fischgericht sein. Wähle passende Gerichte aus der 'fisch' Kategorie der Datenbank.`;
-            } else {
-                fridayRule = `**Strikte Spezialregel für Freitag:** Fisch ist für den Hauptgang am Mittag reserviert. Deine Vorschläge für diese Mahlzeit dürfen daher KEINEN Fisch enthalten.`;
-            }
-        }
-        
-        const eveningRule = (mealType === 'abend' || category === 'wochenhitAbend') 
-            ? "Die Vorschläge sollen typische, saisonale und regionale (D-A-CH) Abendessen sein. Oft sind das leichtere Gerichte, kalte Platten, Suppen oder Eierspeisen." 
-            : "";
 
-        const promptObject = {
-            role: "erfahrener Schweizer Küchenchef für eine Grossküche (Altersheim)",
-            task: `Generiere 5 kreative und passende Menüvorschläge für die Kategorie '${categoryName}'.`,
+        const promptForSuggestions = {
+            task: `Generiere 5-7 kreative und passende Menüvorschläge für die Kategorie '${categoryName}'.`,
             context: {
-                day: target.day || 'Wochenhit',
-                meal: target.mealType || 'Unbekannt',
-                category: categoryName,
-                season: season,
-                date: formatDate(currentDate),
-                existing_plan_for_day: dayData,
-                existing_plan_for_week: weekContext,
-                recipe_examples: recipeCategoryList?.slice(0, 5).map(r => r.name) || [],
+                season: getSeason(currentDate),
+                existingMealsInDatabase: recipeCategoryList.slice(0, 10).map(r => r.name)
             },
             rules: [
-                "Vorschläge müssen zur Jahreszeit und zum Rest des Menüs passen.",
-                "Vermeide Zutaten, die diese Woche bereits prominent verwendet wurden.",
-                fridayRule,
-                eveningRule,
-            ].filter(Boolean), // Filter out empty strings from rules
-            output_format_instruction: "Gib NUR eine JSON-Liste von 5 Strings zurück."
-        };
-
-        const responseSchema = {
-            type: Type.ARRAY,
-            items: { type: Type.STRING }
+                "Alle Vorschläge müssen zur gewählten Kategorie passen.",
+                "Keine Wiederholungen von den existierenden Mahlzeiten.",
+                "Nur kurze, präzise Namen ohne Backslashes oder Zeilenumbrüche."
+            ]
         };
 
         try {
-            const response = await fetch('/.netlify/functions/generate', {
+            const response = await fetch('/.netlify/functions/generate-suggestion', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    prompt: JSON.stringify(promptObject),
-                    schema: responseSchema,
+                    prompt: JSON.stringify(promptForSuggestions),
+                    // Schema für eine einfache Liste von Strings
+                    schema: { type: 'array', items: { type: 'string' } }
                 }),
             });
 
@@ -212,12 +181,12 @@ export const SelectionModal: React.FC<SelectionModalProps> = ({ isOpen, onClose,
                             {error && <p className="p-3 text-sm text-red-600">{error}</p>}
                             {suggestions.length > 0 ? suggestions.map((item, i) => (
                                 <button key={i} onClick={() => onApply(item)} className="w-full text-left p-3 text-sm hover:bg-blue-100 transition-colors">{item}</button>
-                            )) : !isLoading && !error && <p className="p-3 text-sm text-slate-500">Klicken Sie auf den Button, um Ideen zu erhalten.</p>}
+                            )) : !isLoading && !error && <p className="p-3 text-sm text-slate-500\">Klicken Sie auf den Button, um Ideen zu erhalten.</p>}
                         </div>
                     </div>
                 </div>
                 <div className="mt-6 flex justify-end">
-                    <button onClick={onClose} className="bg-slate-200 text-slate-700 font-semibold px-4 py-2 rounded-lg hover:bg-slate-300 transition-colors">Schliessen</button>
+                    <button onClick={onClose} className="bg-slate-200 text-slate-700 font-semibold px-4 py-2 rounded-lg hover:bg-slate-300 transition-colors\">Schliessen</button>
                 </div>
             </div>
         </div>
