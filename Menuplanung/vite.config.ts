@@ -1,15 +1,25 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig, loadEnv } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    proxy: {
-      '/.netlify/functions': {
-        target: 'http://localhost:9999', // Default port for netlify dev functions
-        changeOrigin: true,
-      }
-    }
-  }
-})
+export default defineConfig(({ mode }) => {
+  // Lade Umgebungsvariablen aus der .env-Datei im Root-Verzeichnis
+  const env = loadEnv(mode, process.cwd(), '');
+
+  return {
+    plugins: [
+      // Füge das React-Plugin hinzu
+      react()
+    ],
+    define: {
+      // Stelle den API-Schlüssel sicher für den Frontend-Code bereit
+      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
+    },
+    resolve: {
+      // Definiere einen Alias für einfachere Import-Pfade
+      alias: {
+        '@': path.resolve(__dirname, './src'),
+      },
+    },
+  };
+});
