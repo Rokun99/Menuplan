@@ -5,6 +5,8 @@ import { getSeason, formatDate } from '../../utils/dateHelpers';
 import { LoadingSpinner } from '../../components/LoadingSpinner';
 import { evaluateDishInContext } from '../../rules/nutritionRules';
 
+// Entfernt: import { Type } from '@google/genai';
+
 interface SelectionModalProps {
     isOpen: boolean;
     onClose: () => void;
@@ -96,41 +98,39 @@ export const SelectionModal: React.FC<SelectionModalProps> = ({ isOpen, onClose,
         setError('');
         setSuggestions([]);
 
-        const promptForSuggestions = {
-            task: `Generiere 5-7 kreative und passende Menüvorschläge für die Kategorie '${categoryName}'.`,
-            context: {
-                season: getSeason(currentDate),
-                existingMealsInDatabase: recipeCategoryList.slice(0, 10).map(r => r.name)
-            },
+        const promptObject = {
+            task: "Generiere kreative Vorschläge für die ausgewählte Kategorie",
+            category: categoryName,
+            mealType: target.mealType,
+            existingOptions: recipeCategoryList.map(r => r.name),
             rules: [
-                "Alle Vorschläge müssen zur gewählten Kategorie passen.",
-                "Keine Wiederholungen von den existierenden Mahlzeiten.",
-                "Nur kurze, präzise Namen ohne Backslashes oder Zeilenumbrüche."
+                "Vorschläge müssen zur Kategorie passen",
+                "Keine Wiederholung von existierenden Optionen",
+                "Rezepte sollten für ein Schweizer Altersheim geeignet sein",
+                "Kreative und abwechslungsreiche Ideen"
             ]
         };
 
         try {
-            const response = await fetch('/.netlify/functions/generate-suggestion', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    prompt: JSON.stringify(promptForSuggestions),
-                    // Schema für eine einfache Liste von Strings
-                    schema: { type: 'array', items: { type: 'string' } }
-                }),
+            // Aufruf der neuen Netlify Function
+            const res = await fetch('/.netlify/functions/generate-suggestions', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ promptObject }),
             });
 
-            if (!response.ok) {
-                const errorData = await response.json();
-                throw new Error(errorData.error || `Netzwerk-Antwort war nicht OK (${response.status})`);
+            if (!res.ok) {
+                const errData = await res.json();
+                throw new Error(errData.error || 'Netzwerk-Antwort war nicht OK');
             }
+
+            const data = await res.json();
+            const parsedSuggestions = JSON.parse(data.text);
             
-            const data = await response.json();
-            const text = data.text;
-            const parsedSuggestions = JSON.parse(text);
-            setSuggestions(parsedSuggestions);
+            setSuggestions(Array.isArray(parsedSuggestions) ? parsedSuggestions : []);
+
         } catch (err) {
             console.error("Error generating suggestions:", err);
             setError(`Fehler bei der Generierung der Vorschläge: ${(err as Error).message}`);
@@ -181,12 +181,12 @@ export const SelectionModal: React.FC<SelectionModalProps> = ({ isOpen, onClose,
                             {error && <p className="p-3 text-sm text-red-600">{error}</p>}
                             {suggestions.length > 0 ? suggestions.map((item, i) => (
                                 <button key={i} onClick={() => onApply(item)} className="w-full text-left p-3 text-sm hover:bg-blue-100 transition-colors">{item}</button>
-                            )) : !isLoading && !error && <p className="p-3 text-sm text-slate-500\">Klicken Sie auf den Button, um Ideen zu erhalten.</p>}
+                            )) : !isLoading && !error && <p className="p-3 text-sm text-slate-500">Klicken Sie auf den Button, um Ideen zu erhalten.</p>}
                         </div>
                     </div>
                 </div>
                 <div className="mt-6 flex justify-end">
-                    <button onClick={onClose} className="bg-slate-200 text-slate-700 font-semibold px-4 py-2 rounded-lg hover:bg-slate-300 transition-colors\">Schliessen</button>
+                    <button onClick={onClose} className="bg-slate-200 text-slate-700 font-semibold px-4 py-2 rounded-lg hover:bg-slate-300 transition-colors">Schliessen</button>
                 </div>
             </div>
         </div>
