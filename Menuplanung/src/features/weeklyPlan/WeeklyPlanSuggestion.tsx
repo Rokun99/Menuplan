@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Type } from '@google/genai';
+import { Type } from '@google/generative-ai';
 import { getWeekNumber, getSeason } from '../../utils/dateHelpers';
 import { RecipeDatabase, Recipe } from '../../hooks/useRecipes';
 
@@ -61,12 +61,19 @@ const createDailySchema = () => ({
     },
 });
 
+// ==================================================================
+// HIER IST DIE WICHTIGSTE ÄNDERUNG: DER VERBESSERTE PROMPT
+// ==================================================================
 const createDailyPromptObject = (day: string, season: string, planSoFar: Partial<IdealPlan>, samples: any) => {
-    const plannedMains = Object.values(planSoFar).flatMap(d => [d.mittag.menu, d.mittag.vegi, d.abend.menu, d.abend.vegi]);
+    // Sammelt ALLE bisher geplanten Gerichte, nicht nur die Hauptspeisen
+    const allPreviouslyPlannedDishes = Object.values(planSoFar).flatMap(d => [
+        d.mittag.suppe, d.mittag.dessert, d.mittag.menu, d.mittag.vegi,
+        d.abend.menu, d.abend.vegi
+    ]);
 
     const rules = [
       `**SAISONALITÄT:** Bevorzuge Gerichte, die zur Jahreszeit '${season}' passen.`,
-      `**ABWECHSLUNG:** Wiederhole KEINE Hauptgerichte, die bereits geplant wurden: ${JSON.stringify(plannedMains)}`,
+      `**STRIKTE ABWECHSLUNG (WICHTIGSTE REGEL):** Wiederhole ABSOLUT KEIN Gericht, das bereits geplant wurde. Verbotene Gerichte sind: ${JSON.stringify(allPreviouslyPlannedDishes)}`,
       "**DATENBANK:** Nutze NUR Gerichte aus dem Rezept-Auszug. Wähle aus den korrekten Kategorien (z.B. `mittagessen.suppe` für die Suppe).",
       "**STRUKTUR:** Fülle IMMER alle Felder aus: mittag(suppe, dessert, menu, vegi) und abend(menu, vegi).",
       "**FLEISCH-LIMIT:** Plane max. 3-4 Fleischgerichte in der GANZEN Woche. Prüfe `planSoFar`.",
@@ -81,8 +88,8 @@ const createDailyPromptObject = (day: string, season: string, planSoFar: Partial
     }
     
     return {
-        role: "KI-Küchenchef für ein Schweizer Altersheim",
-        task: "Erstelle den Menüplan für EINEN EINZELNEN Tag.",
+        role: "KI-Küchenchef für ein Schweizer Altersheim mit Fokus auf hohe Qualität und Abwechslung",
+        task: "Erstelle den Menüplan für EINEN EINZELNEN Tag und befolge die Regeln strikt.",
         context: {
             day_to_plan: day,
             season: season,
@@ -119,17 +126,20 @@ export const WeeklyPlanSuggestion: React.FC<WeeklyPlanSuggestionProps> = ({
 
     const samples = {
       mittagessen: {
-        suppe: getSample(recipes.mittagessen.suppe, 8),
-        dessert: getSample(recipes.mittagessen.dessert, 8),
-        menu: getSample(recipes.mittagessen.menu, 12),
-        vegi: getSample(recipes.mittagessen.vegi, 12),
+        suppe: getSample(recipes.mittagessen.suppe, 10),
+        dessert: getSample(recipes.mittagessen.dessert, 10),
+        menu: getSample(recipes.mittagessen.menu, 15),
+        vegi: getSample(recipes.mittagessen.vegi, 15),
         fisch: getSample(recipes.mittagessen.fisch, 8),
       },
       abendessen: {
-        menu: getSample(recipes.abendessen.menu, 12),
-        vegi: getSample(recipes.abendessen.vegi, 12),
+        menu: getSample(recipes.abendessen.menu, 15),
+        vegi: getSample(recipes.abendessen.vegi, 15),
       },
     };
+    
+    // DEBUGGING: Zeigt an, welche Rezepte der KI zur Verfügung stehen.
+    console.log("Verfügbare Rezept-Samples für die KI:", samples);
 
     if (samples.mittagessen.fisch.length === 0) {
         setError('Keine Fischgerichte für die "Fisch-Freitag"-Regel gefunden.');
@@ -150,7 +160,7 @@ export const WeeklyPlanSuggestion: React.FC<WeeklyPlanSuggestionProps> = ({
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                prompt: JSON.stringify(dailyPromptObject),
+                prompt: dailyPromptObject, // Hier senden wir das ganze Objekt
                 schema: dailySchema,
             }),
         });
@@ -161,7 +171,9 @@ export const WeeklyPlanSuggestion: React.FC<WeeklyPlanSuggestionProps> = ({
         }
         
         const data = await res.json();
-        const dayPlan: DayPlan = JSON.parse(data.text.trim());
+        // Versuch, die Antwort zu bereinigen, falls sie in Markdown-Codeblöcken eingeschlossen ist
+        const cleanedText = data.text.replace(/```json\n?/, '').replace(/```$/, '').trim();
+        const dayPlan: DayPlan = JSON.parse(cleanedText);
 
         if (!dayPlan.mittag || !dayPlan.abend || !dayPlan.mittag.menu) {
             throw new Error(`KI hat eine ungültige Struktur für ${day} generiert.`);
