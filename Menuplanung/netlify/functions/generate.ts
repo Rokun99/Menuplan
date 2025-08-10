@@ -76,16 +76,16 @@ export const handler: Handler = async (event) => {
     const { GoogleGenerativeAI } = await import('@google/generative-ai');
     const genAI = new GoogleGenerativeAI(apiKey);
     
-    // KORREKTUR: Den korrekten und empfohlenen Modellnamen verwenden
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest" });
+    // KORREKTUR: Wechsel zum Flash-Modell, um Ratenbegrenzungen zu vermeiden
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
     
     // Anfrage an Google AI senden
-    console.log("Sending prompt to Google AI with Gemini 1.5 Pro...");
+    console.log("Sending prompt to Google AI with Gemini 1.5 Flash...");
     let generationResult;
     
     // Konfiguration für mehr Kreativität
     const generationConfig = {
-      temperature: 0.9, // Hoher Wert für mehr Kreativität und Abwechslung
+      temperature: 0.8, // Leicht reduzierte Temperatur für das Flash-Modell
       maxOutputTokens: 4096, // Erhöhtes Limit für komplexere Pläne
     };
     
