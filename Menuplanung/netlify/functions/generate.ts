@@ -76,11 +76,11 @@ export const handler: Handler = async (event) => {
     const { GoogleGenerativeAI } = await import('@google/generative-ai');
     const genAI = new GoogleGenerativeAI(apiKey);
     
-    // NEU: gemini-2.0-flash verwenden für bessere Regelbefolgung und Qualität
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-latest" });
+    // KORREKTUR: Den korrekten und empfohlenen Modellnamen verwenden
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest" });
     
     // Anfrage an Google AI senden
-    console.log("Sending prompt to Google AI with gemini-2.0-flash...");
+    console.log("Sending prompt to Google AI with Gemini 1.5 Pro...");
     let generationResult;
     
     // Konfiguration für mehr Kreativität
