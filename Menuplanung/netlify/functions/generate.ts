@@ -31,8 +31,6 @@ export const handler: Handler = async (event) => {
     
     // Google Gemini API-Client initialisieren
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
-    
-    // Verwende das "flash"-Modell für höhere Limits und deaktiviere Sicherheitseinstellungen für Menüplanung
     const model = genAI.getGenerativeModel({ 
       model: "gemini-1.5-flash-latest",
       safetySettings: [
@@ -44,25 +42,21 @@ export const handler: Handler = async (event) => {
     });
     
     // Prompt-Inhalt vorbereiten
-    let promptContent = typeof promptObject === 'string' 
-      ? promptObject 
-      : JSON.stringify(promptObject);
-      
-    // Für Wochenplanungen (erkennbar am komplexeren Schema) füge zusätzliche Anweisungen hinzu
-    if (schema && schema.properties && schema.properties.mittag) {
-      promptContent += `\n\nEXTREM WICHTIGE REGELN:
-      1. ABSOLUT KEINE WIEDERHOLUNGEN: Kein Gericht (Suppe, Dessert, Menü, Vegi) darf sich in der GESAMTEN Woche wiederholen!
-      2. ÜBERPRÜFE JEDEN TAG gegen alle vorherigen Tage auf Duplikate!
-      3. KEINE BACKSLASHES (\\): Entferne alle Backslash-Zeichen aus der Ausgabe!
-      4. KOMPLETTE VIELFALT: Jede Mahlzeit muss vollständig einzigartig sein!
-      5. EINDEUTIGE GERICHTE: Jeder Tag braucht unterschiedliche Suppen, Desserts und alle anderen Gerichte.`;
-    }
+    let promptContent = typeof promptObject === 'string' ? promptObject : JSON.stringify(promptObject);
     
-    // Google Gemini API-Aufruf
+    // Zusätzliche, extrem strenge Anweisungen für Vielfalt
+    promptContent += `\n\nEXTREM WICHTIGE REGELN (BEFOLGE SIE STRENG!):
+    1. ABSOLUTE EINZIGARTIGKEIT: JEDES Gericht (Suppe, Dessert, Menü, Vegi) MUSS 100% EINZIGARTIG sein! Keine Wiederholung in der Woche!
+    2. ÜBERPRÜFE ALLES: Vergleiche mit plan_so_far_this_week und stelle sicher, dass KEIN Gericht (nicht nur Hauptgerichte) wiederholt wird!
+    3. KEINE BACKSLASHES ODER SONDERZEICHEN: Schreibe reine Textnamen ohne \\, /, Zeilenumbrüche oder ähnliches!
+    4. MAXIMALE VIELFALT: Variiere Zutaten, Zubereitungsarten und Kategorien. Kein Gericht darf ähnlich klingen!
+    5. ABENDESSEN-SPEZIALREGEL: Abend.menu und abend.vegi MÜSSEN IMMER unterschiedlich sein, außer bei Vegi-Tagen!`;
+    
+    // Gemini API-Aufruf
     const result = await model.generateContent({
       contents: [{ role: "user", parts: [{ text: promptContent }] }],
       generationConfig: {
-        temperature: schema ? 0.9 : 0.7, // Höhere Temperatur für Wochenplan
+        temperature: 0.95, // Hohe Temperatur für maximale Vielfalt
         maxOutputTokens: 2048,
         responseMimeType: "application/json",
         responseSchema: schema
@@ -72,37 +66,40 @@ export const handler: Handler = async (event) => {
     const response = await result.response;
     let responseText = response.text();
     
-    // Entferne Backslashes und problematische Zeichen
-    responseText = responseText.replace(/\\/g, '').replace(/\n/g, ' ').replace(/\r/g, ' ').replace(/\t/g, ' ');
+    // Entferne problematische Zeichen (Backslashes, Zeilenumbrüche usw.)
+    responseText = responseText
+      .replace(/\\/g, '')  // Backslashes entfernen
+      .replace(/\n/g, ' ')
+      .replace(/\r/g, '')
+      .replace(/\t/g, ' ')
+      .trim(); // Überflüssige Leerzeichen entfernen
+      
+    // Validiere grundlegende Struktur
+    try {
+      const parsed = JSON.parse(responseText);
+      if (schema && schema.properties.mittag && (!parsed.mittag || !parsed.abend)) {
+        throw new Error("Invalid structure: missing 'mittag' or 'abend' keys.");
+      }
+    } catch (e) {
+      console.error("Invalid JSON structure from AI:", responseText);
+      return {
+        statusCode: 500,
+        headers,
+        body: JSON.stringify({ error: "Generated invalid JSON structure", details: responseText })
+      };
+    }
     
     return {
       statusCode: 200,
       headers,
       body: JSON.stringify({ text: responseText })
     };
-
   } catch (error) {
     console.error("Function error:", error);
-    
-    // Spezifische Fehlerbehandlung für Gemini-Rate-Limits
-    const errorMessage = error.toString();
-    if (errorMessage.includes("429") || errorMessage.includes("quota")) {
-      return {
-        statusCode: 429,
-        headers,
-        body: JSON.stringify({ 
-          error: "Google Gemini API Rate-Limit erreicht. Bitte versuchen Sie es später erneut.",
-          details: errorMessage
-        })
-      };
-    }
-    
     return {
       statusCode: 500,
       headers,
-      body: JSON.stringify({ 
-        error: error instanceof Error ? error.message : String(error) 
-      })
+      body: JSON.stringify({ error: String(error) })
     };
   }
 };
