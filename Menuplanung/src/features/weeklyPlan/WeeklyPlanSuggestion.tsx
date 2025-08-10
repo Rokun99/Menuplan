@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Type } from '@google/generative-ai';
+// GELÖSCHT: Der fehlerhafte 'Type'-Import wurde entfernt.
+// import { Type } from '@google/generative-ai';
 import { getWeekNumber, getSeason } from '../../utils/dateHelpers';
 import { RecipeDatabase, Recipe } from '../../hooks/useRecipes';
 
@@ -36,34 +37,34 @@ const getSample = (list: Recipe[] | undefined, max = 15): Recipe[] => {
   return [...list].sort(() => 0.5 - Math.random()).slice(0, max);
 };
 
+// ==================================================================
+// HIER IST DIE KORREKTUR: Das Schema-Format wurde angepasst.
+// ==================================================================
 const createDailySchema = () => ({
-    type: Type.OBJECT,
-    required: ['mittag', 'abend'],
+    type: "object",
     properties: {
       mittag: {
-        type: Type.OBJECT,
-        required: ['suppe', 'dessert', 'menu', 'vegi'],
+        type: "object",
         properties: {
-          suppe: { type: Type.STRING },
-          dessert: { type: Type.STRING },
-          menu: { type: Type.STRING },
-          vegi: { type: Type.STRING },
+          suppe: { type: "string" },
+          dessert: { type: "string" },
+          menu: { type: "string" },
+          vegi: { type: "string" },
         },
+        required: ["suppe", "dessert", "menu", "vegi"],
       },
       abend: {
-        type: Type.OBJECT,
-        required: ['menu', 'vegi'],
+        type: "object",
         properties: {
-          menu: { type: Type.STRING },
-          vegi: { type: Type.STRING },
+          menu: { type: "string" },
+          vegi: { type: "string" },
         },
+        required: ["menu", "vegi"],
       },
     },
+    required: ["mittag", "abend"],
 });
 
-// ==================================================================
-// HIER IST DIE WICHTIGSTE ÄNDERUNG: DER VERBESSERTE PROMPT
-// ==================================================================
 const createDailyPromptObject = (day: string, season: string, planSoFar: Partial<IdealPlan>, samples: any) => {
     // Sammelt ALLE bisher geplanten Gerichte, nicht nur die Hauptspeisen
     const allPreviouslyPlannedDishes = Object.values(planSoFar).flatMap(d => [
@@ -276,7 +277,7 @@ export const WeeklyPlanSuggestion: React.FC<WeeklyPlanSuggestionProps> = ({
                   ))}
                   {MEAL_TYPES.abend.map(c => (
                     <td key={`c-a-${c}`} className="p-3 text-slate-700 hover:bg-blue-50 cursor-pointer border-l" onClick={() => idealPlan[day] && applyMeal(day, 'abend', c)}>
-                      {idealPlan[day]?.abend?.[c] ?? (isLoading ? '' : '-')}
+                      {idealPlan[day]?.abend?.[c] ?? (isLoading ? '' : '-')}\
                     </td>
                   ))}
                   <td className="p-3 text-center border-l">
