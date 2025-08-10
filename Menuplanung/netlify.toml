@@ -1,0 +1,19 @@
+# netlify.toml
+[build]
+  # Der Befehl zum Bauen Ihres Projekts
+  command = "npm install && npm run build"
+  
+  # Das Verzeichnis, aus dem die Dateien veröffentlicht werden
+  publish = "dist"
+  
+  # Das Verzeichnis, in dem Ihre Netlify Functions liegen
+  functions = "netlify/functions"
+# Redirect-Regel für Single-Page-Applications
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+# Falls Sie API-Schlüssel im Frontend verstecken möchten
+[build.environment]
+  # Hier keine sensiblen Daten eintragen! Diese werden in der UI konfiguriert
+  NODE_VERSION = "18" # Oder die Node-Version, die Sie verwenden
