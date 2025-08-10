@@ -39,7 +39,7 @@ export const handler: Handler = async (event) => {
       ? promptObject 
       : JSON.stringify(promptObject);
       
-    promptContent += `\n\nDeine Antwort MUSS ein valides JSON-Array mit 5-7 einfachen, kurzen Gerichtnamen sein (z.B. ["Gericht 1", "Gericht 2"]). KEINE Zeilenumbrüche oder Backslashes (\\) in den Texten!`;
+    promptContent += `\n\nDeine Antwort MUSS ein valides JSON-Objekt sein, das ein Array von 5-7 einfachen, kurzen Gerichtnamen unter dem Schlüssel "suggestions" enthält (z.B. {"suggestions": ["Gericht 1", "Gericht 2"]}). KEINE Zeilenumbrüche oder Backslashes (\\) in den Texten!`;
     
     // OpenAI API-Aufruf
     const completion = await openai.chat.completions.create({
@@ -47,21 +47,20 @@ export const handler: Handler = async (event) => {
       messages: [
         {
           role: "system",
-          content: "Du bist ein Experte für Menüplanungen und Rezepte. Erstelle präzise, abwechslungsreiche Vorschläge. Deine Antwort muss immer ein valides JSON-Array von Strings sein."
+          content: "Du bist ein Experte für Menüplanungen und Rezepte. Erstelle präzise, abwechslungsreiche Vorschläge. Deine Antwort muss immer ein valides JSON-Objekt sein, das ein Array von Strings unter dem Schlüssel 'suggestions' enthält."
         },
         { role: "user", content: promptContent }
       ],
-      // Wichtig: Wir erwarten hier ein Objekt, das ein Array enthält, um den JSON-Modus zu nutzen
       response_format: { type: "json_object" }, 
       temperature: 0.8
     });
     
-    // Antwort extrahieren und bereinigen
-    let responseText = completion.choices[0].message.content || '{"suggestions": []}';
+    // Antwort extrahieren
+    const responseText = completion.choices[0].message.content || '{"suggestions": []}';
     
     // JSON parsen und das Array extrahieren
     const parsedJson = JSON.parse(responseText);
-    const suggestions = parsedJson.suggestions || parsedJson.ideen || []; // Flexibel für den Schlüsselnamen
+    const suggestions = parsedJson.suggestions || [];
 
     return {
       statusCode: 200,
@@ -71,7 +70,7 @@ export const handler: Handler = async (event) => {
     };
     
   } catch (error) {
-    console.error("Function error:", error);
+    console.error("Suggestion function error:", error);
     return {
       statusCode: 500,
       headers,
