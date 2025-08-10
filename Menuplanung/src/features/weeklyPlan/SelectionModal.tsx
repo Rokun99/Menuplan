@@ -5,8 +5,6 @@ import { getSeason, formatDate } from '../../utils/dateHelpers';
 import { LoadingSpinner } from '../../components/LoadingSpinner';
 import { evaluateDishInContext } from '../../rules/nutritionRules';
 
-// Veraltete Google-spezifische Importe wurden entfernt
-
 interface SelectionModalProps {
     isOpen: boolean;
     onClose: () => void;
@@ -102,27 +100,44 @@ export const SelectionModal: React.FC<SelectionModalProps> = ({ isOpen, onClose,
             setIsLoading(true);
             setError("");
             
+            // Prompt-Objekt erstellen
             const promptObject = {
-                task: "Generiere kreative Menüvorschläge",
-                category: categoryName,
-                mealType: target.mealType,
-                existingOptions: recipeCategoryList.map(r => r.name),
+                role: "KI-Küchenchef für ein Schweizer Altersheim",
+                task: "Generiere 5-7 kreative Vorschläge für die gewählte Kategorie",
+                context: {
+                    category: categoryName,
+                    mealType: target.mealType,
+                    existingMeals: recipeCategoryList.map(r => r.name)
+                },
                 rules: [
-                    "Gib genau 5-7 kreative Vorschläge zurück",
-                    "Vorschläge müssen zur Kategorie passen",
+                    "Vorschläge müssen zur Kategorie passen und für ältere Menschen geeignet sein",
                     "Keine Wiederholung von existierenden Optionen",
-                    "Rezepte sollten für ein Schweizer Altersheim geeignet sein"
+                    "Abwechslungsreiche Ideen mit unterschiedlichen Zutaten und Zubereitungsarten",
+                    "Keine Backslashes (\\) oder problematische Zeichen verwenden"
                 ]
             };
             
-            // Ruft die neue, universelle Funktion auf
+            // Definiere das Schema für die Antwort
+            const responseSchema = {
+                type: "object",
+                properties: {
+                    suggestions: {
+                        type: "array",
+                        items: { type: "string" }
+                    }
+                }
+            };
+            
+            // Aufruf der Netlify-Funktion
             const res = await fetch('/.netlify/functions/generate', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                // Wichtig: 'prompt' als Schlüssel verwenden, damit die Funktion es erkennt
-                body: JSON.stringify({ prompt: JSON.stringify(promptObject) }),
+                body: JSON.stringify({
+                    promptObject: promptObject,
+                    schema: responseSchema
+                }),
             });
 
             if (!res.ok) {
@@ -131,10 +146,23 @@ export const SelectionModal: React.FC<SelectionModalProps> = ({ isOpen, onClose,
             }
 
             const data = await res.json();
-            const parsedSuggestions = JSON.parse(data.text);
             
-            setSuggestions(Array.isArray(parsedSuggestions) ? parsedSuggestions : []);
-
+            // Versuche, die Suggestions zu extrahieren
+            let parsedSuggestions = [];
+            try {
+                const parsed = JSON.parse(data.text);
+                
+                if (parsed.suggestions && Array.isArray(parsed.suggestions)) {
+                    parsedSuggestions = parsed.suggestions;
+                } else if (Array.isArray(parsed)) {
+                    parsedSuggestions = parsed;
+                }
+            } catch (e) {
+                console.error("Error parsing suggestions:", e);
+                parsedSuggestions = [];
+            }
+            
+            setSuggestions(parsedSuggestions);
         } catch (err) {
             console.error("Error generating suggestions:", err);
             setError(`Fehler bei der Generierung der Vorschläge: ${(err as Error).message}`);
