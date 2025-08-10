@@ -19,7 +19,7 @@ export const handler: Handler = async (event) => {
 
   try {
     const body = JSON.parse(event.body || '{}');
-    const promptObject = body.promptObject || body.prompt;
+    const promptObject = body.promptObject;
     
     if (!promptObject) {
       return { 
