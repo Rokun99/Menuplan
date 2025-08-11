@@ -266,7 +266,6 @@ export const SelectionModal: React.FC<SelectionModalProps> = ({
       setGenerationAttempts(prev => prev + 1);
       
       const recentMeals = await getRecentMeals(7);
-      const mealFrequency = await getMealFrequency();
       
       const promptObject = {
         role: "Erfahrener Küchenchef für Schweizer Altersheim mit Expertise in altersgerechter Ernährung",
@@ -307,16 +306,320 @@ export const SelectionModal: React.FC<SelectionModalProps> = ({
         examples: recipeCategoryList.slice(0, 3).map(r => r.name)
       };
       
-      // Response logic would go here, calling the new serverless function
-      // For now, this is just the setup. The actual fetch call needs to be implemented.
-
+      const responseSchema = {
+        type: "object",
+        properties: {
+          suggestions: {
+            type: "array",
+            items: { 
+              type: "string",
+              minLength: 3,
+              maxLength: 100
+            },
+            minItems: 5,
+            maxItems: 10
+          }
+        },
+        required: ["suggestions"]
+      };
+      
+      const res = await fetch('/.netlify/functions/generate-enhanced', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          promptObject: promptObject,
+          schema: responseSchema,
+          existingItems: [...recipeCategoryList.map(r => r.name), ...recentMeals],
+          useCache: generationAttempts === 1,
+          modelPreference: generationAttempts > 2 ? 'PRO' : 'FAST'
+        }),
+      });
+      
+      if (!res.ok) {
+        const errData = await res.json();
+        throw new Error(errData.error || 'Netzwerk-Antwort war nicht OK');
+      }
+      
+      const data = await res.json();
+      
+      let parsedSuggestions = [];
+      try {
+        const parsed = JSON.parse(data.text);
+        parsedSuggestions = parsed.suggestions || parsed;
+      } catch (e) {
+        console.error("Error parsing suggestions:", e);
+        throw new Error("Fehler beim Verarbeiten der Vorschläge");
+      }
+      
+      const validatedSuggestions = parsedSuggestions.map(suggestion => ({
+        name: suggestion,
+        validation: validateSuggestionQuality(suggestion, {
+          category: categoryName,
+          mealType: target.mealType
+        })
+      }));
+      
+      const validSuggestions = validatedSuggestions.filter(s => s.validation.isValid);
+      
+      if (validSuggestions.length < 3 && generationAttempts < 3) {
+        console.log(`Nur ${validSuggestions.length} gültige Vorschläge, versuche erneut...`);
+        return generateSuggestions();
+      }
+      
+      suggestionCache.current.set(cacheKey, {
+        suggestions: validatedSuggestions,
+        timestamp: Date.now()
+      });
+      
+      setSuggestions(validatedSuggestions);
+      
     } catch (err) {
-      console.error("Error setting up suggestion generation:", err);
-      setError("Fehler bei der Vorbereitung der Vorschläge.");
+      console.error("Error generating suggestions:", err);
+      setError(`Fehler bei der Generierung: ${(err as Error).message}`);
+      
+      if (generationAttempts < 2) {
+        setTimeout(() => generateSuggestions(), 2000);
+      }
     } finally {
       setIsLoading(false);
     }
-  }, [categoryName, target, currentDate, dayPlan, weekPlan, nutritionalBalance, preferences, getRecentMeals, getMealFrequency, recipeCategoryList]);
-
-  // ... rest of the component
+  }, [categoryName, target, dayPlan, weekPlan, nutritionalBalance, recipeCategoryList, currentDate, preferences, generationAttempts, getRecentMeals]);
+  
+  const handleSelection = useCallback((selection: string, source: 'database' | 'ai') => {
+    trackSelection(selection, target.category, source);
+    onApply(selection);
+  }, [trackSelection, target, onApply]);
+  
+  useEffect(() => {
+    if (isOpen) {
+      setSearchTerm('');
+      setSuggestions([]);
+      setError('');
+      setIsLoading(false);
+      setGenerationAttempts(0);
+    }
+  }, [isOpen]);
+  
+  if (!isOpen) return null;
+  
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50 p-4" onClick={onClose}>
+      <div className="bg-white rounded-xl shadow-2xl p-6 w-full max-w-4xl max-h-[90vh] flex flex-col" onClick={e => e.stopPropagation()}>
+        <div className="mb-6">
+          <h3 className="text-xl font-semibold text-slate-800">
+            {categoryName} für {target?.day} {target?.mealType === 'mittag' ? 'Mittag' : 'Abend'} auswählen
+          </h3>
+          <div className="flex gap-4 mt-2 text-sm text-slate-600">
+            <span>Saison: {getSeason(currentDate)}</span>
+            <span>Woche: {getWeekNumber(currentDate)}</span>
+            {nutritionalBalance.needsMoreProtein && (
+              <span className="text-blue-600 font-medium">↑ Protein empfohlen</span>
+            )}
+            {nutritionalBalance.needsMoreFiber && (
+              <span className="text-green-600 font-medium">↑ Ballaststoffe empfohlen</span>
+            )}
+          </div>
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-6 flex-1 overflow-hidden">
+          <div className="flex flex-col">
+            <div className="flex justify-between items-center mb-3">
+              <h4 className="font-semibold text-slate-700">Aus Datenbank</h4>
+              <span className="text-xs text-slate-500">{filteredAndSortedItems.length} Optionen</span>
+            </div>
+            
+            <input 
+              type="text" 
+              placeholder="Suchen..." 
+              className="w-full p-2 border border-slate-300 rounded-md mb-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            
+            <div className="flex-1 overflow-y-auto border border-slate-200 rounded-lg bg-slate-50/50">
+              {filteredAndSortedItems.length > 0 ? (
+                filteredAndSortedItems.map((item, i) => {
+                  const evaluation = evaluateDishInContext(item, dayPlan);
+                  const isVegetarian = vegetarianRecipeNames.has(item.name);
+                  const frequency = getMealFrequency()[item.name] || 0;
+                  const isPopular = frequency > 5;
+                  const recentlyUsed = weekPlan.some(r => r.name === item.name);
+                  
+                  return (
+                    <button
+                      key={i}
+                      onClick={() => handleSelection(item.name, 'database')}
+                      disabled={recentlyUsed}
+                      className={clsx(
+                        "w-full text-left p-3 transition-all border-b border-slate-100",
+                        recentlyUsed ? "opacity-50 bg-slate-100 cursor-not-allowed" : "hover:bg-blue-50"
+                      )}
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2 flex-1">
+                          <SmartTrafficLight 
+                            score={evaluation.score} 
+                            reasons={evaluation.reasons}
+                          />
+                          <div className="flex-1">
+                            <div className="font-medium text-sm">{item.name}</div>
+                            {item.description && (
+                              <div className="text-xs text-slate-500 mt-0.5">{item.description}</div>
+                            )}
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-center gap-2">
+                          <NutritionalBadges recipe={item} />
+                          
+                          {isVegetarian && (
+                            <span className="text-xs font-semibold text-green-700 bg-green-100 px-2 py-0.5 rounded-full">
+                              Vegi
+                            </span>
+                          )}
+                          
+                          {isPopular && (
+                            <span className="text-xs font-semibold text-blue-700 bg-blue-100 px-2 py-0.5 rounded-full">
+                              Beliebt
+                            </span>
+                          )}
+                          
+                          {recentlyUsed && (
+                            <span className="text-xs font-semibold text-orange-700 bg-orange-100 px-2 py-0.5 rounded-full">
+                              Diese Woche
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </button>
+                  );
+                })
+              ) : (
+                <p className="p-4 text-sm text-slate-500 text-center">
+                  Keine Einträge gefunden. Versuchen Sie einen anderen Suchbegriff.
+                </p>
+              )}
+            </div>
+          </div>
+          
+          <div className="flex flex-col">
+            <div className="flex justify-between items-center mb-3">
+              <h4 className="font-semibold text-slate-700">KI-Vorschläge</h4>
+              {suggestions.length > 0 && (
+                <span className="text-xs text-slate-500">{suggestions.length} Ideen</span>
+              )}
+            </div>
+            
+            <button
+              onClick={generateSuggestions}
+              disabled={isLoading}
+              className={clsx(
+                "w-full mb-3 flex justify-center items-center gap-2 font-semibold px-4 py-2.5 rounded-lg transition-all",
+                isLoading 
+                  ? "bg-blue-300 text-white cursor-not-allowed"
+                  : "bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 shadow-md hover:shadow-lg"
+              )}
+            >
+              {isLoading ? (
+                <>
+                  <LoadingSpinner size="small" />
+                  <span>Generiere kreative Ideen...</span>
+                </>
+              ) : (
+                <>
+                  <span>✨</span>
+                  <span>Neue Ideen generieren</span>
+                  {generationAttempts > 0 && <span className="text-xs">({generationAttempts})</span>}
+                </>
+              )}
+            </button>
+            
+            <div className="flex-1 overflow-y-auto border border-slate-200 rounded-lg relative bg-slate-50/50">
+              {isLoading && (
+                <div className="absolute inset-0 flex items-center justify-center bg-white/80">
+                  <div className="text-center">
+                    <LoadingSpinner />
+                    <p className="text-sm text-slate-600 mt-2">Erstelle personalisierte Vorschläge...</p>
+                  </div>
+                </div>
+              )}
+              
+              {error && (
+                <div className="p-4">
+                  <div className="bg-red-50 border border-red-200 rounded-lg p-3">
+                    <p className="text-sm text-red-600">{error}</p>
+                    {generationAttempts < 3 && (
+                      <button
+                        onClick={generateSuggestions}
+                        className="mt-2 text-xs text-red-700 underline hover:no-underline"
+                      >
+                        Erneut versuchen
+                      </button>
+                    )}
+                  </div>
+                </div>
+              )}
+              
+              {suggestions.length > 0 ? (
+                <div className="divide-y divide-slate-100">
+                  {suggestions.map((item, i) => (
+                    <button
+                      key={i}
+                      onClick={() => handleSelection(item.name, 'ai')}
+                      className="w-full text-left p-3 hover:bg-blue-50 transition-all"
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2 flex-1">
+                          <SmartTrafficLight 
+                            score={item.validation.score} 
+                            reasons={[...item.validation.issues, ...item.validation.warnings]}
+                          />
+                          <div className="flex-1">
+                            <div className="font-medium text-sm">{item.name}</div>
+                            {item.validation.warnings.length > 0 && (
+                              <div className="text-xs text-amber-600 mt-0.5">
+                                ⚠ {item.validation.warnings[0]}
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                        
+                        <span className="text-xs font-semibold text-purple-700 bg-purple-100 px-2 py-0.5 rounded-full">
+                          KI-Idee
+                        </span>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              ) : !isLoading && !error && (
+                <div className="p-8 text-center">
+                  <div className="text-4xl mb-3">💡</div>
+                  <p className="text-sm text-slate-600">
+                    Klicken Sie auf "Neue Ideen generieren" für kreative,
+                    <br />personalisierte Menüvorschläge basierend auf Ihrem Kontext.
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+        
+        <div className="mt-6 flex justify-between items-center">
+          <div className="text-xs text-slate-500">
+            {generationAttempts > 0 && (
+              <span>Model: {generationAttempts > 2 ? 'Gemini Pro' : 'Gemini Flash'}</span>
+            )}
+          </div>
+          <button
+            onClick={onClose}
+            className="bg-slate-200 text-slate-700 font-semibold px-6 py-2.5 rounded-lg hover:bg-slate-300 transition-colors"
+          >
+            Schließen
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 };
