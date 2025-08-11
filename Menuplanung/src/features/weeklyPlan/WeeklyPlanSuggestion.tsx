@@ -24,65 +24,44 @@ const MEAL_TYPES = {
 };
 const HEADER_LABELS: Record<string, string> = { suppe: 'Suppe', menu: 'Menu', vegi: 'Vegi', dessert: 'Dessert' };
 
-// Levenshtein distance to check for similarity between strings
-const levenshteinDistance = (a: string, b: string): number => {
-  if (a.length === 0) return b.length;
-  if (b.length === 0) return a.length;
-  const matrix = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(null));
-  for (let i = 0; i <= a.length; i += 1) matrix[0][i] = i;
-  for (let j = 0; j <= b.length; j += 1) matrix[j][0] = j;
-  for (let j = 1; j <= b.length; j += 1) {
-    for (let i = 1; i <= a.length; i += 1) {
-      const substituteCost = a[i - 1] === b[j - 1] ? 0 : 1;
-      matrix[j][i] = Math.min(
-        matrix[j - 1][i] + 1,
-        matrix[j][i - 1] + 1,
-        matrix[j - 1][i - 1] + substituteCost
-      );
-    }
-  }
-  return matrix[b.length][a.length];
-};
-
-const getSample = (list: Recipe[] | undefined, max = 15): Recipe[] => { // Balanced sample size
+const getSample = (list: Recipe[] | undefined, max = 20): Recipe[] => {
   if (!list || list.length === 0) return [];
   return [...list].sort(() => 0.5 - Math.random()).slice(0, max);
 };
 
 const createDailySchema = () => ({
-  type: "object",
-  properties: {
-    mittag: { type: "object", properties: { suppe: { type: "string" }, dessert: { type: "string" }, menu: { type: "string" }, vegi: { type: "string" } }, required: ["suppe", "dessert", "menu", "vegi"] },
-    abend: { type: "object", properties: { menu: { type: "string" }, vegi: { type: "string" } }, required: ["menu", "vegi"] },
-  },
-  required: ["mittag", "abend"],
+    type: "object",
+    properties: {
+      mittag: { type: "object", properties: { suppe: { type: "string" }, dessert: { type: "string" }, menu: { type: "string" }, vegi: { type: "string" } }, required: ["suppe", "dessert", "menu", "vegi"] },
+      abend: { type: "object", properties: { menu: { type: "string" }, vegi: { type: "string" } }, required: ["menu", "vegi"] },
+    },
+    required: ["mittag", "abend"],
 });
 
 const createDailyPromptObject = (day: string, season: string, planSoFar: Partial<IdealPlan>, samples: any) => {
-  const allPreviouslyPlannedDishes = Object.values(planSoFar).flatMap(d => [ d.mittag.suppe, d.mittag.dessert, d.mittag.menu, d.mittag.vegi, d.abend.menu, d.abend.vegi ]);
-  const rules = [
-    `**SAISONALITÄT:** Bevorzuge Gerichte, die zur Jahreszeit '${season}' passen.`,
-    `**STRIKTE ABWECHSLUNG (WICHTIGSTE REGEL):** Wiederhole ABSOLUT KEIN Gericht, das bereits geplant wurde. Verbotene Gerichte sind: ${JSON.stringify(allPreviouslyPlannedDishes)}. Keine ähnlichen Gerichte (z.B. keine zwei Suppen mit Karotten)!`,
-    "**DATENBANK:** Nutze NUR Gerichte aus dem Rezept-Auszug.",
-    "**STRUKTUR:** Fülle IMMER alle Felder aus.",
-    "**FLEISCH-LIMIT:** Plane max. 3-4 Fleischgerichte in der GANZEN Woche.",
-    "**VEGI-TAG:** EIN Tag der Woche muss ein Vegi-Tag sein.",
-    "**VEGI-ABENDESSEN-REGEL:** Wenn 'abend.menu' vegetarisch ist, MUSS 'abend.vegi' exakt das gleiche Gericht sein.",
-    "**KEINE BACKSLASHES ODER SONDERZEICHEN:** Verwende reine Textnamen ohne \\, /, Zeilenumbrüche oder ähnliches!"
-  ];
-  if (day === 'Freitag') {
-    rules.push("**FISCH-FREITAG (STRIKT):** Das `mittag.menu` MUSS ein Fischgericht sein.");
-  } else {
-    rules.push("**KEIN FISCH:** An diesem Tag darf KEIN Fischgericht geplant werden.");
-  }
-  return {
-    role: "KI-Küchenchef für ein Schweizer Altersheim mit Fokus auf hohe Qualität und Abwechslung",
-    task: "Erstelle den Menüplan für EINEN EINZELNEN Tag und befolge die Regeln strikt.",
-    context: { day_to_plan: day, season: season, plan_so_far_this_week: planSoFar },
-    rules: rules,
-    data_source_sample: samples,
-    output_format_instruction: `Generiere den **vollständigen** JSON-Plan NUR für den Tag **${day}**. Halte dich exakt an die Regeln.`
-  };
+    const allPreviouslyPlannedDishes = Object.values(planSoFar).flatMap(d => [ d.mittag.suppe, d.mittag.dessert, d.mittag.menu, d.mittag.vegi, d.abend.menu, d.abend.vegi ]);
+    const rules = [
+      `**SAISONALITÄT:** Bevorzuge Gerichte, die zur Jahreszeit '${season}' passen.`,
+      `**STRIKTE ABWECHSLUNG (WICHTIGSTE REGEL):** Wiederhole ABSOLUT KEIN Gericht, das bereits geplant wurde. Verbotene Gerichte sind: ${JSON.stringify(allPreviouslyPlannedDishes)}`,
+      "**DATENBANK:** Nutze NUR Gerichte aus dem Rezept-Auszug.",
+      "**STRUKTUR:** Fülle IMMER alle Felder aus.",
+      "**FLEISCH-LIMIT:** Plane max. 3-4 Fleischgerichte in der GANZEN Woche.",
+      "**VEGI-TAG:** EIN Tag der Woche muss ein Vegi-Tag sein.",
+      "**VEGI-ABENDESSEN-REGEL:** Wenn 'abend.menu' vegetarisch ist, MUSS 'abend.vegi' exakt das gleiche Gericht sein."
+    ];
+    if (day === 'Freitag') {
+      rules.push("**FISCH-FREITAG (STRIKT):** Das `mittag.menu` MUSS ein Fischgericht sein.");
+    } else {
+      rules.push("**KEIN FISCH:** An diesem Tag darf KEIN Fischgericht geplant werden.");
+    }
+    return {
+        role: "KI-Küchenchef für ein Schweizer Altersheim mit Fokus auf hohe Qualität und Abwechslung",
+        task: "Erstelle den Menüplan für EINEN EINZELNEN Tag und befolge die Regeln strikt.",
+        context: { day_to_plan: day, season: season, plan_so_far_this_week: planSoFar },
+        rules: rules,
+        data_source_sample: samples,
+        output_format_instruction: `Generiere den **vollständigen** JSON-Plan NUR für den Tag **${day}**. Halte dich exakt an die Regeln.`
+    };
 };
 
 /* ---- COMPONENT ---- */
@@ -106,93 +85,58 @@ export const WeeklyPlanSuggestion: React.FC<WeeklyPlanSuggestionProps> = ({ curr
       mittagessen: { suppe: getSample(recipes.mittagessen.suppe, 12), dessert: getSample(recipes.mittagessen.dessert, 12), menu: getSample(recipes.mittagessen.menu, 20), vegi: getSample(recipes.mittagessen.vegi, 20), fisch: getSample(recipes.mittagessen.fisch, 10) },
       abendessen: { menu: getSample(recipes.abendessen.menu, 20), vegi: getSample(recipes.abendessen.vegi, 20) },
     };
-
+    
     const fullPlan: Partial<IdealPlan> = {};
-
+    
     try {
       for (const day of DAYS) {
         const dailySchema = createDailySchema();
 
         let dayPlan: DayPlan | null = null;
         let attempts = 0;
-        const maxAttempts = 5; // Increased for robustness
-        const baseDelay = 2000; // 2 seconds base delay for retries
+        const maxAttempts = 3;
 
         const hasRepetitions = (newDayPlan: DayPlan, existingPlan: Partial<IdealPlan>) => {
-          const allExistingDishes = Object.values(existingPlan).flatMap(d => [d.mittag.suppe, d.mittag.dessert, d.mittag.menu, d.mittag.vegi, d.abend.menu, d.abend.vegi]);
-          const newDishes = [newDayPlan.mittag.suppe, newDayPlan.mittag.dessert, newDayPlan.mittag.menu, newDayPlan.mittag.vegi, newDayPlan.abend.menu, newDayPlan.abend.vegi];
-          
-          // Strict check for exact matches and similarity
-          return newDishes.some(newDish => allExistingDishes.some(existing => {
-            if (existing === newDish) return true; // Exactly the same
-            // Consider dishes too similar if their difference is small (e.g., "Karottensuppe" vs "Karotten-Suppe")
-            return levenshteinDistance(newDish, existing) < 5; 
-          }));
+            const allExistingDishes = Object.values(existingPlan).flatMap(d => [d.mittag.suppe, d.mittag.dessert, d.mittag.menu, d.mittag.vegi, d.abend.menu, d.abend.vegi]);
+            const newDishes = [newDayPlan.mittag.suppe, newDayPlan.mittag.dessert, newDayPlan.mittag.menu, newDayPlan.mittag.vegi, newDayPlan.abend.menu, newDayPlan.abend.vegi];
+            return newDishes.some(dish => allExistingDishes.includes(dish));
         };
 
         while (attempts < maxAttempts) {
-          console.log(`Generating plan for ${day}, attempt ${attempts + 1}`);
-
-          let dailyPromptObject = createDailyPromptObject(day, getSeason(currentDate), fullPlan, samples);
-          if (attempts > 0) {
-            dailyPromptObject.rules.push(`**RETRY-ANWEISUNG (SEHR WICHTIG):** Dein letzter Versuch hatte Wiederholungen oder Formatfehler. Generiere einen KOMPLETT NEUEN Plan mit 100% EINZIGARTIGEN Gerichten! Keine Backslashes!`);
-          }
-
-          const res = await fetch('/.netlify/functions/generate', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ prompt: JSON.stringify(dailyPromptObject), schema: dailySchema }),
-          });
-
-          if (!res.ok) {
-            if (res.status === 429) {
-              const delayTime = baseDelay * Math.pow(2, attempts);
-              console.log(`Rate-Limit reached. Waiting ${delayTime/1000} seconds...`);
-              await new Promise(resolve => setTimeout(resolve, delayTime));
-            } else if (attempts === maxAttempts - 1) {
-              const errorBody = await res.text();
-              throw new Error(`API-Fehler für ${day} nach ${maxAttempts} Versuchen. Status: ${res.status}. Body: ${errorBody}`);
+            console.log(`Generating plan for ${day}, attempt ${attempts + 1}`);
+            
+            let dailyPromptObject = createDailyPromptObject(day, getSeason(currentDate), fullPlan, samples);
+            if (attempts > 0) {
+                dailyPromptObject.rules.push(`**RETRY-ANWEISUNG:** Dein letzter Versuch für ${day} war repetitiv. Generiere einen komplett NEUEN, EINZIGARTIGEN Plan!`);
             }
-            attempts++;
-            continue;
-          }
 
-          const data = await res.json();
-          let potentialText = data.text.trim();
-          
-          // Sanitize the text before parsing
-          potentialText = potentialText
-            .replace(/\\/g, '')  // Remove backslashes
-            .replace(/\\n/g, ' ').replace(/\n/g, ' ')
-            .replace(/\\r/g, '').replace(/\r/g, '')
-            .replace(/\\t/g, ' ').replace(/\t/g, '')
-            .replace(/\\"/g, '"'); // Fix escaped quotes
+            const res = await fetch('/.netlify/functions/generate', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ promptObject: dailyPromptObject, schema: dailySchema }),
+            });
 
-          let potentialPlan;
-          try {
-            potentialPlan = JSON.parse(potentialText);
-          } catch (parseErr) {
-            console.warn(`Parse error for ${day}:`, parseErr, "Raw text:", potentialText);
-            attempts++;
-            continue;
-          }
+            if (!res.ok) {
+                const errorBody = await res.json().catch(() => ({error: "Unbekannter Serverfehler"}));
+                if (attempts === maxAttempts - 1) throw new Error(`API-Fehler für ${day}: ${errorBody.error}`);
+                attempts++;
+                continue;
+            }
+            
+            const data = await res.json();
+            const potentialPlan: DayPlan = JSON.parse(data.text.trim());
 
-          // Full validation
-          if (potentialPlan.mittag && potentialPlan.abend && 
-              potentialPlan.mittag.suppe && potentialPlan.mittag.dessert && 
-              potentialPlan.mittag.menu && potentialPlan.mittag.vegi &&
-              potentialPlan.abend.menu && potentialPlan.abend.vegi &&
-              !hasRepetitions(potentialPlan, fullPlan)) {
-            dayPlan = potentialPlan;
-            break;
-          } else {
-            console.warn(`Invalid or repetitive plan for ${day}.`);
-            attempts++;
-          }
+            if (potentialPlan.mittag && potentialPlan.abend && !hasRepetitions(potentialPlan, fullPlan)) {
+                dayPlan = potentialPlan;
+                break;
+            } else {
+                console.warn(`Ungültiger oder repetitiver Plan für ${day}.`, potentialPlan);
+                attempts++;
+            }
         }
 
         if (!dayPlan) {
-          throw new Error(`Konnte nach ${maxAttempts} Versuchen keinen gültigen Plan für ${day} erstellen.`);
+            throw new Error(`Konnte nach ${maxAttempts} Versuchen keinen gültigen Plan für ${day} erstellen.`);
         }
 
         fullPlan[day] = dayPlan;
@@ -233,12 +177,11 @@ export const WeeklyPlanSuggestion: React.FC<WeeklyPlanSuggestionProps> = ({ curr
           <p className="text-sm text-slate-500">Basierend auf dem CURAVIVA-Leitfaden für gesunde Ernährung im Alter.</p>
         </div>
         <div className="flex gap-2">
-          <button onClick={generatePlan} disabled={isLoading} className="bg-white border border-slate-300 text-slate-700 font-semibold px-4 py-2 rounded-lg hover:bg-slate-50 disabled:bg-slate-100 disabled:cursor-not-allowed transition-all flex items-center gap-2">
-            {isLoading && <div className="w-4 h-4 border-2 border-slate-300 border-t-slate-600 rounded-full animate-spin"></div>}
+          <button onClick={generatePlan} disabled={isLoading} className="bg-white border border-slate-300 text-slate-700 font-semibold px-4 py-2 rounded-lg hover:bg-slate-50 disabled:bg-slate-100 disabled:cursor-not-allowed">
             {isLoading ? 'Wird generiert...' : 'Neue Empfehlung'}
           </button>
           {idealPlan && Object.keys(idealPlan).length === 7 && (
-            <button onClick={applyFullPlan} className="bg-emerald-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-emerald-700 transition-all">
+            <button onClick={applyFullPlan} className="bg-emerald-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-emerald-700">
               Alles übernehmen
             </button>
           )}
@@ -253,10 +196,10 @@ export const WeeklyPlanSuggestion: React.FC<WeeklyPlanSuggestionProps> = ({ curr
           <table className="min-w-full text-sm border-collapse border border-slate-200">
             <thead className="bg-slate-50 text-slate-600">
               <tr>
-                <th rowSpan={2} className="p-3 font-semibold text-left border-b border-r align-bottom">Tag</th>
+                <th rowSpan={2} className="p-3 font-semibold text-left border-b border-r">Tag</th>
                 <th colSpan={4} className="p-3 font-semibold text-center border-b">Mittagessen</th>
                 <th colSpan={2} className="p-3 font-semibold text-center border-b border-l">Abendessen</th>
-                <th rowSpan={2} className="p-3 font-semibold text-center border-b border-l align-bottom">Aktion</th>
+                <th rowSpan={2} className="p-3 font-semibold text-center border-b border-l">Aktion</th>
               </tr>
               <tr>
                 {MEAL_TYPES.mittag.map(c => <th key={`h-m-${c}`} className="p-2 font-medium text-center border-b">{HEADER_LABELS[c]}</th>)}
@@ -265,7 +208,7 @@ export const WeeklyPlanSuggestion: React.FC<WeeklyPlanSuggestionProps> = ({ curr
             </thead>
             <tbody className="bg-white">
               {DAYS.map(day => (
-                <tr key={day} className="hover:bg-slate-50/50 transition-colors">
+                <tr key={day} className="hover:bg-slate-50/50">
                   <td className="p-3 font-bold border-r">{day} {isLoading && !idealPlan[day] && <span className="animate-spin inline-block ml-2 w-3 h-3 border-2 border-slate-200 border-t-slate-500 rounded-full"></span>}</td>
                   {MEAL_TYPES.mittag.map(c => <td key={`c-m-${c}`} className="p-3 text-slate-700 hover:bg-blue-50 cursor-pointer" onClick={() => idealPlan[day] && applyMeal(day, 'mittag', c)}>{idealPlan[day]?.mittag?.[c] ?? ''}</td>)}
                   {MEAL_TYPES.abend.map(c => <td key={`c-a-${c}`} className="p-3 text-slate-700 hover:bg-blue-50 cursor-pointer border-l" onClick={() => idealPlan[day] && applyMeal(day, 'abend', c)}>{idealPlan[day]?.abend?.[c] ?? ''}</td>)}
