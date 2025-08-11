@@ -423,7 +423,7 @@ export const SelectionModal: React.FC<SelectionModalProps> = ({
           </div>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-6 flex-1 overflow-hidden">
+        <div className="grid md:grid-cols-2 gap-6 flex-1">
           <div className="flex flex-col">
             <div className="flex justify-between items-center mb-3">
               <h4 className="font-semibold text-slate-700">Aus Datenbank</h4>
