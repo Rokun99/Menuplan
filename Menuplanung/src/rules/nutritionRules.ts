@@ -1,4 +1,3 @@
-
 import { Recipe } from '../hooks/useRecipes';
 
 // Daily targets for a 62kg resident, based on the guide
