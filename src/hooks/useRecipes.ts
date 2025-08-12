@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Recipe, Nutrition, PortionConfig, Ingredient, FoodGroup, Allergen } from '../domain/types';
+import { Recipe, PortionConfig, Ingredient, FoodGroup, Allergen } from '../domain/types';
 import { validateRecipes } from '../domain/guards';
 
 // Defines the location and structure of the recipe data files.
@@ -26,7 +26,7 @@ function normalizeAllergens(list: (string | Allergen)[] = []): Allergen[] {
   return Array.from(new Set(mapped)).filter(Boolean) as Allergen[];
 }
 
-// Transforms raw recipe data (from any format) into the canonical Recipe type.
+// Transforms raw recipe data into the canonical Recipe type.
 const transformToCanonicalRecipe = (
     raw: any,
     sourceCategory: string
@@ -88,8 +88,7 @@ export const useRecipes = () => {
         const allRawRecipes: any[] = [];
         recipeResponses.forEach((json, index) => {
           const fileInfo = DATA_FILES[index];
-          // CORRECTED: Simplified logic. This now works for all files, including 'abendessen.json'.
-          // The special 'if' case for abendessen has been removed.
+          // CORRECTED: This simplified logic now works for all files.
           const recipesArray: any[] = json[fileInfo.key] || [];
 
           recipesArray.forEach((raw: any) => {
