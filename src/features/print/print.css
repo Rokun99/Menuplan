@@ -1,0 +1,93 @@
+/* General styling for the print view page */
+.print-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.print-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10pt;
+}
+
+.print-table th, .print-table td {
+    border: 1px solid #e2e8f0;
+    padding: 0.5rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.print-table th {
+    background-color: #f8fafc;
+    font-weight: 600;
+}
+
+.print-table .day-column {
+    width: 10%;
+    font-weight: 700;
+}
+
+.print-table .meal-category {
+    font-weight: 600;
+    color: #475569;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid #f1f5f9;
+    margin-bottom: 0.25rem;
+    font-size: 9pt;
+}
+
+.print-table .allergens {
+    font-size: 8pt;
+    color: #64748b;
+    margin-top: 0.5rem;
+}
+
+.print-table .allergens-label {
+    font-weight: 600;
+}
+
+
+/* Styles for the actual print media */
+@media print {
+    body {
+        background-color: #fff;
+        font-size: 10pt;
+    }
+    
+    #root {
+        padding: 0;
+        margin: 0;
+    }
+
+    .print-container {
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+    }
+    
+    .print-controls {
+        display: none !important;
+    }
+
+    .print-table {
+        page-break-inside: auto;
+    }
+
+    .print-table tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+    
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}

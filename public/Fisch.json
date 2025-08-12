@@ -1,0 +1,1177 @@
+{
+  "fisch": [
+    {
+      "recipeId": "f_dorade_safran_kartoffeln_spinat",
+      "name": "Gebratene Dorade an Safransauce mit Salzkartoffeln und Blattspinat",
+      "tags": ["fish"],
+      "allergens": ["Fisch", "Milch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 500, "portionGByGroup": { "erwachsene": 520, "senioren": 460, "kinder": 380 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 690, "basePortionG": 500 },
+      "kcal": 690,
+      "protein": 42,
+      "fat": 38,
+      "ingredients": [
+        { "ingredientId": "dorade", "name": "Dorade", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 200, "grams": 200, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "spinat", "name": "Blattspinat", "qtyPerBasePortionG": 120, "grams": 120, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_dorsch_dill_petersilienkartoffeln_rahmsauerkraut",
+      "name": "Dorschfilet an Dillsauce mit Petersilienkartoffeln und Rahmsauerkraut",
+      "tags": ["fish"],
+      "allergens": ["Fisch", "Milch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 500, "portionGByGroup": { "erwachsene": 520, "senioren": 460, "kinder": 380 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 670, "basePortionG": 500 },
+      "kcal": 670,
+      "protein": 42,
+      "fat": 35,
+      "ingredients": [
+        { "ingredientId": "dorsch", "name": "Dorschfilet", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 200, "grams": 200, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "sauerkraut", "name": "Sauerkraut", "qtyPerBasePortionG": 150, "grams": 150, "category": "Trockenwaren & Kolonial", "categoryKey": "dry_goods" }
+      ]
+    },
+    {
+      "recipeId": "f_zander_weisswein_safranrisotto_broccoli",
+      "name": "Zanderfilet an Weissweinsauce mit Safranrisotto und Broccoli",
+      "tags": ["fish"],
+      "allergens": ["Fisch", "Milch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 450, "portionGByGroup": { "erwachsene": 470, "senioren": 400, "kinder": 330 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 740, "basePortionG": 450 },
+      "kcal": 740,
+      "protein": 45,
+      "fat": 42,
+      "ingredients": [
+        { "ingredientId": "zanderfilet", "name": "Zanderfilet", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "risottoreis", "name": "Risottoreis", "qtyPerBasePortionG": 80, "grams": 80, "category": "Trockenwaren & Kolonial", "categoryKey": "dry_goods" },
+        { "ingredientId": "broccoli", "name": "Broccoli", "qtyPerBasePortionG": 120, "grams": 120, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_lachs_dillrahm_nudeln_spinat",
+      "name": "Gebratenes Lachsfilet an Dillrahm mit Butternudeln und Spinat",
+      "tags": ["fish"],
+      "allergens": ["Fisch", "Gluten", "Milch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 450, "portionGByGroup": { "erwachsene": 470, "senioren": 400, "kinder": 330 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 750, "basePortionG": 450 },
+      "kcal": 750,
+      "protein": 42,
+      "fat": 45,
+      "ingredients": [
+        { "ingredientId": "lachsfilet", "name": "Lachsfilet", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "nudeln", "name": "Nudeln", "qtyPerBasePortionG": 100, "grams": 100, "category": "Trockenwaren & Kolonial", "categoryKey": "dry_goods" },
+        { "ingredientId": "spinat", "name": "Blattspinat", "qtyPerBasePortionG": 120, "grams": 120, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_saibling_limette_reis_chinakohl",
+      "name": "Saiblingsfilet an Limettensauce mit Kräuter-Reis und Chinakohl",
+      "tags": ["fish"],
+      "allergens": ["Fisch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 450, "portionGByGroup": { "erwachsene": 470, "senioren": 400, "kinder": 330 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 680, "basePortionG": 450 },
+      "kcal": 680,
+      "protein": 40,
+      "fat": 38,
+      "ingredients": [
+        { "ingredientId": "saibling", "name": "Saiblingsfilet", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "reis", "name": "Reis", "qtyPerBasePortionG": 80, "grams": 80, "category": "Trockenwaren & Kolonial", "categoryKey": "dry_goods" },
+        { "ingredientId": "chinakohl", "name": "Chinakohl", "qtyPerBasePortionG": 120, "grams": 120, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_kabeljau_dijon_pueree_spinat",
+      "name": "Kabeljaufilet an Dijonsenfsauce mit Kartoffelpüree und Spinat",
+      "tags": ["fish"],
+      "allergens": ["Fisch", "Milch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 500, "portionGByGroup": { "erwachsene": 520, "senioren": 460, "kinder": 380 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 680, "basePortionG": 500 },
+      "kcal": 680,
+      "protein": 45,
+      "fat": 35,
+      "ingredients": [
+        { "ingredientId": "kabeljau", "name": "Kabeljaufilet", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "kartoffelpueree", "name": "Kartoffelpüree", "qtyPerBasePortionG": 250, "grams": 250, "category": "Molkereiprodukte", "categoryKey": "dairy" },
+        { "ingredientId": "spinat", "name": "Blattspinat", "qtyPerBasePortionG": 120, "grams": 120, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_forelle_muellerin_kartoffeln_blattspinat",
+      "name": "Forelle nach Müllerin Art mit Petersilienkartoffeln und Blattspinat",
+      "tags": ["fish", "classic"],
+      "allergens": ["Fisch", "Gluten", "Milch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 500, "portionGByGroup": { "erwachsene": 520, "senioren": 460, "kinder": 380 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 700, "basePortionG": 500 },
+      "kcal": 700,
+      "protein": 45,
+      "fat": 40,
+      "ingredients": [
+        { "ingredientId": "forelle", "name": "Forelle (ganz/halbiert)", "qtyPerBasePortionG": 220, "grams": 220, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 200, "grams": 200, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "spinat", "name": "Blattspinat", "qtyPerBasePortionG": 100, "grams": 100, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_zanderknusperli_tatarsauce_kartoffeln_salat",
+      "name": "Zanderknusperli mit Tatarsauce, Salzkartoffeln und Salat",
+      "tags": ["fish", "fried"],
+      "allergens": ["Fisch", "Gluten", "Eier"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 500, "portionGByGroup": { "erwachsene": 520, "senioren": 460, "kinder": 380 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 680, "basePortionG": 500 },
+      "kcal": 680,
+      "protein": 32,
+      "fat": 35,
+      "ingredients": [
+        { "ingredientId": "zanderknusperli", "name": "Zanderknusperli (paniert)", "qtyPerBasePortionG": 150, "grams": 150, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 200, "grams": 200, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "salat", "name": "Salatgarnitur", "qtyPerBasePortionG": 150, "grams": 150, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_eglifilets_bierteig_tatarsauce_salat",
+      "name": "Eglifilets im Bierteig mit Tatarsauce und Salat",
+      "tags": ["fish", "fried"],
+      "allergens": ["Fisch", "Gluten", "Eier"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 500, "portionGByGroup": { "erwachsene": 520, "senioren": 460, "kinder": 380 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 680, "basePortionG": 500 },
+      "kcal": 680,
+      "protein": 35,
+      "fat": 40,
+      "ingredients": [
+        { "ingredientId": "egli", "name": "Eglifilets (paniert)", "qtyPerBasePortionG": 150, "grams": 150, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "salat", "name": "Salatgarnitur", "qtyPerBasePortionG": 150, "grams": 150, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 200, "grams": 200, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_seehecht_paniert_zitronenquark_reis_wirsing",
+      "name": "Paniertes Seehechtfilet mit Zitronenquark, Kräuter-Reis und Rahmwirsing",
+      "tags": ["fish", "fried"],
+      "allergens": ["Fisch", "Gluten", "Eier", "Milch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 450, "portionGByGroup": { "erwachsene": 470, "senioren": 400, "kinder": 330 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 700, "basePortionG": 450 },
+      "kcal": 700,
+      "protein": 38,
+      "fat": 38,
+      "ingredients": [
+        { "ingredientId": "seehecht", "name": "Seehechtfilet (paniert)", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "reis", "name": "Reis", "qtyPerBasePortionG": 80, "grams": 80, "category": "Trockenwaren & Kolonial", "categoryKey": "dry_goods" },
+        { "ingredientId": "wirsing", "name": "Wirsing (Rahm)", "qtyPerBasePortionG": 120, "grams": 120, "category": "Molkereiprodukte", "categoryKey": "dairy" }
+      ]
+    },
+    {
+      "recipeId": "f_wolfsbarsch_grenobler_kartoffeln_lattich",
+      "name": "Wolfsbarschfilet 'Grenobler Art' mit Bratkartoffeln und Lattich",
+      "tags": ["fish"],
+      "allergens": ["Fisch", "Milch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 500, "portionGByGroup": { "erwachsene": 520, "senioren": 460, "kinder": 380 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 720, "basePortionG": 500 },
+      "kcal": 720,
+      "protein": 45,
+      "fat": 42,
+      "ingredients": [
+        { "ingredientId": "wolfsbarsch", "name": "Wolfsbarschfilet", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "bratkartoffeln", "name": "Bratkartoffeln", "qtyPerBasePortionG": 220, "grams": 220, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "lattich", "name": "Lattich", "qtyPerBasePortionG": 100, "grams": 100, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_heilbutt_rahmwirsing_kartoffeln",
+      "name": "Pochierter Heilbutt auf Rahmwirsing mit Salzkartoffeln",
+      "tags": ["fish"],
+      "allergens": ["Fisch", "Milch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 500, "portionGByGroup": { "erwachsene": 520, "senioren": 460, "kinder": 380 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 690, "basePortionG": 500 },
+      "kcal": 690,
+      "protein": 45,
+      "fat": 36,
+      "ingredients": [
+        { "ingredientId": "heilbutt", "name": "Heilbuttfilet", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "wirsing", "name": "Wirsing (Rahm)", "qtyPerBasePortionG": 120, "grams": 120, "category": "Molkereiprodukte", "categoryKey": "dairy" },
+        { "ingredientId": "kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 200, "grams": 200, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_felchen_bielerart_kartoffeln_spinat",
+      "name": "Felchenfilet nach Bieler Art mit Salzkartoffeln und gehacktem Spinat",
+      "tags": ["fish"],
+      "allergens": ["Fisch", "Milch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 500, "portionGByGroup": { "erwachsene": 520, "senioren": 460, "kinder": 380 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 650, "basePortionG": 500 },
+      "kcal": 650,
+      "protein": 40,
+      "fat": 35,
+      "ingredients": [
+        { "ingredientId": "felchen", "name": "Felchenfilet", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 200, "grams": 200, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "spinat", "name": "Gehackter Spinat", "qtyPerBasePortionG": 120, "grams": 120, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_paella_marinera",
+      "name": "Paella Marinera mit Meeresfrüchten (optional Poulet) und Erbsen",
+      "tags": ["fish", "rice", "crustaceans"],
+      "allergens": ["Krebstiere", "Fisch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 450, "portionGByGroup": { "erwachsene": 470, "senioren": 400, "kinder": 330 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 760, "basePortionG": 450 },
+      "kcal": 760,
+      "protein": 48,
+      "fat": 32,
+      "ingredients": [
+        { "ingredientId": "reis", "name": "Reis", "qtyPerBasePortionG": 100, "grams": 100, "category": "Trockenwaren & Kolonial", "categoryKey": "dry_goods" },
+        { "ingredientId": "meeresfruechte", "name": "Meeresfrüchte-Mix", "qtyPerBasePortionG": 120, "grams": 120, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "erbsen", "name": "Erbsen", "qtyPerBasePortionG": 80, "grams": 80, "category": "Tiefkühlprodukte", "categoryKey": "frozen" }
+      ]
+    },
+    {
+      "recipeId": "f_fischcurry_kokos_kichererbsen_reis",
+      "name": "Fisch-Curry 'Madras' mit Kokosmilch, Kichererbsen und Basmatireis",
+      "tags": ["fish", "curry"],
+      "allergens": ["Fisch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 450, "portionGByGroup": { "erwachsene": 470, "senioren": 400, "kinder": 330 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 700, "basePortionG": 450 },
+      "kcal": 700,
+      "protein": 35,
+      "fat": 35,
+      "ingredients": [
+        { "ingredientId": "fischwuerfel", "name": "Fischwürfel (festkochend)", "qtyPerBasePortionG": 150, "grams": 150, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "reis", "name": "Basmatireis", "qtyPerBasePortionG": 80, "grams": 80, "category": "Trockenwaren & Kolonial", "categoryKey": "dry_goods" },
+        { "ingredientId": "kichererbsen", "name": "Kichererbsen (gegart)", "qtyPerBasePortionG": 80, "grams": 80, "category": "Trockenwaren & Kolonial", "categoryKey": "dry_goods" }
+      ]
+    },
+    {
+      "recipeId": "f_thunfischsteak_grill_ofengemuese_kartoffeln",
+      "name": "Gegrilltes Thunfischsteak mit Ofengemüse und Rosmarinkartoffeln",
+      "tags": ["fish", "grill"],
+      "allergens": ["Fisch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 500, "portionGByGroup": { "erwachsene": 520, "senioren": 460, "kinder": 380 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 720, "basePortionG": 500 },
+      "kcal": 720,
+      "protein": 48,
+      "fat": 38,
+      "ingredients": [
+        { "ingredientId": "thunfischsteak", "name": "Thunfischsteak", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "ofengemuese", "name": "Ofengemüse", "qtyPerBasePortionG": 120, "grams": 120, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 200, "grams": 200, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_lachs_spinat_lasagne",
+      "name": "Lachs-Spinat-Lasagne mit Bechamelsauce",
+      "tags": ["fish", "pasta", "oven"],
+      "allergens": ["Fisch", "Gluten", "Milch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 450, "portionGByGroup": { "erwachsene": 470, "senioren": 400, "kinder": 330 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 750, "basePortionG": 450 },
+      "kcal": 750,
+      "protein": 38,
+      "fat": 42,
+      "ingredients": [
+        { "ingredientId": "lachsfilet", "name": "Lachsfilet", "qtyPerBasePortionG": 120, "grams": 120, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "lasagneblaetter", "name": "Lasagneblätter", "qtyPerBasePortionG": 80, "grams": 80, "category": "Trockenwaren & Kolonial", "categoryKey": "dry_goods" },
+        { "ingredientId": "spinat", "name": "Spinat", "qtyPerBasePortionG": 120, "grams": 120, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_fischstaebchen_dillsauce_kartoffeln_rahmspinat",
+      "name": "Gebackene Fischstäbchen mit Dillsauce, Salzkartoffeln und Rahmspinat",
+      "tags": ["fish", "kids"],
+      "allergens": ["Fisch", "Gluten", "Milch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 500, "portionGByGroup": { "erwachsene": 520, "senioren": 460, "kinder": 380 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 600, "basePortionG": 500 },
+      "kcal": 600,
+      "protein": 25,
+      "fat": 30,
+      "ingredients": [
+        { "ingredientId": "fischstaebchen", "name": "Fischstäbchen", "qtyPerBasePortionG": 150, "grams": 150, "category": "Tiefkühlprodukte", "categoryKey": "frozen" },
+        { "ingredientId": "kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 200, "grams": 200, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "rahmspinat", "name": "Rahmspinat", "qtyPerBasePortionG": 150, "grams": 150, "category": "Molkereiprodukte", "categoryKey": "dairy" }
+      ]
+    },
+    {
+      "recipeId": "f_bouillabaisse_rouille_croutons",
+      "name": "Bouillabaisse (Fischsuppe) mit Croutons und Rouille",
+      "tags": ["fish", "soup", "crustaceans", "molluscs"],
+      "allergens": ["Fisch", "Krebstiere", "Weichtiere", "Gluten", "Eier"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 400, "portionGByGroup": { "erwachsene": 420, "senioren": 360, "kinder": 300 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 650, "basePortionG": 400 },
+      "kcal": 650,
+      "protein": 35,
+      "fat": 32,
+      "ingredients": [
+        { "ingredientId": "fischmix", "name": "Fisch- & Meeresfrüchtemix", "qtyPerBasePortionG": 200, "grams": 200, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "brot", "name": "Brot (Croutons)", "qtyPerBasePortionG": 60, "grams": 60, "category": "Bäckerei", "categoryKey": "bakery" }
+      ]
+    },
+    {
+      "recipeId": "f_calamares_aioli_suesskartoffelfries_salat",
+      "name": "Gebackene Calamares mit Limetten-Aioli, Süsskartoffel-Frites und Salat",
+      "tags": ["molluscs", "fried"],
+      "allergens": ["Weichtiere", "Eier", "Gluten"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 430, "portionGByGroup": { "erwachsene": 450, "senioren": 380, "kinder": 320 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 710, "basePortionG": 430 },
+      "kcal": 710,
+      "protein": 25,
+      "fat": 46,
+      "ingredients": [
+        { "ingredientId": "calamares", "name": "Calamares (paniert)", "qtyPerBasePortionG": 150, "grams": 150, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "suesskartoffeln", "name": "Süsskartoffeln (Frites)", "qtyPerBasePortionG": 180, "grams": 180, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "salat", "name": "Salatgarnitur", "qtyPerBasePortionG": 100, "grams": 100, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+        {
+      "recipeId": "f-lachs-dillrahm-salzkartoffeln-spinat",
+      "name": "Gebratenes Lachsfilet an Dillrahmsauce mit Salzkartoffeln und Spinat",
+      "allergens": ["Fisch", "Milch"],
+      "kcal": 720,
+      "protein": 42,
+      "fat": 45,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Lachsfilet", "grams": 180, "category": "Tiefkühlprodukte" },
+        { "name": "Kartoffeln", "grams": 200, "category": "Gemüse & Früchte" },
+        { "name": "Spinat", "grams": 150, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-zander-weisswein-risotto-broccoli",
+      "name": "Gebratenes Zanderfilet an Weissweinsauce mit Safranrisotto und Broccoli",
+      "allergens": ["Fisch", "Milch"],
+      "kcal": 740,
+      "protein": 45,
+      "fat": 42,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Zanderfilet", "grams": 180, "category": "Tiefkühlprodukte" },
+        { "name": "Risottoreis", "grams": 80, "category": "Trockenwaren & Kolonial" },
+        { "name": "Broccoli", "grams": 150, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-dorade-safran-kartoffeln-spinat",
+      "name": "Gebratenes Doradenfilet an Safransauce mit Salzkartoffeln und Spinat",
+      "allergens": ["Fisch", "Milch"],
+      "kcal": 690,
+      "protein": 40,
+      "fat": 38,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Doradenfilet", "grams": 180, "category": "Tiefkühlprodukte" },
+        { "name": "Kartoffeln", "grams": 200, "category": "Gemüse & Früchte" },
+        { "name": "Spinat", "grams": 150, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-saibling-limette-reis-chinakohl",
+      "name": "Gebratenes Saiblingsfilet an Limettensauce mit Kräuter-Reis und Chinakohl",
+      "allergens": ["Fisch", "Milch"],
+      "kcal": 680,
+      "protein": 40,
+      "fat": 38,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Saiblingsfilet", "grams": 180, "category": "Tiefkühlprodukte" },
+        { "name": "Reis", "grams": 80, "category": "Trockenwaren & Kolonial" },
+        { "name": "Chinakohl", "grams": 150, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-kabeljau-dijonkartoffel-spinat",
+      "name": "Gebratenes Kabeljaufilet an Dijonsenfsauce mit Kartoffelpüree und Spinat",
+      "allergens": ["Fisch", "Milch"],
+      "kcal": 680,
+      "protein": 45,
+      "fat": 35,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Kabeljaufilet", "grams": 180, "category": "Tiefkühlprodukte" },
+        { "name": "Kartoffeln", "grams": 200, "category": "Gemüse & Früchte" },
+        { "name": "Milch", "grams": 50, "category": "Molkereiprodukte" },
+        { "name": "Spinat", "grams": 150, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-seehecht-paniert-zitronenquark-reis-wirsing",
+      "name": "Paniertes Seehechtfilet an Zitronenquarksauce mit Kräuter-Reis und Rahmwirsing",
+      "allergens": ["Fisch", "Gluten", "Eier", "Milch"],
+      "kcal": 700,
+      "protein": 38,
+      "fat": 38,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Seehechtfilet", "grams": 180, "category": "Tiefkühlprodukte" },
+        { "name": "Reis", "grams": 80, "category": "Trockenwaren & Kolonial" },
+        { "name": "Wirsing", "grams": 150, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-forelle-muellerin-kartoffeln-spinat",
+      "name": "Forelle nach Art der Müllerin mit Petersilienkartoffeln und Blattspinat",
+      "allergens": ["Fisch", "Milch", "Gluten"],
+      "kcal": 700,
+      "protein": 45,
+      "fat": 40,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Forelle", "grams": 250, "category": "Tiefkühlprodukte" },
+        { "name": "Kartoffeln", "grams": 200, "category": "Gemüse & Früchte" },
+        { "name": "Spinat", "grams": 150, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-wolfsbarsch-grenobler-kartoffeln-lattich",
+      "name": "Wolfsbarschfilet 'Grenobler Art' mit Zitrone, Kapern, Bratkartoffeln und Lattich",
+      "allergens": ["Fisch"],
+      "kcal": 720,
+      "protein": 45,
+      "fat": 42,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Wolfsbarschfilet", "grams": 180, "category": "Tiefkühlprodukte" },
+        { "name": "Kartoffeln", "grams": 200, "category": "Gemüse & Früchte" },
+        { "name": "Lattich", "grams": 150, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-fischragout-dillrahm-kartoffel-spinat",
+      "name": "Fischragout an Dillrahmsauce mit Kartoffelpüree und gehacktem Spinat",
+      "allergens": ["Fisch", "Milch"],
+      "kcal": 620,
+      "protein": 38,
+      "fat": 30,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Fischwürfel", "grams": 180, "category": "Tiefkühlprodukte" },
+        { "name": "Kartoffeln", "grams": 200, "category": "Gemüse & Früchte" },
+        { "name": "Spinat", "grams": 150, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-backfisch-bierteig-remoulade-kartoffelsalat",
+      "name": "Backfisch im Bierteig mit Remoulade und Kartoffelsalat",
+      "allergens": ["Fisch", "Gluten", "Eier", "Milch"],
+      "kcal": 730,
+      "protein": 35,
+      "fat": 40,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Weissfischfilet", "grams": 180, "category": "Tiefkühlprodukte" },
+        { "name": "Kartoffeln", "grams": 250, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-lachs-teriyaki-sesam-pakchoi-jasmimreis",
+      "name": "Lachs Teriyaki mit Sesam, Pak Choi und Jasminreis",
+      "allergens": ["Fisch", "Soja", "Sesam"],
+      "kcal": 700,
+      "protein": 40,
+      "fat": 35,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Lachsfilet", "grams": 160, "category": "Tiefkühlprodukte" },
+        { "name": "Reis", "grams": 80, "category": "Trockenwaren & Kolonial" },
+        { "name": "Pak Choi", "grams": 150, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-garnelen-knusper-curry-papaya",
+      "name": "Garnelen in der Knusperpanade mit Curry-Dip und Thai-Papayasalat",
+      "allergens": ["Krebstiere", "Gluten"],
+      "kcal": 680,
+      "protein": 30,
+      "fat": 38,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Garnelen", "grams": 120, "category": "Tiefkühlprodukte" },
+        { "name": "Papaya", "grams": 120, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-calamares-aioli-suesskartoffel",
+      "name": "Gebackene Calamares an Limetten-Aioli mit Süsskartoffel-Frites und Salat",
+      "allergens": ["Weichtiere", "Eier"],
+      "kcal": 710,
+      "protein": 25,
+      "fat": 46,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Calamares", "grams": 150, "category": "Tiefkühlprodukte" },
+        { "name": "Süsskartoffeln", "grams": 180, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-paella-valenciana",
+      "name": "Spanische Paella 'Valenciana' mit Riesengarnelen, Pouletbrust, Erbsen und Tomaten",
+      "allergens": ["Krebstiere"],
+      "kcal": 750,
+      "protein": 45,
+      "fat": 30,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Reis", "grams": 100, "category": "Trockenwaren & Kolonial" },
+        { "name": "Pouletbrust", "grams": 80, "category": "Metzgerei" },
+        { "name": "Riesengarnelen", "grams": 60, "category": "Tiefkühlprodukte" },
+        { "name": "Erbsen", "grams": 80, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-penne-rauchlachs-brokkoli-dill",
+      "name": "Penne mit Rauchlachs, Brokkoli und Dill in Zitronensauce",
+      "allergens": ["Fisch", "Gluten", "Milch"],
+      "kcal": 680,
+      "protein": 30,
+      "fat": 35,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Penne", "grams": 120, "category": "Trockenwaren & Kolonial" },
+        { "name": "Rauchlachs", "grams": 80, "category": "Tiefkühlprodukte" },
+        { "name": "Brokkoli", "grams": 120, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-tagliatelle-zitrone-garnelen-parmesan",
+      "name": "Zitronen-Tagliatelle mit gebratenen Garnelen und gehobeltem Parmesan",
+      "allergens": ["Krebstiere", "Gluten", "Eier", "Milch"],
+      "kcal": 720,
+      "protein": 38,
+      "fat": 35,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Tagliatelle", "grams": 120, "category": "Trockenwaren & Kolonial" },
+        { "name": "Garnelen", "grams": 120, "category": "Tiefkühlprodukte" }
+      ]
+    },
+    {
+      "recipeId": "f-thunfischsteak-ofengemuese",
+      "name": "Thunfischsteak vom Grill mit mediterranem Ofengemüse und Rosmarinkartoffeln",
+      "allergens": ["Fisch"],
+      "kcal": 720,
+      "protein": 48,
+      "fat": 38,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Thunfischsteak", "grams": 180, "category": "Tiefkühlprodukte" },
+        { "name": "Gemüsemix", "grams": 200, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-bouillabaisse-croutons-rouille",
+      "name": "Fischsuppe 'Marseiller Art' (Bouillabaisse) mit Croutons und Rouille",
+      "allergens": ["Fisch", "Krebstiere", "Weichtiere", "Gluten", "Eier"],
+      "kcal": 650,
+      "protein": 35,
+      "fat": 32,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Fisch- & Meeresfrüchtemix", "grams": 200, "category": "Tiefkühlprodukte" },
+        { "name": "Brot", "grams": 60, "category": "Bäckerei" }
+      ]
+    },
+    {
+      "recipeId": "f-lachs-spinat-lasagne",
+      "name": "Lachs-Spinat-Lasagne mit Bechamelsauce",
+      "allergens": ["Fisch", "Gluten", "Milch"],
+      "kcal": 750,
+      "protein": 38,
+      "fat": 42,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Lachsfilet", "grams": 120, "category": "Tiefkühlprodukte" },
+        { "name": "Lasagneblätter", "grams": 80, "category": "Trockenwaren & Kolonial" },
+        { "name": "Spinat", "grams": 150, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-fischstaebli-dill-salzkartoffeln-rahmspinat",
+      "name": "Gebackene Fischstäbli an Dillsauce mit Salzkartoffeln und Rahmspinat",
+      "allergens": ["Fisch", "Gluten", "Milch"],
+      "kcal": 600,
+      "protein": 25,
+      "fat": 30,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Fischstäbli", "grams": 150, "category": "Tiefkühlprodukte" },
+        { "name": "Kartoffeln", "grams": 200, "category": "Gemüse & Früchte" },
+        { "name": "Spinat", "grams": 150, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-eglifilets-bierteig-tatarsauce-salat",
+      "name": "Eglifilets im Bierteig an Tatarsauce mit Salatgarnitur",
+      "allergens": ["Fisch", "Gluten", "Eier"],
+      "kcal": 680,
+      "protein": 35,
+      "fat": 40,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Eglifilets", "grams": 150, "category": "Tiefkühlprodukte" },
+        { "name": "Salat", "grams": 150, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-seezunge-muellerin-kartoffeln-broccoli",
+      "name": "Seezungenfilet 'Müllerin Art' mit Zitronenbutter, Salzkartoffeln und Broccoli",
+      "allergens": ["Fisch", "Gluten", "Milch"],
+      "kcal": 710,
+      "protein": 40,
+      "fat": 40,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Seezungenfilet", "grams": 180, "category": "Tiefkühlprodukte" },
+        { "name": "Kartoffeln", "grams": 200, "category": "Gemüse & Früchte" },
+        { "name": "Broccoli", "grams": 150, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-heilbutt-pochiert-rahmwirsing-kartoffeln",
+      "name": "Pochiertes Heilbuttfilet auf Rahmwirsing mit Salzkartoffeln",
+      "allergens": ["Fisch", "Milch"],
+      "kcal": 690,
+      "protein": 45,
+      "fat": 36,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Heilbuttfilet", "grams": 180, "category": "Tiefkühlprodukte" },
+        { "name": "Wirsing", "grams": 150, "category": "Gemüse & Früchte" },
+        { "name": "Kartoffeln", "grams": 200, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-sardinen-gebraten-kartoffeln-zitrone",
+      "name": "Gebratene Sardinen mit Knoblauch, Zitrone und Salzkartoffeln",
+      "allergens": ["Fisch"],
+      "kcal": 640,
+      "protein": 35,
+      "fat": 35,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Sardinen", "grams": 200, "category": "Tiefkühlprodukte" },
+        { "name": "Kartoffeln", "grams": 200, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-thunfisch-bowl-reis-edamame-sesam",
+      "name": "Thunfisch-Bowl mit Reis, Edamame und Sesam",
+      "allergens": ["Fisch", "Soja", "Sesam"],
+      "kcal": 680,
+      "protein": 38,
+      "fat": 28,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Thunfisch (würfelig)", "grams": 150, "category": "Tiefkühlprodukte" },
+        { "name": "Reis", "grams": 80, "category": "Trockenwaren & Kolonial" },
+        { "name": "Edamame", "grams": 100, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-fischcurry-madras-kokos-kichererbsen-reis",
+      "name": "Fisch-Curry 'Madras' mit Kokosmilch, Kichererbsen und Basmatireis",
+      "allergens": ["Fisch"],
+      "kcal": 700,
+      "protein": 35,
+      "fat": 35,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Fischwürfel", "grams": 150, "category": "Tiefkühlprodukte" },
+        { "name": "Reis", "grams": 80, "category": "Trockenwaren & Kolonial" },
+        { "name": "Kichererbsen", "grams": 80, "category": "Trockenwaren & Kolonial" }
+      ]
+    },
+    {
+      "recipeId": "f-lachs-burger-broetli-dill-gurke",
+      "name": "Lachs-Burger im Brötli mit Dillsauce und Gurkensalat",
+      "allergens": ["Fisch", "Gluten", "Milch"],
+      "kcal": 710,
+      "protein": 35,
+      "fat": 38,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Lachspatty", "grams": 150, "category": "Tiefkühlprodukte" },
+        { "name": "Burgerbrötchen", "grams": 80, "category": "Bäckerei" },
+        { "name": "Gurke", "grams": 120, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-seeteufel-speck-linsenragout",
+      "name": "Seeteufelmedaillons im Speckmantel auf Linsenragout",
+      "allergens": ["Fisch"],
+      "kcal": 740,
+      "protein": 48,
+      "fat": 40,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Seeteufel", "grams": 180, "category": "Tiefkühlprodukte" },
+        { "name": "Linsen", "grams": 100, "category": "Trockenwaren & Kolonial" }
+      ]
+    },
+    {
+      "recipeId": "f-jakobsmuscheln-safranrisotto",
+      "name": "Gebratene Jakobsmuscheln auf Safranrisotto",
+      "allergens": ["Weichtiere", "Milch"],
+      "kcal": 680,
+      "protein": 30,
+      "fat": 32,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Jakobsmuscheln", "grams": 150, "category": "Tiefkühlprodukte" },
+        { "name": "Risottoreis", "grams": 80, "category": "Trockenwaren & Kolonial" }
+      ]
+    },
+    {
+      "recipeId": "f-fisch-tacos-mango-avocado",
+      "name": "Fisch-Tacos mit Mangosalsa und Avocado-Creme",
+      "allergens": ["Fisch", "Gluten"],
+      "kcal": 650,
+      "protein": 35,
+      "fat": 30,
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "ingredients": [
+        { "name": "Weissfischfilet", "grams": 150, "category": "Tiefkühlprodukte" },
+        { "name": "Weizentortillas", "grams": 80, "category": "Trockenwaren & Kolonial" },
+        { "name": "Mango", "grams": 100, "category": "Gemüse & Früchte" },
+        { "name": "Avocado", "grams": 80, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f-vollkorn-spaghetti-garnelen-tomaten",
+      "name": "Vollkorn-Spaghetti mit Garnelen, Kirschtomaten und Basilikum",
+      "allergens": ["Krebstiere", "Gluten"],
+      "kcal": 690,
+      "protein": 33,
+      "fat": 28,
+      "foodGroup": "protein",
+      "isVollkorn": true,
+      "ingredients": [
+        { "name": "Vollkorn-Spaghetti", "grams": 120, "category": "Trockenwaren & Kolonial" },
+        { "name": "Garnelen", "grams": 120, "category": "Tiefkühlprodukte" },
+        { "name": "Kirschtomaten", "grams": 120, "category": "Gemüse & Früchte" }
+      ]
+    },
+    {
+      "recipeId": "f_rotbarsch_senfsauce_kartoffelstock_erbsli",
+      "name": "Gebratenes Rotbarschfilet an Senfsauce mit Kartoffelstock und Erbsli",
+      "tags": ["fish", "classic"],
+      "allergens": ["Fisch", "Milch", "Senf"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 500, "portionGByGroup": { "erwachsene": 520, "senioren": 460, "kinder": 380 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 660, "basePortionG": 500 },
+      "kcal": 660,
+      "protein": 40,
+      "fat": 32,
+      "ingredients": [
+        { "ingredientId": "rotbarsch", "name": "Rotbarschfilet", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "kartoffelstock", "name": "Kartoffelstock", "qtyPerBasePortionG": 220, "grams": 220, "category": "Molkereiprodukte", "categoryKey": "dairy" },
+        { "ingredientId": "erbsen", "name": "Erbsen", "qtyPerBasePortionG": 100, "grams": 100, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_scholle_finkenwerder_bratkartoffeln_gurkensalat",
+      "name": "Scholle Finkenwerder Art mit Speckwürfeln, Bratkartoffeln und Gurkensalat",
+      "tags": ["fish", "classic"],
+      "allergens": ["Fisch", "Gluten"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 520, "portionGByGroup": { "erwachsene": 540, "senioren": 480, "kinder": 400 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 730, "basePortionG": 520 },
+      "kcal": 730,
+      "protein": 42,
+      "fat": 45,
+      "ingredients": [
+        { "ingredientId": "scholle", "name": "Scholle", "qtyPerBasePortionG": 200, "grams": 200, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "bratkartoffeln", "name": "Bratkartoffeln", "qtyPerBasePortionG": 220, "grams": 220, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "speck", "name": "Speckwürfel", "qtyPerBasePortionG": 30, "grams": 30, "category": "Metzgerei", "categoryKey": "butchery" }
+      ]
+    },
+    {
+      "recipeId": "f_pangasius_curry_reis_gemuese",
+      "name": "Pangasiusfilet an milder Currysauce mit Reis und Mischgemüse",
+      "tags": ["fish", "curry"],
+      "allergens": ["Fisch", "Milch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 480, "portionGByGroup": { "erwachsene": 500, "senioren": 440, "kinder": 360 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 640, "basePortionG": 480 },
+      "kcal": 640,
+      "protein": 38,
+      "fat": 28,
+      "ingredients": [
+        { "ingredientId": "pangasius", "name": "Pangasiusfilet", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "reis", "name": "Reis", "qtyPerBasePortionG": 80, "grams": 80, "category": "Trockenwaren & Kolonial", "categoryKey": "dry_goods" },
+        { "ingredientId": "mischgemuese", "name": "Mischgemüse", "qtyPerBasePortionG": 150, "grams": 150, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_matjes_hausfrauenart_kartoffeln",
+      "name": "Matjesfilet nach Hausfrauenart mit Salzkartoffeln",
+      "tags": ["fish", "classic"],
+      "allergens": ["Fisch", "Milch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 450, "portionGByGroup": { "erwachsene": 470, "senioren": 400, "kinder": 330 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 620, "basePortionG": 450 },
+      "kcal": 620,
+      "protein": 28,
+      "fat": 35,
+      "ingredients": [
+        { "ingredientId": "matjes", "name": "Matjesfilet", "qtyPerBasePortionG": 150, "grams": 150, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "kartoffeln", "name": "Salzkartoffeln", "qtyPerBasePortionG": 200, "grams": 200, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "apfel", "name": "Apfel", "qtyPerBasePortionG": 50, "grams": 50, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_seelachs_paniert_kartoffelsalat_remoulade",
+      "name": "Gebackenes Seelachsfilet mit Kartoffelsalat und Remoulade",
+      "tags": ["fish", "fried"],
+      "allergens": ["Fisch", "Gluten", "Eier", "Milch", "Senf"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 500, "portionGByGroup": { "erwachsene": 520, "senioren": 460, "kinder": 380 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 710, "basePortionG": 500 },
+      "kcal": 710,
+      "protein": 30,
+      "fat": 42,
+      "ingredients": [
+        { "ingredientId": "seelachs", "name": "Seelachsfilet (paniert)", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "kartoffelsalat", "name": "Kartoffelsalat", "qtyPerBasePortionG": 220, "grams": 220, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "remoulade", "name": "Remoulade", "qtyPerBasePortionG": 50, "grams": 50, "category": "Trockenwaren & Kolonial", "categoryKey": "dry_goods" }
+      ]
+    },
+    {
+      "recipeId": "f_fischpflanzerl_kartoffelgurkensalat",
+      "name": "Hausgemachte Fischpflanzerl mit Kartoffel-Gurken-Salat",
+      "tags": ["fish", "homemade"],
+      "allergens": ["Fisch", "Gluten", "Eier"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 480, "portionGByGroup": { "erwachsene": 500, "senioren": 440, "kinder": 360 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 630, "basePortionG": 480 },
+      "kcal": 630,
+      "protein": 32,
+      "fat": 30,
+      "ingredients": [
+        { "ingredientId": "fischfarce", "name": "Fischfarce (gemischt)", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "kartoffelsalat", "name": "Kartoffel-Gurken-Salat", "qtyPerBasePortionG": 250, "grams": 250, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_rotbarsch_geduenstet_wurzelgemuese_dillkartoffeln",
+      "name": "Gedünsteter Rotbarsch auf Wurzelgemüse mit Dillkartoffeln",
+      "tags": ["fish", "steamed"],
+      "allergens": ["Fisch", "Sellerie"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 480, "portionGByGroup": { "erwachsene": 500, "senioren": 440, "kinder": 360 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 580, "basePortionG": 480 },
+      "kcal": 580,
+      "protein": 40,
+      "fat": 25,
+      "ingredients": [
+        { "ingredientId": "rotbarsch", "name": "Rotbarschfilet", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "wurzelgemuese", "name": "Wurzelgemüse (Karotten, Sellerie)", "qtyPerBasePortionG": 150, "grams": 150, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "kartoffeln", "name": "Dillkartoffeln", "qtyPerBasePortionG": 150, "grams": 150, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_lachsforelle_gebraten_mandelbutter_risotto",
+      "name": "Gebratene Lachsforelle mit Mandelbutter, dazu Bärlauchrisotto",
+      "tags": ["fish", "nuts"],
+      "allergens": ["Fisch", "Milch", "Nüsse"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 450, "portionGByGroup": { "erwachsene": 470, "senioren": 400, "kinder": 330 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 780, "basePortionG": 450 },
+      "kcal": 780,
+      "protein": 44,
+      "fat": 48,
+      "ingredients": [
+        { "ingredientId": "lachsforelle", "name": "Lachsforellenfilet", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "risottoreis", "name": "Risottoreis", "qtyPerBasePortionG": 80, "grams": 80, "category": "Trockenwaren & Kolonial", "categoryKey": "dry_goods" },
+        { "ingredientId": "mandeln", "name": "Mandelsplitter", "qtyPerBasePortionG": 20, "grams": 20, "category": "Trockenwaren & Kolonial", "categoryKey": "dry_goods" }
+      ]
+    },
+    {
+      "recipeId": "f_heringsstipp_pellkartoffeln",
+      "name": "Heringsstipp in Sahnesauce mit Pellkartoffeln",
+      "tags": ["fish", "classic"],
+      "allergens": ["Fisch", "Milch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 460, "portionGByGroup": { "erwachsene": 480, "senioren": 420, "kinder": 350 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 610, "basePortionG": 460 },
+      "kcal": 610,
+      "protein": 25,
+      "fat": 33,
+      "ingredients": [
+        { "ingredientId": "salzhering", "name": "Salzhering", "qtyPerBasePortionG": 150, "grams": 150, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "kartoffeln", "name": "Pellkartoffeln", "qtyPerBasePortionG": 250, "grams": 250, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_fischfrikadellen_senfsauce_kartoffelstock",
+      "name": "Fischfrikadellen an körniger Senfsauce mit Kartoffelstock",
+      "tags": ["fish", "homemade"],
+      "allergens": ["Fisch", "Gluten", "Eier", "Senf", "Milch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 480, "portionGByGroup": { "erwachsene": 500, "senioren": 440, "kinder": 360 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 650, "basePortionG": 480 },
+      "kcal": 650,
+      "protein": 33,
+      "fat": 32,
+      "ingredients": [
+        { "ingredientId": "fischfarce", "name": "Fischfarce (gemischt)", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "kartoffelstock", "name": "Kartoffelstock", "qtyPerBasePortionG": 250, "grams": 250, "category": "Molkereiprodukte", "categoryKey": "dairy" }
+      ]
+    },
+    {
+      "recipeId": "f_kabeljau_geduenstet_estragon_tagliatelle_karotten",
+      "name": "Gedünsteter Kabeljau an Estragonsauce mit Tagliatelle und Karottenstreifen",
+      "tags": ["fish", "steamed", "pasta"],
+      "allergens": ["Fisch", "Gluten", "Milch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 460, "portionGByGroup": { "erwachsene": 480, "senioren": 420, "kinder": 350 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 670, "basePortionG": 460 },
+      "kcal": 670,
+      "protein": 42,
+      "fat": 30,
+      "ingredients": [
+        { "ingredientId": "kabeljau", "name": "Kabeljaufilet", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "tagliatelle", "name": "Tagliatelle", "qtyPerBasePortionG": 100, "grams": 100, "category": "Trockenwaren & Kolonial", "categoryKey": "dry_goods" },
+        { "ingredientId": "karotten", "name": "Karotten", "qtyPerBasePortionG": 100, "grams": 100, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_makrele_gegrillt_linsensalat_balsamico",
+      "name": "Gegrillte Makrele mit lauwarmem Linsensalat und Balsamico-Dressing",
+      "tags": ["fish", "grill"],
+      "allergens": ["Fisch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 450, "portionGByGroup": { "erwachsene": 470, "senioren": 400, "kinder": 330 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 690, "basePortionG": 450 },
+      "kcal": 690,
+      "protein": 45,
+      "fat": 38,
+      "ingredients": [
+        { "ingredientId": "makrele", "name": "Makrelenfilet", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "linsen", "name": "Linsen (gekocht)", "qtyPerBasePortionG": 150, "grams": 150, "category": "Trockenwaren & Kolonial", "categoryKey": "dry_goods" }
+      ]
+    },
+    {
+      "recipeId": "f_tilapia_kokosmilch_limette_reis",
+      "name": "Tilapiafilet in Kokos-Limetten-Sauce mit Duftreis",
+      "tags": ["fish", "asian"],
+      "allergens": ["Fisch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 450, "portionGByGroup": { "erwachsene": 470, "senioren": 400, "kinder": 330 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 660, "basePortionG": 450 },
+      "kcal": 660,
+      "protein": 38,
+      "fat": 32,
+      "ingredients": [
+        { "ingredientId": "tilapia", "name": "Tilapiafilet", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "reis", "name": "Duftreis", "qtyPerBasePortionG": 90, "grams": 90, "category": "Trockenwaren & Kolonial", "categoryKey": "dry_goods" },
+        { "ingredientId": "kokosmilch", "name": "Kokosmilch", "qtyPerBasePortionG": 80, "grams": 80, "category": "Trockenwaren & Kolonial", "categoryKey": "dry_goods" }
+      ]
+    },
+    {
+      "recipeId": "f_fischgulasch_paprika_kartoffeln",
+      "name": "Fischgulasch mit Paprika und Salzkartoffeln",
+      "tags": ["fish", "stew"],
+      "allergens": ["Fisch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 500, "portionGByGroup": { "erwachsene": 520, "senioren": 460, "kinder": 380 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 620, "basePortionG": 500 },
+      "kcal": 620,
+      "protein": 35,
+      "fat": 28,
+      "ingredients": [
+        { "ingredientId": "fischwuerfel", "name": "Fischwürfel (gemischt)", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 200, "grams": 200, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "paprika", "name": "Paprika", "qtyPerBasePortionG": 100, "grams": 100, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_crevetten_cocktail_avocado_toast",
+      "name": "Klassischer Crevetten-Cocktail mit Avocado und Toast",
+      "tags": ["crustaceans", "starter"],
+      "allergens": ["Krebstiere", "Gluten", "Eier"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 350, "portionGByGroup": { "erwachsene": 370, "senioren": 320, "kinder": 280 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 550, "basePortionG": 350 },
+      "kcal": 550,
+      "protein": 25,
+      "fat": 35,
+      "ingredients": [
+        { "ingredientId": "crevetten", "name": "Crevetten (gekocht)", "qtyPerBasePortionG": 120, "grams": 120, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "avocado", "name": "Avocado", "qtyPerBasePortionG": 80, "grams": 80, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "toast", "name": "Toastbrot", "qtyPerBasePortionG": 50, "grams": 50, "category": "Bäckerei", "categoryKey": "bakery" }
+      ]
+    },
+    {
+      "recipeId": "f_fischauflauf_kartoffeln_broccoli_kaese",
+      "name": "Fischauflauf mit Kartoffeln, Broccoli und Käse überbacken",
+      "tags": ["fish", "oven"],
+      "allergens": ["Fisch", "Milch", "Gluten"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 480, "portionGByGroup": { "erwachsene": 500, "senioren": 440, "kinder": 360 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 720, "basePortionG": 480 },
+      "kcal": 720,
+      "protein": 40,
+      "fat": 40,
+      "ingredients": [
+        { "ingredientId": "fischfilet", "name": "Weissfischfilet", "qtyPerBasePortionG": 150, "grams": 150, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "kartoffeln", "name": "Kartoffeln (gekocht)", "qtyPerBasePortionG": 180, "grams": 180, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "broccoli", "name": "Broccoli", "qtyPerBasePortionG": 100, "grams": 100, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_seeteufel_mediterran_ofenkartoffeln_gemuese",
+      "name": "Seeteufelmedaillons auf mediterranem Gemüse mit Ofenkartoffeln",
+      "tags": ["fish", "oven"],
+      "allergens": ["Fisch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 500, "portionGByGroup": { "erwachsene": 520, "senioren": 460, "kinder": 380 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 700, "basePortionG": 500 },
+      "kcal": 700,
+      "protein": 48,
+      "fat": 35,
+      "ingredients": [
+        { "ingredientId": "seeteufel", "name": "Seeteufelmedaillons", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "gemuesemix_mediterran", "name": "Mediterranes Gemüse", "qtyPerBasePortionG": 150, "grams": 150, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "kartoffeln", "name": "Ofenkartoffeln", "qtyPerBasePortionG": 170, "grams": 170, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_lachs_sauerrahmsauce_roesti_lauch",
+      "name": "Gebratenes Lachsfilet an Sauerrahmsauce mit Rösti und Lauchgemüse",
+      "tags": ["fish", "classic"],
+      "allergens": ["Fisch", "Milch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 500, "portionGByGroup": { "erwachsene": 520, "senioren": 460, "kinder": 380 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 750, "basePortionG": 500 },
+      "kcal": 750,
+      "protein": 42,
+      "fat": 48,
+      "ingredients": [
+        { "ingredientId": "lachsfilet", "name": "Lachsfilet", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "roesti", "name": "Rösti", "qtyPerBasePortionG": 200, "grams": 200, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "lauch", "name": "Lauchgemüse", "qtyPerBasePortionG": 120, "grams": 120, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_fischknoedel_dillsauce_karotten",
+      "name": "Fischknödel in Dillsauce mit Salzkartoffeln und Karottengemüse",
+      "tags": ["fish", "homemade"],
+      "allergens": ["Fisch", "Gluten", "Eier", "Milch"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 480, "portionGByGroup": { "erwachsene": 500, "senioren": 440, "kinder": 360 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 610, "basePortionG": 480 },
+      "kcal": 610,
+      "protein": 30,
+      "fat": 28,
+      "ingredients": [
+        { "ingredientId": "fischknoedel", "name": "Fischknödel", "qtyPerBasePortionG": 180, "grams": 180, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "kartoffeln", "name": "Salzkartoffeln", "qtyPerBasePortionG": 200, "grams": 200, "category": "Gemüse & Früchte", "categoryKey": "produce" },
+        { "ingredientId": "karotten", "name": "Karottengemüse", "qtyPerBasePortionG": 100, "grams": 100, "category": "Gemüse & Früchte", "categoryKey": "produce" }
+      ]
+    },
+    {
+      "recipeId": "f_zander_blaetterteig_spinat_ricotta",
+      "name": "Zanderfilet im Blätterteig mit Spinat-Ricotta-Füllung",
+      "tags": ["fish", "oven"],
+      "allergens": ["Fisch", "Gluten", "Milch", "Eier"],
+      "foodGroup": "protein",
+      "isVollkorn": false,
+      "portion": { "basePortionG": 400, "portionGByGroup": { "erwachsene": 420, "senioren": 360, "kinder": 300 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 760, "basePortionG": 400 },
+      "kcal": 760,
+      "protein": 40,
+      "fat": 45,
+      "ingredients": [
+        { "ingredientId": "zanderfilet", "name": "Zanderfilet", "qtyPerBasePortionG": 150, "grams": 150, "category": "Tiefkühlprodukte", "categoryKey": "seafood" },
+        { "ingredientId": "blaetterteig", "name": "Blätterteig", "qtyPerBasePortionG": 100, "grams": 100, "category": "Trockenwaren & Kolonial", "categoryKey": "dry_goods" },
+        { "ingredientId": "spinat_ricotta", "name": "Spinat-Ricotta-Füllung", "qtyPerBasePortionG": 100, "grams": 100, "category": "Molkereiprodukte", "categoryKey": "dairy" }
+      ]
+    }
+  ]
+}

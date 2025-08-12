@@ -1,0 +1,11 @@
+
+{
+    "suppe": 200,
+    "dessert": 100,
+    "protein": 120,
+    "starch": 80,
+    "vegetable": 150,
+    "fruit": 120,
+    "dairy": 150,
+    "fat_oil": 15
+}

@@ -1,0 +1,2119 @@
+{
+  "suppe": [
+    {
+      "recipeId": "s_apfel-sellerie-suppe",
+      "name": "Apfel-Sellerie-Suppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "fruit", "classic"],
+      "allergens": ["sellerie", "milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 150,
+        "portionGByGroup": { "erwachsene": 150, "senioren": 135, "kinder": 113 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 120,
+        "basePortionG": 150
+      },
+      "ingredients": [
+        { "ingredientId": "ing-apfel", "name": "Apfel", "qtyPerBasePortionG": 50, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-sellerie", "name": "Sellerie", "qtyPerBasePortionG": 80, "categoryKey": "produce", "yield": 0.85, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_basler-mehlsuppe",
+      "name": "Basler Mehlsuppe",
+      "foodGroup": "starch",
+      "tags": ["classic", "local", "soup"],
+      "allergens": ["gluten", "milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 70,
+        "portionGByGroup": { "erwachsene": 70, "senioren": 63, "kinder": 53 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 250,
+        "basePortionG": 70
+      },
+      "ingredients": [
+        { "ingredientId": "ing-mehl", "name": "Mehl", "qtyPerBasePortionG": 30, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 5000, "isRaw": true },
+        { "ingredientId": "ing-butter", "name": "Butter", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 1, "packSizeG": 250, "isRaw": false },
+        { "ingredientId": "ing-zwiebeln", "name": "Zwiebeln", "qtyPerBasePortionG": 20, "categoryKey": "produce", "yield": 0.9, "packSizeG": 2500, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_baerlauchcremesuppe",
+      "name": "Bärlauchcrèmesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "seasonal", "spring"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 150,
+        "portionGByGroup": { "erwachsene": 150, "senioren": 135, "kinder": 113 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 180,
+        "basePortionG": 150
+      },
+      "ingredients": [
+        { "ingredientId": "ing-baerlauch", "name": "Bärlauch", "qtyPerBasePortionG": 60, "categoryKey": "produce", "yield": 0.85, "packSizeG": 500, "isRaw": true },
+        { "ingredientId": "ing-kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 50, "categoryKey": "produce", "yield": 0.8, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 40, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_blumenkohlcremesuppe",
+      "name": "Blumenkohlcrèmesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "classic"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 175,
+        "portionGByGroup": { "erwachsene": 175, "senioren": 158, "kinder": 131 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 150,
+        "basePortionG": 175
+      },
+      "ingredients": [
+        { "ingredientId": "ing-blumenkohl", "name": "Blumenkohl", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.75, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_blumenkohlsuppe-mit-eigelb",
+      "name": "Blumenkohlsuppe mit Eigelb",
+      "foodGroup": "vegetable",
+      "tags": ["soup", "classic"],
+      "allergens": ["egg", "milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 180,
+        "portionGByGroup": { "erwachsene": 180, "senioren": 162, "kinder": 135 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 170,
+        "basePortionG": 180
+      },
+      "ingredients": [
+        { "ingredientId": "ing-blumenkohl", "name": "Blumenkohl", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.75, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-ei", "name": "Eier", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 1, "packSizeG": 10, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_bouillon-mit-ei",
+      "name": "Bouillon mit Ei",
+      "foodGroup": "protein",
+      "tags": ["broth", "light", "classic"],
+      "allergens": ["egg"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 50,
+        "portionGByGroup": { "erwachsene": 50, "senioren": 45, "kinder": 38 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 80,
+        "basePortionG": 50
+      },
+      "ingredients": [
+        { "ingredientId": "ing-ei", "name": "Eier", "qtyPerBasePortionG": 50, "categoryKey": "dairy", "yield": 1, "packSizeG": 10, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_bouillon-mit-fideli",
+      "name": "Bouillon mit Fideli",
+      "foodGroup": "starch",
+      "tags": ["broth", "pasta", "classic"],
+      "allergens": ["gluten"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 20,
+        "portionGByGroup": { "erwachsene": 20, "senioren": 18, "kinder": 15 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 90,
+        "basePortionG": 20
+      },
+      "ingredients": [
+        { "ingredientId": "ing-hoernli", "name": "Hörnli", "qtyPerBasePortionG": 20, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 5000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_bouillon-mille-fanti",
+      "name": "Bouillon \"Mille Fanti\"",
+      "foodGroup": "starch",
+      "tags": ["broth", "semolina", "classic"],
+      "allergens": ["gluten", "egg", "milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 40,
+        "portionGByGroup": { "erwachsene": 40, "senioren": 36, "kinder": 30 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 130,
+        "basePortionG": 40
+      },
+      "ingredients": [
+        { "ingredientId": "ing-griess", "name": "Griess", "qtyPerBasePortionG": 20, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-ei", "name": "Eier", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 1, "packSizeG": 10, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_brennnesselsuppe-mit-ei",
+      "name": "Brennnesselsuppe mit Ei",
+      "foodGroup": "vegetable",
+      "tags": ["wild_herb", "seasonal"],
+      "allergens": ["egg"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 130,
+        "portionGByGroup": { "erwachsene": 130, "senioren": 117, "kinder": 98 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 150,
+        "basePortionG": 130
+      },
+      "ingredients": [
+        { "ingredientId": "ing-brennnesseln", "name": "Brennnesseln", "qtyPerBasePortionG": 80, "categoryKey": "produce", "yield": 0.8, "packSizeG": 500, "isRaw": true },
+        { "ingredientId": "ing-ei", "name": "Eier", "qtyPerBasePortionG": 50, "categoryKey": "dairy", "yield": 1, "packSizeG": 10, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_broccolicremesuppe",
+      "name": "Broccolicrèmesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "classic"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 180,
+        "portionGByGroup": { "erwachsene": 180, "senioren": 162, "kinder": 135 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 160,
+        "basePortionG": 180
+      },
+      "ingredients": [
+        { "ingredientId": "ing-broccoli", "name": "Broccoli", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.75, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_brotsuppe-mit-kuemmel",
+      "name": "Brotsuppe mit Kümmel",
+      "foodGroup": "starch",
+      "tags": ["bread", "classic", "hearty"],
+      "allergens": ["gluten"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 52,
+        "portionGByGroup": { "erwachsene": 52, "senioren": 47, "kinder": 39 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 210,
+        "basePortionG": 52
+      },
+      "ingredients": [
+        { "ingredientId": "ing-brot-altbacken", "name": "Brot", "qtyPerBasePortionG": 50, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-kuemmel", "name": "Kümmel", "qtyPerBasePortionG": 2, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 500, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_buendner-gerstensuppe",
+      "name": "Bündner Gerstensuppe",
+      "foodGroup": "starch",
+      "tags": ["barley", "classic", "hearty", "local"],
+      "allergens": ["gluten", "sellerie"],
+      "isVollkorn": true,
+      "portion": {
+        "basePortionG": 120,
+        "portionGByGroup": { "erwachsene": 120, "senioren": 108, "kinder": 90 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 280,
+        "basePortionG": 120
+      },
+      "ingredients": [
+        { "ingredientId": "ing-gerste", "name": "Gerste", "qtyPerBasePortionG": 40, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-karotten", "name": "Karotten", "qtyPerBasePortionG": 30, "categoryKey": "produce", "yield": 0.9, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-sellerie", "name": "Sellerie", "qtyPerBasePortionG": 30, "categoryKey": "produce", "yield": 0.85, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-buendnerfleisch", "name": "Bündnerfleisch", "qtyPerBasePortionG": 20, "categoryKey": "butchery", "yield": 1, "packSizeG": 500, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_capresesuppe-mit-bueffelmozzarella",
+      "name": "Capresesuppe mit Büffelmozzarella",
+      "foodGroup": "dairy",
+      "tags": ["tomato", "cheese", "summer"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 200,
+        "portionGByGroup": { "erwachsene": 200, "senioren": 180, "kinder": 150 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 220,
+        "basePortionG": 200
+      },
+      "ingredients": [
+        { "ingredientId": "ing-tomaten", "name": "Tomaten", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.95, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-mozzarella", "name": "Mozzarella", "qtyPerBasePortionG": 50, "categoryKey": "dairy", "yield": 1, "packSizeG": 500, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_champignoncremesuppe",
+      "name": "Champignoncrèmesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "mushroom", "classic"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 130,
+        "portionGByGroup": { "erwachsene": 130, "senioren": 117, "kinder": 98 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 170,
+        "basePortionG": 130
+      },
+      "ingredients": [
+        { "ingredientId": "ing-champignons", "name": "Champignons", "qtyPerBasePortionG": 100, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_curry-linsen-kokossuppe",
+      "name": "Curry-Linsen-Kokossuppe",
+      "foodGroup": "protein",
+      "tags": ["lentil", "curry", "vegan_adaptable"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 90,
+        "portionGByGroup": { "erwachsene": 90, "senioren": 81, "kinder": 68 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 250,
+        "basePortionG": 90
+      },
+      "ingredients": [
+        { "ingredientId": "ing-linsen-rot", "name": "Linsen", "qtyPerBasePortionG": 50, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-kokosmilch", "name": "Kokosmilch", "qtyPerBasePortionG": 40, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 400, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_dill-rahmsuppe",
+      "name": "Dill-Rahmsuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "herb"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 120,
+        "portionGByGroup": { "erwachsene": 120, "senioren": 108, "kinder": 90 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 160,
+        "basePortionG": 120
+      },
+      "ingredients": [
+        { "ingredientId": "ing-dill", "name": "Dill", "qtyPerBasePortionG": 30, "categoryKey": "produce", "yield": 0.9, "packSizeG": 100, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 60, "categoryKey": "produce", "yield": 0.8, "packSizeG": 2500, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_eierschwaemmlisuppe",
+      "name": "Eierschwämmlisuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "mushroom", "seasonal"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 105,
+        "portionGByGroup": { "erwachsene": 105, "senioren": 95, "kinder": 79 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 160,
+        "basePortionG": 105
+      },
+      "ingredients": [
+        { "ingredientId": "ing-eierschwaemmli", "name": "Eierschwämmli", "qtyPerBasePortionG": 80, "categoryKey": "produce", "yield": 0.85, "packSizeG": 500, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_erbsencremesuppe",
+      "name": "Erbsencremesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "classic", "legume"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 145,
+        "portionGByGroup": { "erwachsene": 145, "senioren": 131, "kinder": 109 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 190,
+        "basePortionG": 145
+      },
+      "ingredients": [
+        { "ingredientId": "ing-erbsen", "name": "Erbsen", "qtyPerBasePortionG": 120, "categoryKey": "frozen", "yield": 1, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_erbsensuppe-mit-croutons",
+      "name": "Erbsensuppe mit Croutons",
+      "foodGroup": "vegetable",
+      "tags": ["soup", "legume"],
+      "allergens": ["gluten"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 140,
+        "portionGByGroup": { "erwachsene": 140, "senioren": 126, "kinder": 105 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 180,
+        "basePortionG": 140
+      },
+      "ingredients": [
+        { "ingredientId": "ing-erbsen", "name": "Erbsen", "qtyPerBasePortionG": 120, "categoryKey": "frozen", "yield": 1, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-brot-croutons", "name": "Brot", "qtyPerBasePortionG": 20, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_fenchel-lauchsuppe-mit-apfel",
+      "name": "Fenchel-Lauchsuppe mit Apfel",
+      "foodGroup": "vegetable",
+      "tags": ["soup", "light"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 150,
+        "portionGByGroup": { "erwachsene": 150, "senioren": 135, "kinder": 113 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 130,
+        "basePortionG": 150
+      },
+      "ingredients": [
+        { "ingredientId": "ing-fenchel", "name": "Fenchel", "qtyPerBasePortionG": 70, "categoryKey": "produce", "yield": 0.8, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-lauch", "name": "Lauch", "qtyPerBasePortionG": 50, "categoryKey": "produce", "yield": 0.75, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-apfel", "name": "Apfel", "qtyPerBasePortionG": 30, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_fischsuppe-matrosenart",
+      "name": "Fischsuppe 'Matrosenart'",
+      "foodGroup": "protein",
+      "tags": ["soup", "fish", "hearty"],
+      "allergens": ["fish", "sellerie"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 160,
+        "portionGByGroup": { "erwachsene": 160, "senioren": 144, "kinder": 120 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 220,
+        "basePortionG": 160
+      },
+      "ingredients": [
+        { "ingredientId": "ing-fischfilet-weiss", "name": "Fischfilet", "qtyPerBasePortionG": 80, "categoryKey": "seafood", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-tomaten", "name": "Tomaten", "qtyPerBasePortionG": 50, "categoryKey": "produce", "yield": 0.95, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-fenchel", "name": "Fenchel", "qtyPerBasePortionG": 30, "categoryKey": "produce", "yield": 0.8, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_flaedlisuppe",
+      "name": "Flädlisuppe",
+      "foodGroup": "starch",
+      "tags": ["broth", "pancake", "classic"],
+      "allergens": ["gluten", "egg", "milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 75,
+        "portionGByGroup": { "erwachsene": 75, "senioren": 68, "kinder": 56 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 150,
+        "basePortionG": 75
+      },
+      "ingredients": [
+        { "ingredientId": "ing-mehl", "name": "Mehl", "qtyPerBasePortionG": 20, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 5000, "isRaw": true },
+        { "ingredientId": "ing-ei", "name": "Eier", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 10, "isRaw": true },
+        { "ingredientId": "ing-milch", "name": "Milch", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_franzoesische-zwiebelsuppe",
+      "name": "Französische Zwiebelsuppe",
+      "foodGroup": "vegetable",
+      "tags": ["onion", "cheese", "classic", "baked"],
+      "allergens": ["gluten", "milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 210,
+        "portionGByGroup": { "erwachsene": 210, "senioren": 189, "kinder": 158 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 280,
+        "basePortionG": 210
+      },
+      "ingredients": [
+        { "ingredientId": "ing-zwiebeln", "name": "Zwiebeln", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.9, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-brot-weiss", "name": "Brot", "qtyPerBasePortionG": 30, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-kaese-gerieben", "name": "Käse", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_gazpacho",
+      "name": "Gazpacho (Kalte Gemüsesuppe)",
+      "foodGroup": "vegetable",
+      "tags": ["cold_soup", "summer", "vegan"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 150,
+        "portionGByGroup": { "erwachsene": 150, "senioren": 135, "kinder": 113 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 100,
+        "basePortionG": 150
+      },
+      "ingredients": [
+        { "ingredientId": "ing-tomaten", "name": "Tomaten", "qtyPerBasePortionG": 100, "categoryKey": "produce", "yield": 0.95, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-gurke", "name": "Gurke", "qtyPerBasePortionG": 50, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_gefluegelcremesuppe",
+      "name": "Geflügelcrèmesuppe",
+      "foodGroup": "protein",
+      "tags": ["cream_soup", "poultry"],
+      "allergens": ["milk", "sellerie"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 80,
+        "portionGByGroup": { "erwachsene": 80, "senioren": 72, "kinder": 60 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 180,
+        "basePortionG": 80
+      },
+      "ingredients": [
+        { "ingredientId": "ing-pouletbrust", "name": "Pouletbrust", "qtyPerBasePortionG": 50, "categoryKey": "butchery", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_gemuese-graupensuppe",
+      "name": "Gemüse-Graupensuppe",
+      "foodGroup": "starch",
+      "tags": ["barley", "hearty", "soup"],
+      "allergens": ["gluten", "sellerie"],
+      "isVollkorn": true,
+      "portion": {
+        "basePortionG": 110,
+        "portionGByGroup": { "erwachsene": 110, "senioren": 99, "kinder": 83 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 210,
+        "basePortionG": 110
+      },
+      "ingredients": [
+        { "ingredientId": "ing-graupen", "name": "Graupen", "qtyPerBasePortionG": 40, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-karotten", "name": "Karotten", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.9, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-lauch", "name": "Lauch", "qtyPerBasePortionG": 30, "categoryKey": "produce", "yield": 0.75, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_gemuesecremesuppe",
+      "name": "Gemüsecremesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "vegetable_mix"],
+      "allergens": ["milk", "sellerie"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 115,
+        "portionGByGroup": { "erwachsene": 115, "senioren": 104, "kinder": 86 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 150,
+        "basePortionG": 115
+      },
+      "ingredients": [
+        { "ingredientId": "ing-karotten", "name": "Karotten", "qtyPerBasePortionG": 50, "categoryKey": "produce", "yield": 0.9, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-sellerie", "name": "Sellerie", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.85, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_gemuesesuppe-mit-kraeutern",
+      "name": "Gemüsesuppe mit Kräutern",
+      "foodGroup": "vegetable",
+      "tags": ["soup", "light", "herb"],
+      "allergens": ["sellerie"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 75,
+        "portionGByGroup": { "erwachsene": 75, "senioren": 68, "kinder": 56 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 95,
+        "basePortionG": 75
+      },
+      "ingredients": [
+        { "ingredientId": "ing-karotten", "name": "Karotten", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.9, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-lauch", "name": "Lauch", "qtyPerBasePortionG": 30, "categoryKey": "produce", "yield": 0.75, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-petersilie", "name": "Petersilie", "qtyPerBasePortionG": 5, "categoryKey": "produce", "yield": 0.9, "packSizeG": 100, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_geroestete-hafersuppe",
+      "name": "Geröstete Hafersuppe",
+      "foodGroup": "starch",
+      "tags": ["oat", "classic"],
+      "allergens": ["gluten"],
+      "isVollkorn": true,
+      "portion": {
+        "basePortionG": 30,
+        "portionGByGroup": { "erwachsene": 30, "senioren": 27, "kinder": 23 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 150,
+        "basePortionG": 30
+      },
+      "ingredients": [
+        { "ingredientId": "ing-haferflocken", "name": "Haferflocken", "qtyPerBasePortionG": 30, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_getreidesuppe-mit-dinkel",
+      "name": "Getreidesuppe mit Dinkel",
+      "foodGroup": "starch",
+      "tags": ["spelt", "hearty", "soup"],
+      "allergens": ["gluten"],
+      "isVollkorn": true,
+      "portion": {
+        "basePortionG": 90,
+        "portionGByGroup": { "erwachsene": 90, "senioren": 81, "kinder": 68 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 190,
+        "basePortionG": 90
+      },
+      "ingredients": [
+        { "ingredientId": "ing-dinkel", "name": "Dinkel", "qtyPerBasePortionG": 50, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-lauch", "name": "Lauch", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.75, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_griessnockerlsuppe",
+      "name": "Griessnockerlsuppe",
+      "foodGroup": "starch",
+      "tags": ["broth", "dumpling", "classic"],
+      "allergens": ["gluten", "egg"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 50,
+        "portionGByGroup": { "erwachsene": 50, "senioren": 45, "kinder": 38 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 160,
+        "basePortionG": 50
+      },
+      "ingredients": [
+        { "ingredientId": "ing-hartweizengriess", "name": "Hartweizengriess", "qtyPerBasePortionG": 30, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-ei", "name": "Eier", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 1, "packSizeG": 10, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_griesssuppe-mit-schnittlauch",
+      "name": "Griesssuppe mit Schnittlauch",
+      "foodGroup": "starch",
+      "tags": ["semolina", "classic"],
+      "allergens": ["gluten", "milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 30,
+        "portionGByGroup": { "erwachsene": 30, "senioren": 27, "kinder": 23 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 120,
+        "basePortionG": 30
+      },
+      "ingredients": [
+        { "ingredientId": "ing-griess", "name": "Griess", "qtyPerBasePortionG": 25, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-schnittlauch", "name": "Schnittlauch", "qtyPerBasePortionG": 5, "categoryKey": "produce", "yield": 0.95, "packSizeG": 100, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_gulaschsuppe",
+      "name": "Gulaschsuppe",
+      "foodGroup": "protein",
+      "tags": ["stew", "hearty", "beef"],
+      "allergens": ["sellerie"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 190,
+        "portionGByGroup": { "erwachsene": 190, "senioren": 171, "kinder": 143 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 320,
+        "basePortionG": 190
+      },
+      "ingredients": [
+        { "ingredientId": "ing-rindsvoressen", "name": "Rindsvoressen", "qtyPerBasePortionG": 80, "categoryKey": "butchery", "yield": 0.7, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 70, "categoryKey": "produce", "yield": 0.8, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-peperoni", "name": "Peperoni", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.85, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_gurken-kaltschale-mit-dill",
+      "name": "Gurken-Kaltschale mit Dill",
+      "foodGroup": "vegetable",
+      "tags": ["cold_soup", "summer", "light"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 180,
+        "portionGByGroup": { "erwachsene": 180, "senioren": 162, "kinder": 135 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 130,
+        "basePortionG": 180
+      },
+      "ingredients": [
+        { "ingredientId": "ing-gurke", "name": "Gurke", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-joghurt", "name": "Joghurt", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_haferflockensuppe-mit-gemuese",
+      "name": "Haferflockensuppe mit Gemüse",
+      "foodGroup": "starch",
+      "tags": ["oat", "hearty"],
+      "allergens": ["gluten", "sellerie"],
+      "isVollkorn": true,
+      "portion": {
+        "basePortionG": 75,
+        "portionGByGroup": { "erwachsene": 75, "senioren": 68, "kinder": 56 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 160,
+        "basePortionG": 75
+      },
+      "ingredients": [
+        { "ingredientId": "ing-haferflocken", "name": "Haferflocken", "qtyPerBasePortionG": 25, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-karotten", "name": "Karotten", "qtyPerBasePortionG": 30, "categoryKey": "produce", "yield": 0.9, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-sellerie", "name": "Sellerie", "qtyPerBasePortionG": 20, "categoryKey": "produce", "yield": 0.85, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_hochzeitssuppe",
+      "name": "Hochzeitssuppe",
+      "foodGroup": "protein",
+      "tags": ["broth", "classic", "celebration"],
+      "allergens": ["gluten", "egg", "sellerie"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 70,
+        "portionGByGroup": { "erwachsene": 70, "senioren": 63, "kinder": 53 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 220,
+        "basePortionG": 70
+      },
+      "ingredients": [
+        { "ingredientId": "ing-pouletbrust", "name": "Pouletbrust", "qtyPerBasePortionG": 30, "categoryKey": "butchery", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-griessnockerl", "name": "Griessnockerl", "qtyPerBasePortionG": 20, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-eierstich", "name": "Eierstich", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 1, "packSizeG": 500, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_huehnersuppe-mit-nudeln",
+      "name": "Hühnersuppe mit Nudeln",
+      "foodGroup": "protein",
+      "tags": ["poultry", "pasta", "classic"],
+      "allergens": ["gluten", "sellerie"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 60,
+        "portionGByGroup": { "erwachsene": 60, "senioren": 54, "kinder": 45 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 150,
+        "basePortionG": 60
+      },
+      "ingredients": [
+        { "ingredientId": "ing-pouletbrust", "name": "Pouletbrust", "qtyPerBasePortionG": 40, "categoryKey": "butchery", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-nudeln", "name": "Nudeln", "qtyPerBasePortionG": 20, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 5000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_indische-linsensuppe-dal",
+      "name": "Indische Linsensuppe (Dal)",
+      "foodGroup": "protein",
+      "tags": ["lentil", "indian", "vegan_adaptable"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 115,
+        "portionGByGroup": { "erwachsene": 115, "senioren": 104, "kinder": 86 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 240,
+        "basePortionG": 115
+      },
+      "ingredients": [
+        { "ingredientId": "ing-linsen-rot", "name": "Rote Linsen", "qtyPerBasePortionG": 60, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-tomaten-gehackt", "name": "Tomaten", "qtyPerBasePortionG": 50, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-ingwer", "name": "Ingwer", "qtyPerBasePortionG": 5, "categoryKey": "produce", "yield": 0.9, "packSizeG": 250, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_italienische-brotsuppe-pappa-al-pomodoro",
+      "name": "Italienische Brotsuppe (Pappa al Pomodoro)",
+      "foodGroup": "starch",
+      "tags": ["bread", "tomato", "classic", "italian"],
+      "allergens": ["gluten"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 170,
+        "portionGByGroup": { "erwachsene": 170, "senioren": 153, "kinder": 128 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 210,
+        "basePortionG": 170
+      },
+      "ingredients": [
+        { "ingredientId": "ing-brot-altbacken", "name": "Brot", "qtyPerBasePortionG": 50, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-tomaten-gehackt", "name": "Tomaten", "qtyPerBasePortionG": 120, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_joghurt-gurken-suppe-kalt",
+      "name": "Joghurt-Gurken-Suppe (kalt)",
+      "foodGroup": "dairy",
+      "tags": ["cold_soup", "summer", "light"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 180,
+        "portionGByGroup": { "erwachsene": 180, "senioren": 162, "kinder": 135 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 110,
+        "basePortionG": 180
+      },
+      "ingredients": [
+        { "ingredientId": "ing-joghurt", "name": "Joghurt", "qtyPerBasePortionG": 100, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-gurke", "name": "Gurke", "qtyPerBasePortionG": 80, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_kalbskraftbruehe-mit-sherry",
+      "name": "Kalbskraftbrühe mit Sherry",
+      "foodGroup": "protein",
+      "tags": ["broth", "veal", "classic"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 110,
+        "portionGByGroup": { "erwachsene": 110, "senioren": 99, "kinder": 83 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 90,
+        "basePortionG": 110
+      },
+      "ingredients": [
+        { "ingredientId": "ing-kalbsknochen", "name": "Kalbsknochen", "qtyPerBasePortionG": 100, "categoryKey": "butchery", "yield": 0.3, "packSizeG": 5000, "isRaw": true },
+        { "ingredientId": "ing-sherry", "name": "Sherry", "qtyPerBasePortionG": 10, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 750, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_karotten-ingwersuppe",
+      "name": "Karotten-Ingwersuppe",
+      "foodGroup": "vegetable",
+      "tags": ["soup", "carrot", "ginger"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 155,
+        "portionGByGroup": { "erwachsene": 155, "senioren": 140, "kinder": 116 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 120,
+        "basePortionG": 155
+      },
+      "ingredients": [
+        { "ingredientId": "ing-karotten", "name": "Karotten", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.9, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-ingwer", "name": "Ingwer", "qtyPerBasePortionG": 5, "categoryKey": "produce", "yield": 0.9, "packSizeG": 250, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_kartoffel-lauch-suppe",
+      "name": "Kartoffel-Lauch-Suppe",
+      "foodGroup": "starch",
+      "tags": ["potato", "leek", "classic", "hearty"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 220,
+        "portionGByGroup": { "erwachsene": 220, "senioren": 198, "kinder": 165 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 190,
+        "basePortionG": 220
+      },
+      "ingredients": [
+        { "ingredientId": "ing-kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 120, "categoryKey": "produce", "yield": 0.8, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-lauch", "name": "Lauch", "qtyPerBasePortionG": 80, "categoryKey": "produce", "yield": 0.75, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_kartoffelsuppe-mit-majoran",
+      "name": "Kartoffelsuppe mit Majoran",
+      "foodGroup": "starch",
+      "tags": ["potato", "classic"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 152,
+        "portionGByGroup": { "erwachsene": 152, "senioren": 137, "kinder": 114 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 130,
+        "basePortionG": 152
+      },
+      "ingredients": [
+        { "ingredientId": "ing-kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.8, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-majoran", "name": "Majoran", "qtyPerBasePortionG": 2, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 200, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_kerbelcremesuppe",
+      "name": "Kerbelcrèmesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "herb", "spring"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 65,
+        "portionGByGroup": { "erwachsene": 65, "senioren": 59, "kinder": 49 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 140,
+        "basePortionG": 65
+      },
+      "ingredients": [
+        { "ingredientId": "ing-kerbel", "name": "Kerbel", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.85, "packSizeG": 100, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_kichererbsensuppe-orientalisch",
+      "name": "Kichererbsensuppe (orientalisch)",
+      "foodGroup": "protein",
+      "tags": ["chickpea", "oriental", "vegan_adaptable"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 80,
+        "portionGByGroup": { "erwachsene": 80, "senioren": 72, "kinder": 60 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 230,
+        "basePortionG": 80
+      },
+      "ingredients": [
+        { "ingredientId": "ing-kichererbsen", "name": "Kichererbsen", "qtyPerBasePortionG": 80, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_knoblauchcremesuppe",
+      "name": "Knoblauchcrèmesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "garlic", "classic"],
+      "allergens": ["milk", "gluten"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 65,
+        "portionGByGroup": { "erwachsene": 65, "senioren": 59, "kinder": 49 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 190,
+        "basePortionG": 65
+      },
+      "ingredients": [
+        { "ingredientId": "ing-knoblauch", "name": "Knoblauch", "qtyPerBasePortionG": 20, "categoryKey": "produce", "yield": 0.9, "packSizeG": 500, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-brot-weiss", "name": "Brot", "qtyPerBasePortionG": 15, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_kohlrabicremesuppe",
+      "name": "Kohlrabicremesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "classic"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 170,
+        "portionGByGroup": { "erwachsene": 170, "senioren": 153, "kinder": 128 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 140,
+        "basePortionG": 170
+      },
+      "ingredients": [
+        { "ingredientId": "ing-kohlrabi", "name": "Kohlrabi", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.8, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_kraeftige-rindsbouillon-mit-mark",
+      "name": "Kräftige Rindsbouillon mit Mark",
+      "foodGroup": "protein",
+      "tags": ["broth", "beef", "classic"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 140,
+        "portionGByGroup": { "erwachsene": 140, "senioren": 126, "kinder": 105 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 120,
+        "basePortionG": 140
+      },
+      "ingredients": [
+        { "ingredientId": "ing-rindsknochen", "name": "Rindsknochen", "qtyPerBasePortionG": 120, "categoryKey": "butchery", "yield": 0.3, "packSizeG": 5000, "isRaw": true },
+        { "ingredientId": "ing-markbein", "name": "Markbein", "qtyPerBasePortionG": 20, "categoryKey": "butchery", "yield": 1, "packSizeG": 500, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_kraeutercremesuppe",
+      "name": "Kräutercremesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "herb", "spring"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 65,
+        "portionGByGroup": { "erwachsene": 65, "senioren": 59, "kinder": 49 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 150,
+        "basePortionG": 65
+      },
+      "ingredients": [
+        { "ingredientId": "ing-kraeuter-gemischt", "name": "Kräuter", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.9, "packSizeG": 100, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_kuerbis-apfel-suppe",
+      "name": "Kürbis-Apfel-Suppe",
+      "foodGroup": "vegetable",
+      "tags": ["soup", "pumpkin", "autumn", "seasonal"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 180,
+        "portionGByGroup": { "erwachsene": 180, "senioren": 162, "kinder": 135 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 140,
+        "basePortionG": 180
+      },
+      "ingredients": [
+        { "ingredientId": "ing-kuerbis", "name": "Kürbis", "qtyPerBasePortionG": 140, "categoryKey": "produce", "yield": 0.8, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-apfel", "name": "Apfel", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_kuerbiscremesuppe-mit-kokos",
+      "name": "Kürbiscrèmesuppe mit Kokos",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "pumpkin", "coconut", "autumn"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 190,
+        "portionGByGroup": { "erwachsene": 190, "senioren": 171, "kinder": 143 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 200,
+        "basePortionG": 190
+      },
+      "ingredients": [
+        { "ingredientId": "ing-kuerbis", "name": "Kürbis", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.8, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-kokosmilch", "name": "Kokosmilch", "qtyPerBasePortionG": 40, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 400, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_kaese-lauch-suppe-mit-hackfleisch",
+      "name": "Käse-Lauch-Suppe mit Hackfleisch",
+      "foodGroup": "protein",
+      "tags": ["cheese", "leek", "hearty", "stew"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 170,
+        "portionGByGroup": { "erwachsene": 170, "senioren": 153, "kinder": 128 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 350,
+        "basePortionG": 170
+      },
+      "ingredients": [
+        { "ingredientId": "ing-hackfleisch-rind", "name": "Rindshackfleisch", "qtyPerBasePortionG": 50, "categoryKey": "butchery", "yield": 0.75, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-lauch", "name": "Lauch", "qtyPerBasePortionG": 80, "categoryKey": "produce", "yield": 0.75, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-schmelzkaese", "name": "Käse", "qtyPerBasePortionG": 40, "categoryKey": "dairy", "yield": 1, "packSizeG": 500, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_lauchcremesuppe-mit-speckwuerfeln",
+      "name": "Lauchcrèmesuppe mit Speckwürfeln",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "leek", "hearty"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 195,
+        "portionGByGroup": { "erwachsene": 195, "senioren": 176, "kinder": 146 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 200,
+        "basePortionG": 195
+      },
+      "ingredients": [
+        { "ingredientId": "ing-lauch", "name": "Lauch", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.75, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-speck", "name": "Speck", "qtyPerBasePortionG": 20, "categoryKey": "butchery", "yield": 0.6, "packSizeG": 500, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_linsencremesuppe-mit-curry",
+      "name": "Linsencremesuppe mit Curry",
+      "foodGroup": "protein",
+      "tags": ["cream_soup", "lentil", "curry"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 80,
+        "portionGByGroup": { "erwachsene": 80, "senioren": 72, "kinder": 60 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 250,
+        "basePortionG": 80
+      },
+      "ingredients": [
+        { "ingredientId": "ing-linsen-rot", "name": "Linsen", "qtyPerBasePortionG": 60, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_maiscremesuppe",
+      "name": "Maiscrèmesuppe",
+      "foodGroup": "starch",
+      "tags": ["cream_soup", "corn", "classic"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 120,
+        "portionGByGroup": { "erwachsene": 120, "senioren": 108, "kinder": 90 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 180,
+        "basePortionG": 120
+      },
+      "ingredients": [
+        { "ingredientId": "ing-mais", "name": "Mais", "qtyPerBasePortionG": 100, "categoryKey": "frozen", "yield": 1, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_maronencremesuppe",
+      "name": "Maronencremesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "chestnut", "autumn", "seasonal"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 110,
+        "portionGByGroup": { "erwachsene": 110, "senioren": 99, "kinder": 83 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 250,
+        "basePortionG": 110
+      },
+      "ingredients": [
+        { "ingredientId": "ing-maronen-gegart", "name": "Maronen", "qtyPerBasePortionG": 80, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 500, "isRaw": false },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_minestrone-classico",
+      "name": "Minestrone 'Classico'",
+      "foodGroup": "vegetable",
+      "tags": ["soup", "pasta", "vegetable_mix", "classic", "italian"],
+      "allergens": ["gluten", "sellerie"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 85,
+        "portionGByGroup": { "erwachsene": 85, "senioren": 77, "kinder": 64 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 180,
+        "basePortionG": 85
+      },
+      "ingredients": [
+        { "ingredientId": "ing-bohnen-weiss", "name": "Bohnen", "qtyPerBasePortionG": 30, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-hoernli", "name": "Hörnli", "qtyPerBasePortionG": 15, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 5000, "isRaw": true },
+        { "ingredientId": "ing-karotten", "name": "Karotten", "qtyPerBasePortionG": 20, "categoryKey": "produce", "yield": 0.9, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-sellerie", "name": "Sellerie", "qtyPerBasePortionG": 20, "categoryKey": "produce", "yield": 0.85, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_morchelrahmsuppe",
+      "name": "Morchelrahmsuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "mushroom", "gourmet", "seasonal"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 90,
+        "portionGByGroup": { "erwachsene": 90, "senioren": 81, "kinder": 68 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 190,
+        "basePortionG": 90
+      },
+      "ingredients": [
+        { "ingredientId": "ing-morcheln", "name": "Morcheln", "qtyPerBasePortionG": 60, "categoryKey": "produce", "yield": 0.9, "packSizeG": 250, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_ochsenschwanzsuppe",
+      "name": "Ochsenschwanzsuppe",
+      "foodGroup": "protein",
+      "tags": ["broth", "beef", "classic"],
+      "allergens": ["sellerie"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 150,
+        "portionGByGroup": { "erwachsene": 150, "senioren": 135, "kinder": 113 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 250,
+        "basePortionG": 150
+      },
+      "ingredients": [
+        { "ingredientId": "ing-ochsenschwanz", "name": "Ochsenschwanz", "qtyPerBasePortionG": 100, "categoryKey": "butchery", "yield": 0.4, "packSizeG": 2000, "isRaw": true },
+        { "ingredientId": "ing-wurzelgemuese", "name": "Wurzelgemüse", "qtyPerBasePortionG": 50, "categoryKey": "produce", "yield": 0.85, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_paprika-cremesuppe",
+      "name": "Paprika-Crèmesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "pepper"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 175,
+        "portionGByGroup": { "erwachsene": 175, "senioren": 158, "kinder": 131 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 160,
+        "basePortionG": 175
+      },
+      "ingredients": [
+        { "ingredientId": "ing-peperoni", "name": "Peperoni", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.85, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_passierte-gemuesesuppe",
+      "name": "Passierte Gemüsesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["pureed_soup", "light", "diet"],
+      "allergens": ["sellerie"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 120,
+        "portionGByGroup": { "erwachsene": 120, "senioren": 108, "kinder": 90 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 90,
+        "basePortionG": 120
+      },
+      "ingredients": [
+        { "ingredientId": "ing-karotten", "name": "Karotten", "qtyPerBasePortionG": 50, "categoryKey": "produce", "yield": 0.9, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-sellerie", "name": "Sellerie", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.85, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 30, "categoryKey": "produce", "yield": 0.8, "packSizeG": 2500, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_pastinakencremesuppe",
+      "name": "Pastinakencrèmesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "parsnip", "winter"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 175,
+        "portionGByGroup": { "erwachsene": 175, "senioren": 158, "kinder": 131 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 170,
+        "basePortionG": 175
+      },
+      "ingredients": [
+        { "ingredientId": "ing-pastinaken", "name": "Pastinaken", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.85, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_petersiliencremesuppe",
+      "name": "Petersiliencrèmesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "herb", "root_vegetable"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 145,
+        "portionGByGroup": { "erwachsene": 145, "senioren": 131, "kinder": 109 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 150,
+        "basePortionG": 145
+      },
+      "ingredients": [
+        { "ingredientId": "ing-petersilienwurzel", "name": "Petersilienwurzel", "qtyPerBasePortionG": 100, "categoryKey": "produce", "yield": 0.85, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-petersilie", "name": "Petersilie", "qtyPerBasePortionG": 20, "categoryKey": "produce", "yield": 0.9, "packSizeG": 100, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_pfifferlingssuppe-mit-weisswein",
+      "name": "Pfifferlingssuppe mit Weisswein",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "mushroom", "seasonal"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 120,
+        "portionGByGroup": { "erwachsene": 120, "senioren": 108, "kinder": 90 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 170,
+        "basePortionG": 120
+      },
+      "ingredients": [
+        { "ingredientId": "ing-pfifferlinge", "name": "Pfifferlinge", "qtyPerBasePortionG": 80, "categoryKey": "produce", "yield": 0.85, "packSizeG": 500, "isRaw": true },
+        { "ingredientId": "ing-weisswein", "name": "Weisswein", "qtyPerBasePortionG": 15, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 750, "isRaw": false },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_pfingstsuppe-sieben-kraeuter-suppe",
+      "name": "Pfingstsuppe (Sieben-Kräuter-Suppe)",
+      "foodGroup": "vegetable",
+      "tags": ["wild_herb", "seasonal", "spring"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 130,
+        "portionGByGroup": { "erwachsene": 130, "senioren": 117, "kinder": 98 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 100,
+        "basePortionG": 130
+      },
+      "ingredients": [
+        { "ingredientId": "ing-kraeuter-gemischt", "name": "Kräuter", "qtyPerBasePortionG": 80, "categoryKey": "produce", "yield": 0.85, "packSizeG": 500, "isRaw": true },
+        { "ingredientId": "ing-kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 50, "categoryKey": "produce", "yield": 0.8, "packSizeG": 2500, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_pfaelzerkarotten-kokossuppe",
+      "name": "Pfälzerkarotten-Kokossuppe",
+      "foodGroup": "vegetable",
+      "tags": ["soup", "carrot", "coconut"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 160,
+        "portionGByGroup": { "erwachsene": 160, "senioren": 144, "kinder": 120 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 200,
+        "basePortionG": 160
+      },
+      "ingredients": [
+        { "ingredientId": "ing-karotten", "name": "Karotten", "qtyPerBasePortionG": 120, "categoryKey": "produce", "yield": 0.9, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-kokosmilch", "name": "Kokosmilch", "qtyPerBasePortionG": 40, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 400, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_randen-meerrettichsuppe",
+      "name": "Randen-Meerrettichsuppe",
+      "foodGroup": "vegetable",
+      "tags": ["soup", "beetroot"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 175,
+        "portionGByGroup": { "erwachsene": 175, "senioren": 158, "kinder": 131 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 130,
+        "basePortionG": 175
+      },
+      "ingredients": [
+        { "ingredientId": "ing-randen-gegart", "name": "Randen", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-meerrettich", "name": "Meerrettich", "qtyPerBasePortionG": 10, "categoryKey": "produce", "yield": 0.9, "packSizeG": 200, "isRaw": true },
+        { "ingredientId": "ing-sauerrahm", "name": "Sauerrahm", "qtyPerBasePortionG": 15, "categoryKey": "dairy", "yield": 1, "packSizeG": 500, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_ribelmaissuppe",
+      "name": "Ribelmaissuppe",
+      "foodGroup": "starch",
+      "tags": ["corn", "local", "classic"],
+      "allergens": ["milk"],
+      "isVollkorn": true,
+      "portion": {
+        "basePortionG": 150,
+        "portionGByGroup": { "erwachsene": 150, "senioren": 135, "kinder": 113 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 220,
+        "basePortionG": 150
+      },
+      "ingredients": [
+        { "ingredientId": "ing-ribelmais", "name": "Ribelmais", "qtyPerBasePortionG": 50, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-milch", "name": "Milch", "qtyPerBasePortionG": 100, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_risi-bisi-suppe",
+      "name": "Risi-Bisi-Suppe",
+      "foodGroup": "starch",
+      "tags": ["rice", "pea", "soup"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 80,
+        "portionGByGroup": { "erwachsene": 80, "senioren": 72, "kinder": 60 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 180,
+        "basePortionG": 80
+      },
+      "ingredients": [
+        { "ingredientId": "ing-reis", "name": "Reis", "qtyPerBasePortionG": 30, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 5000, "isRaw": true },
+        { "ingredientId": "ing-erbsen", "name": "Erbsen", "qtyPerBasePortionG": 50, "categoryKey": "frozen", "yield": 1, "packSizeG": 2500, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_rotkohlsuppe-mit-apfel",
+      "name": "Rotkohlsuppe mit Apfel",
+      "foodGroup": "vegetable",
+      "tags": ["cabbage", "fruit", "winter"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 170,
+        "portionGByGroup": { "erwachsene": 170, "senioren": 153, "kinder": 128 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 140,
+        "basePortionG": 170
+      },
+      "ingredients": [
+        { "ingredientId": "ing-rotkohl", "name": "Rotkohl", "qtyPerBasePortionG": 120, "categoryKey": "produce", "yield": 0.8, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-apfel", "name": "Apfel", "qtyPerBasePortionG": 50, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_rueebli-orangencremesuppe",
+      "name": "Rüebli-Orangencremesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "carrot", "orange"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 195,
+        "portionGByGroup": { "erwachsene": 195, "senioren": 176, "kinder": 146 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 170,
+        "basePortionG": 195
+      },
+      "ingredients": [
+        { "ingredientId": "ing-karotten", "name": "Karotten", "qtyPerBasePortionG": 140, "categoryKey": "produce", "yield": 0.9, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-orange", "name": "Orange", "qtyPerBasePortionG": 30, "categoryKey": "produce", "yield": 0.5, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_rueeblicremesuppe",
+      "name": "Rüeblicrèmesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "carrot", "classic"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 175,
+        "portionGByGroup": { "erwachsene": 175, "senioren": 158, "kinder": 131 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 160,
+        "basePortionG": 175
+      },
+      "ingredients": [
+        { "ingredientId": "ing-karotten", "name": "Karotten", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.9, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_salat-cremesuppe",
+      "name": "Salat-Crèmesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "lettuce"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 125,
+        "portionGByGroup": { "erwachsene": 125, "senioren": 113, "kinder": 94 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 130,
+        "basePortionG": 125
+      },
+      "ingredients": [
+        { "ingredientId": "ing-kopfsalat", "name": "Kopfsalat", "qtyPerBasePortionG": 100, "categoryKey": "produce", "yield": 0.85, "packSizeG": 500, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_sauerkrautsuppe-mit-kartoffeln",
+      "name": "Sauerkrautsuppe mit Kartoffeln",
+      "foodGroup": "vegetable",
+      "tags": ["soup", "sauerkraut", "winter"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 180,
+        "portionGByGroup": { "erwachsene": 180, "senioren": 162, "kinder": 135 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 140,
+        "basePortionG": 180
+      },
+      "ingredients": [
+        { "ingredientId": "ing-sauerkraut", "name": "Sauerkraut", "qtyPerBasePortionG": 100, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 80, "categoryKey": "produce", "yield": 0.8, "packSizeG": 2500, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_sauerampfersuppe",
+      "name": "Sauerampfersuppe",
+      "foodGroup": "vegetable",
+      "tags": ["wild_herb", "seasonal", "spring"],
+      "allergens": ["milk", "egg"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 120,
+        "portionGByGroup": { "erwachsene": 120, "senioren": 108, "kinder": 90 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 150,
+        "basePortionG": 120
+      },
+      "ingredients": [
+        { "ingredientId": "ing-sauerampfer", "name": "Sauerampfer", "qtyPerBasePortionG": 80, "categoryKey": "produce", "yield": 0.85, "packSizeG": 500, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-ei", "name": "Eier", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 1, "packSizeG": 10, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_schwarzwurzelcremesuppe",
+      "name": "Schwarzwurzelcrèmesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "root_vegetable", "winter"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 175,
+        "portionGByGroup": { "erwachsene": 175, "senioren": 158, "kinder": 131 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 180,
+        "basePortionG": 175
+      },
+      "ingredients": [
+        { "ingredientId": "ing-schwarzwurzel", "name": "Schwarzwurzel", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.75, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_selleriecremesuppe",
+      "name": "Selleriecrèmesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "root_vegetable", "classic"],
+      "allergens": ["sellerie", "milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 175,
+        "portionGByGroup": { "erwachsene": 175, "senioren": 158, "kinder": 131 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 160,
+        "basePortionG": 175
+      },
+      "ingredients": [
+        { "ingredientId": "ing-sellerie", "name": "Sellerie", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.85, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_serbische-bohnensuppe",
+      "name": "Serbische Bohnensuppe",
+      "foodGroup": "protein",
+      "tags": ["bean", "stew", "hearty"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 140,
+        "portionGByGroup": { "erwachsene": 140, "senioren": 126, "kinder": 105 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 280,
+        "basePortionG": 140
+      },
+      "ingredients": [
+        { "ingredientId": "ing-bohnen-weiss", "name": "Weisse Bohnen", "qtyPerBasePortionG": 70, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-rindfleisch-wuerfel", "name": "Rindfleisch", "qtyPerBasePortionG": 40, "categoryKey": "butchery", "yield": 0.7, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-peperoni", "name": "Peperoni", "qtyPerBasePortionG": 30, "categoryKey": "produce", "yield": 0.85, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_sopa-de-ajo-spanische-knoblauchsuppe",
+      "name": "Sopa de ajo (Spanische Knoblauchsuppe)",
+      "foodGroup": "vegetable",
+      "tags": ["garlic", "bread", "classic"],
+      "allergens": ["gluten", "egg"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 80,
+        "portionGByGroup": { "erwachsene": 80, "senioren": 72, "kinder": 60 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 220,
+        "basePortionG": 80
+      },
+      "ingredients": [
+        { "ingredientId": "ing-brot-weiss", "name": "Brot", "qtyPerBasePortionG": 40, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-knoblauch", "name": "Knoblauch", "qtyPerBasePortionG": 20, "categoryKey": "produce", "yield": 0.9, "packSizeG": 500, "isRaw": true },
+        { "ingredientId": "ing-ei", "name": "Eier", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 1, "packSizeG": 10, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_spargelcremesuppe",
+      "name": "Spargelcrèmesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "asparagus", "spring", "seasonal"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 145,
+        "portionGByGroup": { "erwachsene": 145, "senioren": 131, "kinder": 109 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 150,
+        "basePortionG": 145
+      },
+      "ingredients": [
+        { "ingredientId": "ing-spargel", "name": "Spargel", "qtyPerBasePortionG": 120, "categoryKey": "produce", "yield": 0.6, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_spinat-ricotta-suppe",
+      "name": "Spinat-Ricotta-Suppe",
+      "foodGroup": "vegetable",
+      "tags": ["soup", "spinach", "cheese"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 160,
+        "portionGByGroup": { "erwachsene": 160, "senioren": 144, "kinder": 120 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 190,
+        "basePortionG": 160
+      },
+      "ingredients": [
+        { "ingredientId": "ing-spinat", "name": "Spinat", "qtyPerBasePortionG": 120, "categoryKey": "produce", "yield": 0.85, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-ricotta", "name": "Ricotta", "qtyPerBasePortionG": 40, "categoryKey": "dairy", "yield": 1, "packSizeG": 500, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_steckruebeneintopf-mit-speck",
+      "name": "Steckrübeneintopf mit Speck",
+      "foodGroup": "vegetable",
+      "tags": ["stew", "root_vegetable", "winter", "hearty"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 240,
+        "portionGByGroup": { "erwachsene": 240, "senioren": 216, "kinder": 180 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 220,
+        "basePortionG": 240
+      },
+      "ingredients": [
+        { "ingredientId": "ing-steckruebe", "name": "Steckrübe", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.8, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 60, "categoryKey": "produce", "yield": 0.8, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-speck", "name": "Speck", "qtyPerBasePortionG": 30, "categoryKey": "butchery", "yield": 0.6, "packSizeG": 500, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_steinpilzsuppe",
+      "name": "Steinpilzsuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "mushroom", "gourmet", "autumn"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 105,
+        "portionGByGroup": { "erwachsene": 105, "senioren": 95, "kinder": 79 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 170,
+        "basePortionG": 105
+      },
+      "ingredients": [
+        { "ingredientId": "ing-steinpilze", "name": "Steinpilze", "qtyPerBasePortionG": 80, "categoryKey": "produce", "yield": 0.85, "packSizeG": 500, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_suesskartoffelsuppe-mit-ingwer",
+      "name": "Süsskartoffelsuppe mit Ingwer",
+      "foodGroup": "starch",
+      "tags": ["soup", "sweet_potato", "ginger"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 155,
+        "portionGByGroup": { "erwachsene": 155, "senioren": 140, "kinder": 116 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 160,
+        "basePortionG": 155
+      },
+      "ingredients": [
+        { "ingredientId": "ing-suesskartoffel", "name": "Süsskartoffel", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.8, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-ingwer", "name": "Ingwer", "qtyPerBasePortionG": 5, "categoryKey": "produce", "yield": 0.9, "packSizeG": 250, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_thailaendische-poulet-kokos-suppe-tom-kha-gai",
+      "name": "Thailändische Poulet-Kokos-Suppe (Tom Kha Gai)",
+      "foodGroup": "protein",
+      "tags": ["soup", "poultry", "coconut", "thai"],
+      "allergens": ["fish"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 170,
+        "portionGByGroup": { "erwachsene": 170, "senioren": 153, "kinder": 128 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 260,
+        "basePortionG": 170
+      },
+      "ingredients": [
+        { "ingredientId": "ing-pouletbrust", "name": "Pouletbrust", "qtyPerBasePortionG": 60, "categoryKey": "butchery", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-kokosmilch", "name": "Kokosmilch", "qtyPerBasePortionG": 80, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 400, "isRaw": false },
+        { "ingredientId": "ing-champignons", "name": "Champignons", "qtyPerBasePortionG": 30, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_tomaten-reis-suppe",
+      "name": "Tomaten-Reis-Suppe",
+      "foodGroup": "starch",
+      "tags": ["soup", "tomato", "rice"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 150,
+        "portionGByGroup": { "erwachsene": 150, "senioren": 135, "kinder": 113 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 160,
+        "basePortionG": 150
+      },
+      "ingredients": [
+        { "ingredientId": "ing-tomaten-gehackt", "name": "Tomaten", "qtyPerBasePortionG": 120, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-reis", "name": "Reis", "qtyPerBasePortionG": 30, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 5000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_tomatocremesuppe-mit-basilikum",
+      "name": "Tomatencrèmesuppe mit Basilikum",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "tomato", "classic"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 185,
+        "portionGByGroup": { "erwachsene": 185, "senioren": 167, "kinder": 139 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 170,
+        "basePortionG": 185
+      },
+      "ingredients": [
+        { "ingredientId": "ing-tomaten-gehackt", "name": "Tomaten", "qtyPerBasePortionG": 150, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-basilikum", "name": "Basilikum", "qtyPerBasePortionG": 5, "categoryKey": "produce", "yield": 0.9, "packSizeG": 100, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_topinamburcremesuppe",
+      "name": "Topinamburcrèmesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "root_vegetable", "winter"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 175,
+        "portionGByGroup": { "erwachsene": 175, "senioren": 158, "kinder": 131 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 180,
+        "basePortionG": 175
+      },
+      "ingredients": [
+        { "ingredientId": "ing-topinambur", "name": "Topinambur", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.8, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_vichyssoise-kalte-lauch-kartoffel-suppe",
+      "name": "Vichyssoise (Kalte Lauch-Kartoffel-Suppe)",
+      "foodGroup": "vegetable",
+      "tags": ["cold_soup", "potato", "leek", "classic", "summer"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 210,
+        "portionGByGroup": { "erwachsene": 210, "senioren": 189, "kinder": 158 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 180,
+        "basePortionG": 210
+      },
+      "ingredients": [
+        { "ingredientId": "ing-lauch", "name": "Lauch", "qtyPerBasePortionG": 100, "categoryKey": "produce", "yield": 0.75, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-kartoffeln", "name": "Kartoffeln", "qtyPerBasePortionG": 80, "categoryKey": "produce", "yield": 0.8, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_waldpilzcremesuppe",
+      "name": "Waldpilzcrèmesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "mushroom", "autumn"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 125,
+        "portionGByGroup": { "erwachsene": 125, "senioren": 113, "kinder": 94 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 170,
+        "basePortionG": 125
+      },
+      "ingredients": [
+        { "ingredientId": "ing-waldpilze", "name": "Waldpilze", "qtyPerBasePortionG": 100, "categoryKey": "produce", "yield": 0.85, "packSizeG": 500, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_weisse-bohnensuppe-mit-salbei",
+      "name": "Weisse Bohnensuppe mit Salbei",
+      "foodGroup": "protein",
+      "tags": ["bean", "soup", "hearty"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 73,
+        "portionGByGroup": { "erwachsene": 73, "senioren": 66, "kinder": 55 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 210,
+        "basePortionG": 73
+      },
+      "ingredients": [
+        { "ingredientId": "ing-bohnen-weiss", "name": "Weisse Bohnen", "qtyPerBasePortionG": 70, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-salbei", "name": "Salbei", "qtyPerBasePortionG": 3, "categoryKey": "produce", "yield": 1, "packSizeG": 100, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_weisskohlsuppe-mit-kuemmel",
+      "name": "Weisskohlsuppe mit Kümmel",
+      "foodGroup": "vegetable",
+      "tags": ["cabbage", "soup", "light"],
+      "allergens": [],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 153,
+        "portionGByGroup": { "erwachsene": 153, "senioren": 138, "kinder": 115 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 120,
+        "basePortionG": 153
+      },
+      "ingredients": [
+        { "ingredientId": "ing-weisskohl", "name": "Weisskohl", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.8, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-kuemmel", "name": "Kümmel", "qtyPerBasePortionG": 3, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 500, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_weissweinsuppe",
+      "name": "Weissweinsuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "wine", "classic"],
+      "allergens": ["milk", "egg", "gluten"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 85,
+        "portionGByGroup": { "erwachsene": 85, "senioren": 77, "kinder": 64 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 180,
+        "basePortionG": 85
+      },
+      "ingredients": [
+        { "ingredientId": "ing-weisswein", "name": "Weisswein", "qtyPerBasePortionG": 40, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 750, "isRaw": false },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-eigelb", "name": "Eigelb", "qtyPerBasePortionG": 15, "categoryKey": "dairy", "yield": 1, "packSizeG": 10, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_winzersuppe",
+      "name": "Winzersuppe",
+      "foodGroup": "vegetable",
+      "tags": ["soup", "wine", "bread"],
+      "allergens": ["gluten", "milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 105,
+        "portionGByGroup": { "erwachsene": 105, "senioren": 95, "kinder": 79 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 220,
+        "basePortionG": 105
+      },
+      "ingredients": [
+        { "ingredientId": "ing-zwiebeln", "name": "Zwiebeln", "qtyPerBasePortionG": 50, "categoryKey": "produce", "yield": 0.9, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-weisswein", "name": "Weisswein", "qtyPerBasePortionG": 30, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 750, "isRaw": false },
+        { "ingredientId": "ing-brot-weiss", "name": "Brot", "qtyPerBasePortionG": 25, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_wirsingcremesuppe",
+      "name": "Wirsingcrèmesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "cabbage", "winter"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 175,
+        "portionGByGroup": { "erwachsene": 175, "senioren": 158, "kinder": 131 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 150,
+        "basePortionG": 175
+      },
+      "ingredients": [
+        { "ingredientId": "ing-wirsing", "name": "Wirsing", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.8, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_wurzelgemuesesuppe",
+      "name": "Wurzelgemüsesuppe",
+      "foodGroup": "vegetable",
+      "tags": ["soup", "root_vegetable", "winter"],
+      "allergens": ["sellerie"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 130,
+        "portionGByGroup": { "erwachsene": 130, "senioren": 117, "kinder": 98 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 110,
+        "basePortionG": 130
+      },
+      "ingredients": [
+        { "ingredientId": "ing-karotten", "name": "Karotten", "qtyPerBasePortionG": 50, "categoryKey": "produce", "yield": 0.9, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-sellerie", "name": "Sellerie", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.85, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-pastinaken", "name": "Pastinaken", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.85, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "s_zucchetticremesuppe-mit-parmesan",
+      "name": "Zucchetticremesuppe mit Parmesan",
+      "foodGroup": "vegetable",
+      "tags": ["cream_soup", "zucchini", "cheese"],
+      "allergens": ["milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 185,
+        "portionGByGroup": { "erwachsene": 185, "senioren": 167, "kinder": 139 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 160,
+        "basePortionG": 185
+      },
+      "ingredients": [
+        { "ingredientId": "ing-zucchetti", "name": "Zucchetti", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ing-parmesan", "name": "Parmesan", "qtyPerBasePortionG": 15, "categoryKey": "dairy", "yield": 1, "packSizeG": 500, "isRaw": false },
+        { "ingredientId": "ing-rahm", "name": "Rahm", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "s_zwiebelsuppe-elsaesser-art",
+      "name": "Zwiebelsuppe 'Elsässer Art'",
+      "foodGroup": "vegetable",
+      "tags": ["onion", "cheese", "classic"],
+      "allergens": ["gluten", "milk"],
+      "isVollkorn": false,
+      "portion": {
+        "basePortionG": 170,
+        "portionGByGroup": { "erwachsene": 170, "senioren": 153, "kinder": 128 }
+      },
+      "nutrition": {
+        "kind": "PER_PORTION",
+        "kcalPerPortion": 250,
+        "basePortionG": 170
+      },
+      "ingredients": [
+        { "ingredientId": "ing-zwiebeln", "name": "Zwiebeln", "qtyPerBasePortionG": 120, "categoryKey": "produce", "yield": 0.9, "packSizeG": 2500, "isRaw": true },
+        { "ingredientId": "ing-kaese-gerieben", "name": "Käse", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ing-brot-weiss", "name": "Brot", "qtyPerBasePortionG": 20, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    }
+  ]
+}

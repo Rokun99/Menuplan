@@ -1,0 +1,1761 @@
+{
+  "dessert": [
+    {
+      "recipeId": "d_amaretti",
+      "name": "Amaretti",
+      "foodGroup": "fat_oil",
+      "tags": ["bakery", "biscuit", "italian"],
+      "allergens": ["nuts", "egg"],
+      "portion": { "basePortionG": 30, "portionGByGroup": { "erwachsene": 30, "senioren": 25, "kinder": 20 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 120, "basePortionG": 30 },
+      "ingredients": [
+        { "ingredientId": "amaretti_fertig", "name": "Amaretti (fertig)", "qtyPerBasePortionG": 30, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "d_apfelkompott_vanille",
+      "name": "Apfelkompott mit Vanille",
+      "foodGroup": "fruit",
+      "tags": ["fruit", "compote", "classic"],
+      "allergens": [],
+      "portion": { "basePortionG": 180, "portionGByGroup": { "erwachsene": 180, "senioren": 150, "kinder": 120 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 140, "basePortionG": 180 },
+      "ingredients": [
+        { "ingredientId": "apfel_frisch", "name": "Apfel", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "zucker", "name": "Zucker", "qtyPerBasePortionG": 10, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "vanille", "name": "Vanille", "qtyPerBasePortionG": 1, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 50, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_apfelkuchen",
+      "name": "Apfelkuchen",
+      "foodGroup": "fruit",
+      "tags": ["cake", "baked"],
+      "allergens": ["gluten", "egg", "milk"],
+      "portion": { "basePortionG": 140, "portionGByGroup": { "erwachsene": 140, "senioren": 120, "kinder": 100 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 380, "basePortionG": 140 },
+      "ingredients": [
+        { "ingredientId": "weizenmehl", "name": "Mehl", "qtyPerBasePortionG": 40, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "apfel_frisch", "name": "Apfel", "qtyPerBasePortionG": 80, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "butter", "name": "Butter", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 1, "packSizeG": 250, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "d_aprikosen_sorbet",
+      "name": "Aprikosen-Sorbet",
+      "foodGroup": "fruit",
+      "tags": ["sorbet", "cold"],
+      "allergens": [],
+      "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 80 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 130, "basePortionG": 120 },
+      "ingredients": [
+        { "ingredientId": "aprikosen_frisch", "name": "Aprikosen", "qtyPerBasePortionG": 120, "categoryKey": "produce", "yield": 0.94, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_aprikosen_joghurt",
+      "name": "Aprikosenjoghurt",
+      "foodGroup": "dairy",
+      "tags": ["yogurt", "fruit"],
+      "allergens": ["milk"],
+      "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 120, "basePortionG": 150 },
+      "ingredients": [
+        { "ingredientId": "joghurt_nature", "name": "Joghurt nature", "qtyPerBasePortionG": 120, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "aprikosen_frisch", "name": "Aprikosen", "qtyPerBasePortionG": 30, "categoryKey": "produce", "yield": 0.94, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_bananen_joghurt",
+      "name": "Bananenjoghurt",
+      "foodGroup": "dairy",
+      "tags": ["yogurt", "fruit"],
+      "allergens": ["milk"],
+      "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 130, "basePortionG": 150 },
+      "ingredients": [
+        { "ingredientId": "joghurt_nature", "name": "Joghurt nature", "qtyPerBasePortionG": 120, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "banane_frisch", "name": "Banane", "qtyPerBasePortionG": 30, "categoryKey": "produce", "yield": 0.7, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_birnenkompott",
+      "name": "Birnenkompott",
+      "foodGroup": "fruit",
+      "tags": ["fruit", "compote"],
+      "allergens": [],
+      "portion": { "basePortionG": 170, "portionGByGroup": { "erwachsene": 170, "senioren": 140, "kinder": 110 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 130, "basePortionG": 170 },
+      "ingredients": [
+        { "ingredientId": "birnen_frisch", "name": "Birnen", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.92, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "zucker", "name": "Zucker", "qtyPerBasePortionG": 8, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_birnensorbet_williams",
+      "name": "Birnensorbet 'Williams'",
+      "foodGroup": "fruit",
+      "tags": ["sorbet", "cold"],
+      "allergens": [],
+      "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 80 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 140, "basePortionG": 120 },
+      "ingredients": [
+        { "ingredientId": "birnen_frisch", "name": "Birnen", "qtyPerBasePortionG": 120, "categoryKey": "produce", "yield": 0.92, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_biskuitroulade",
+      "name": "Biskuitroulade",
+      "foodGroup": "starch",
+      "tags": ["roll", "biscuit", "bakery"],
+      "allergens": ["gluten", "egg"],
+      "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 80 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 320, "basePortionG": 120 },
+      "ingredients": [
+        { "ingredientId": "biskuitroulade_fertig", "name": "Biskuitroulade (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "d_blanc_manger",
+      "name": "Blanc Manger",
+      "foodGroup": "dairy",
+      "tags": ["pudding", "classic"],
+      "allergens": ["milk", "nuts"],
+      "portion": { "basePortionG": 140, "portionGByGroup": { "erwachsene": 140, "senioren": 120, "kinder": 100 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 280, "basePortionG": 140 },
+      "ingredients": [
+        { "ingredientId": "milch", "name": "Milch", "qtyPerBasePortionG": 100, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "mandeln_gemahlen", "name": "Mandeln (gemahlen)", "qtyPerBasePortionG": 20, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "zucker", "name": "Zucker", "qtyPerBasePortionG": 15, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_blaetterteig_cornet_vanille",
+      "name": "Blätterteigcornet mit Vanille",
+      "foodGroup": "starch",
+      "tags": ["pastry", "filled"],
+      "allergens": ["gluten", "milk", "egg"],
+      "portion": { "basePortionG": 100, "portionGByGroup": { "erwachsene": 100, "senioren": 85, "kinder": 70 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 350, "basePortionG": 100 },
+      "ingredients": [
+        { "ingredientId": "blaetterteig_fertig", "name": "Blätterteig (Cornet, fertig)", "qtyPerBasePortionG": 60, "categoryKey": "frozen", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "vanillecreme", "name": "Vanillecreme (füllung)", "qtyPerBasePortionG": 40, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "d_brownies",
+      "name": "Brownies",
+      "foodGroup": "fat_oil",
+      "tags": ["cake", "chocolate"],
+      "allergens": ["gluten", "egg", "milk", "soy", "nuts"],
+      "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 450, "basePortionG": 120 },
+      "ingredients": [
+        { "ingredientId": "brownie_fertig", "name": "Brownie (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "d_cafe_glace",
+      "name": "Café Glacé",
+      "foodGroup": "dairy",
+      "tags": ["ice_cream", "coffee"],
+      "allergens": ["milk"],
+      "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 250, "basePortionG": 120 },
+      "ingredients": [
+        { "ingredientId": "kaffee_glace", "name": "Kaffee-Glacé", "qtyPerBasePortionG": 120, "categoryKey": "frozen", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "d_cake_basic",
+      "name": "Cake",
+      "foodGroup": "starch",
+      "tags": ["cake", "bakery"],
+      "allergens": ["gluten", "egg", "milk"],
+      "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 380, "basePortionG": 120 },
+      "ingredients": [
+        { "ingredientId": "ruhrkuchen_fertig", "name": "Rührkuchen (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "d_caramel_choepfli",
+      "name": "Caramelchöpfli",
+      "foodGroup": "dairy",
+      "tags": ["pudding", "swiss"],
+      "allergens": ["milk", "egg"],
+      "portion": { "basePortionG": 140, "portionGByGroup": { "erwachsene": 140, "senioren": 120, "kinder": 100 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 280, "basePortionG": 140 },
+      "ingredients": [
+        { "ingredientId": "milch", "name": "Milch", "qtyPerBasePortionG": 100, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "eier", "name": "Eier", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 0.88, "packSizeG": 3600, "isRaw": true },
+        { "ingredientId": "zucker", "name": "Zucker", "qtyPerBasePortionG": 20, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_caramel_creme",
+      "name": "Caramelcreme",
+      "foodGroup": "dairy",
+      "tags": ["pudding"],
+      "allergens": ["milk", "egg"],
+      "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 300, "basePortionG": 150 },
+      "ingredients": [
+        { "ingredientId": "milch", "name": "Milch", "qtyPerBasePortionG": 110, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "eier", "name": "Eier", "qtyPerBasePortionG": 25, "categoryKey": "dairy", "yield": 0.88, "packSizeG": 3600, "isRaw": true },
+        { "ingredientId": "zucker", "name": "Zucker", "qtyPerBasePortionG": 15, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_cheesecake_classic",
+      "name": "Cheesecake",
+      "foodGroup": "dairy",
+      "tags": ["cake", "cheesecake"],
+      "allergens": ["gluten", "egg", "milk"],
+      "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 420, "basePortionG": 120 },
+      "ingredients": [
+        { "ingredientId": "cheesecake_fertig", "name": "Cheesecake (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "d_cheesecake_san_sebastian",
+      "name": "Cheesecake 'San Sebastian'",
+      "foodGroup": "dairy",
+      "tags": ["cake", "cheesecake", "baked"],
+      "allergens": ["egg", "milk"],
+      "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 400, "basePortionG": 120 },
+      "ingredients": [
+        { "ingredientId": "cheesecake_sanseb_fertig", "name": "Cheesecake San Sebastian (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "d_cremeschnitte",
+      "name": "Cremeschnitte",
+      "foodGroup": "starch",
+      "tags": ["pastry", "cream"],
+      "allergens": ["gluten", "egg", "milk"],
+      "portion": { "basePortionG": 140, "portionGByGroup": { "erwachsene": 140, "senioren": 120, "kinder": 100 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 450, "basePortionG": 140 },
+      "ingredients": [
+        { "ingredientId": "cremeschnitte_fertig", "name": "Cremeschnitte (fertig)", "qtyPerBasePortionG": 140, "categoryKey": "bakery", "yield": 1, "packSizeG": 1200, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "d_eierlikoer_schichtdessert",
+      "name": "Eierlikör-Schichtdessert",
+      "foodGroup": "dairy",
+      "tags": ["cream", "alcohol"],
+      "allergens": ["egg", "milk"],
+      "portion": { "basePortionG": 140, "portionGByGroup": { "erwachsene": 140, "senioren": 120, "kinder": 100 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 350, "basePortionG": 140 },
+      "ingredients": [
+        { "ingredientId": "rahm", "name": "Rahm", "qtyPerBasePortionG": 80, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "eierlikoer", "name": "Eierlikör", "qtyPerBasePortionG": 30, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 700, "isRaw": false },
+        { "ingredientId": "biskuitbruch", "name": "Biskuit (Brösel)", "qtyPerBasePortionG": 30, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "d_erdbeer_glace",
+      "name": "Erdbeer-Glacé",
+      "foodGroup": "dairy",
+      "tags": ["ice_cream", "strawberry"],
+      "allergens": ["milk"],
+      "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 180, "basePortionG": 120 },
+      "ingredients": [
+        { "ingredientId": "erdbeer_glace_fertig", "name": "Erdbeer-Glacé", "qtyPerBasePortionG": 120, "categoryKey": "frozen", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "d_erdbeer_tiramisu",
+      "name": "Erdbeer-Tiramisu",
+      "foodGroup": "dairy",
+      "tags": ["tiramisu", "strawberry", "no_bake"],
+      "allergens": ["gluten", "egg", "milk", "soy"],
+      "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 380, "basePortionG": 120 },
+      "ingredients": [
+        { "ingredientId": "mascarpone", "name": "Mascarpone", "qtyPerBasePortionG": 50, "categoryKey": "dairy", "yield": 1, "packSizeG": 500, "isRaw": false },
+        { "ingredientId": "loeffelbiskuits", "name": "Löffelbiskuits", "qtyPerBasePortionG": 30, "categoryKey": "bakery", "yield": 1, "packSizeG": 400, "isRaw": false },
+        { "ingredientId": "erdbeeren_frisch", "name": "Erdbeeren", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.98, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_erdbeeren_pur",
+      "name": "Erdbeeren",
+      "foodGroup": "fruit",
+      "tags": ["fruit", "simple"],
+      "allergens": [],
+      "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 50, "basePortionG": 150 },
+      "ingredients": [
+        { "ingredientId": "erdbeeren_frisch", "name": "Erdbeeren", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.98, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_erdbeer_mousse",
+      "name": "Erdbeermousse",
+      "foodGroup": "fruit",
+      "tags": ["mousse", "strawberry"],
+      "allergens": ["egg", "milk"],
+      "portion": { "basePortionG": 130, "portionGByGroup": { "erwachsene": 130, "senioren": 110, "kinder": 90 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 250, "basePortionG": 130 },
+      "ingredients": [
+        { "ingredientId": "erdbeeren_frisch", "name": "Erdbeeren", "qtyPerBasePortionG": 60, "categoryKey": "produce", "yield": 0.98, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "rahm", "name": "Rahm", "qtyPerBasePortionG": 40, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "eiweiss", "name": "Eiweiss", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 0.88, "packSizeG": 3600, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_erdbeer_sorbet",
+      "name": "Erdbeersorbet",
+      "foodGroup": "fruit",
+      "tags": ["sorbet"],
+      "allergens": [],
+      "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 80 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 120, "basePortionG": 120 },
+      "ingredients": [
+        { "ingredientId": "erdbeeren_frisch", "name": "Erdbeeren", "qtyPerBasePortionG": 120, "categoryKey": "produce", "yield": 0.98, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_erdbeer_toertli",
+      "name": "Erdbeertörtli",
+      "foodGroup": "fruit",
+      "tags": ["tart", "pastry"],
+      "allergens": ["gluten", "egg", "milk"],
+      "portion": { "basePortionG": 100, "portionGByGroup": { "erwachsene": 100, "senioren": 85, "kinder": 75 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 350, "basePortionG": 100 },
+      "ingredients": [
+        { "ingredientId": "muerbeteig_toertli", "name": "Mürbeteig-Törtliboden", "qtyPerBasePortionG": 50, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "vanillecreme", "name": "Vanillecreme", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "erdbeeren_frisch", "name": "Erdbeeren", "qtyPerBasePortionG": 20, "categoryKey": "produce", "yield": 0.98, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_exotischer_fruchtsalat",
+      "name": "Exotischer Fruchtsalat",
+      "foodGroup": "fruit",
+      "tags": ["fruit", "salad"],
+      "allergens": [],
+      "portion": { "basePortionG": 160, "portionGByGroup": { "erwachsene": 160, "senioren": 130, "kinder": 110 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 130, "basePortionG": 160 },
+      "ingredients": [
+        { "ingredientId": "mango_frisch", "name": "Mango", "qtyPerBasePortionG": 50, "categoryKey": "produce", "yield": 0.65, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "ananas_frisch", "name": "Ananas", "qtyPerBasePortionG": 50, "categoryKey": "produce", "yield": 0.55, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "kiwi_frisch", "name": "Kiwi", "qtyPerBasePortionG": 30, "categoryKey": "produce", "yield": 0.78, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "passionsfrucht", "name": "Passionsfrucht", "qtyPerBasePortionG": 30, "categoryKey": "produce", "yield": 0.45, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_fasnachtschueechli",
+      "name": "Fasnachtschüechli",
+      "foodGroup": "starch",
+      "tags": ["fried", "swiss", "seasonal"],
+      "allergens": ["gluten", "egg"],
+      "portion": { "basePortionG": 80, "portionGByGroup": { "erwachsene": 80, "senioren": 70, "kinder": 60 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 250, "basePortionG": 80 },
+      "ingredients": [
+        { "ingredientId": "fasnachtschueechli_fertig", "name": "Fasnachtschüechli (fertig)", "qtyPerBasePortionG": 80, "categoryKey": "bakery", "yield": 1, "packSizeG": 800, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "d_fior_di_latte_glace",
+      "name": "Fior di Latte Glacé",
+      "foodGroup": "dairy",
+      "tags": ["ice_cream"],
+      "allergens": ["milk"],
+      "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 200, "basePortionG": 120 },
+      "ingredients": [
+        { "ingredientId": "fior_di_latte", "name": "Fior di Latte Glacé", "qtyPerBasePortionG": 120, "categoryKey": "frozen", "yield": 1, "packSizeG": 5000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "d_aprikosen_frisch",
+      "name": "Frische Aprikosen",
+      "foodGroup": "fruit",
+      "tags": ["fruit", "simple", "seasonal"],
+      "allergens": [],
+      "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 70, "basePortionG": 150 },
+      "ingredients": [
+        { "ingredientId": "aprikosen_frisch", "name": "Aprikosen", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.94, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_fruchtjoghurt_mixed",
+      "name": "Fruchtjoghurt",
+      "foodGroup": "dairy",
+      "tags": ["yogurt"],
+      "allergens": ["milk"],
+      "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 120, "basePortionG": 150 },
+      "ingredients": [
+        { "ingredientId": "joghurt_nature", "name": "Joghurt nature", "qtyPerBasePortionG": 140, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "fruchtmix_wuerfel", "name": "Fruchtmix (gewürfelt)", "qtyPerBasePortionG": 10, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_fruchtsalat",
+      "name": "Fruchtsalat",
+      "foodGroup": "fruit",
+      "tags": ["fruit", "salad"],
+      "allergens": [],
+      "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 120, "basePortionG": 150 },
+      "ingredients": [
+        { "ingredientId": "apfel_frisch", "name": "Apfel", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "banane_frisch", "name": "Banane", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.7, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "orange_frisch", "name": "Orange", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.8, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "trauben", "name": "Trauben", "qtyPerBasePortionG": 30, "categoryKey": "produce", "yield": 0.95, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_frucht_toertli",
+      "name": "Fruchttörtli",
+      "foodGroup": "fruit",
+      "tags": ["tart", "pastry"],
+      "allergens": ["gluten", "egg", "milk"],
+      "portion": { "basePortionG": 100, "portionGByGroup": { "erwachsene": 100, "senioren": 85, "kinder": 75 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 320, "basePortionG": 100 },
+      "ingredients": [
+        { "ingredientId": "muerbeteig_toertli", "name": "Mürbeteig-Törtliboden", "qtyPerBasePortionG": 50, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "vanillecreme", "name": "Vanillecreme", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "saisonfruechte", "name": "Saisonfrüchte", "qtyPerBasePortionG": 20, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_gebrannte_creme",
+      "name": "Gebrannte Creme",
+      "foodGroup": "dairy",
+      "tags": ["crème_brulée", "classic"],
+      "allergens": ["milk", "egg"],
+      "portion": { "basePortionG": 140, "portionGByGroup": { "erwachsene": 140, "senioren": 120, "kinder": 100 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 350, "basePortionG": 140 },
+      "ingredients": [
+        { "ingredientId": "rahm", "name": "Rahm", "qtyPerBasePortionG": 90, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "milch", "name": "Milch", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "eigelb", "name": "Eigelb", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 0.88, "packSizeG": 3600, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_glace_mixed",
+      "name": "Glacé",
+      "foodGroup": "dairy",
+      "tags": ["ice_cream"],
+      "allergens": ["milk", "egg"],
+      "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 200, "basePortionG": 120 },
+      "ingredients": [
+        { "ingredientId": "glace_gemischt", "name": "Glacé (Sorten gemischt)", "qtyPerBasePortionG": 120, "categoryKey": "frozen", "yield": 1, "packSizeG": 5000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "d_granatapfel_pannacotta",
+      "name": "Granatapfel-Panna Cotta",
+      "foodGroup": "dairy",
+      "tags": ["panna_cotta", "fruit"],
+      "allergens": ["milk"],
+      "portion": { "basePortionG": 160, "portionGByGroup": { "erwachsene": 160, "senioren": 130, "kinder": 120 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 330, "basePortionG": 160 },
+      "ingredients": [
+        { "ingredientId": "rahm", "name": "Rahm", "qtyPerBasePortionG": 110, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "granatapfelkerne", "name": "Granatapfelkerne", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.5, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "zucker", "name": "Zucker", "qtyPerBasePortionG": 10, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_griessflan",
+      "name": "Griessflan",
+      "foodGroup": "starch",
+      "tags": ["pudding", "baked"],
+      "allergens": ["gluten", "milk", "egg"],
+      "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 220, "basePortionG": 150 },
+      "ingredients": [
+        { "ingredientId": "hartweizengriess", "name": "Hartweizengriess", "qtyPerBasePortionG": 40, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "milch", "name": "Milch", "qtyPerBasePortionG": 100, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+        { "ingredientId": "ei", "name": "Ei", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 0.88, "packSizeG": 3600, "isRaw": true }
+      ]
+    },
+    {
+      "recipeId": "d_griessflammerie",
+      "name": "Griessflammerie",
+      "foodGroup": "starch",
+      "tags": ["pudding", "classic"],
+      "allergens": ["gluten", "milk"],
+      "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 250, "basePortionG": 150 },
+      "ingredients": [
+        { "ingredientId": "hartweizengriess", "name": "Hartweizengriess", "qtyPerBasePortionG": 45, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "milch", "name": "Milch", "qtyPerBasePortionG": 105, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+      "recipeId": "d_griesskoepfli",
+      "name": "Griessköpfli",
+      "foodGroup": "starch",
+      "tags": ["steamed", "classic"],
+      "allergens": ["gluten", "milk"],
+      "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+      "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 200, "basePortionG": 150 },
+      "ingredients": [
+        { "ingredientId": "hartweizengriess", "name": "Hartweizengriess", "qtyPerBasePortionG": 40, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true },
+        { "ingredientId": "milch", "name": "Milch", "qtyPerBasePortionG": 110, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+      ]
+    },
+    {
+  "recipeId": "d_himbeer_sorbet",
+  "name": "Himbeer-Sorbet",
+  "foodGroup": "fruit",
+  "tags": ["sorbet"],
+  "allergens": [],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 80 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 120, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "himbeeren_tk", "name": "Himbeeren (TK)", "qtyPerBasePortionG": 120, "categoryKey": "frozen", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_joghurt_heidelbeeren",
+  "name": "Joghurt mit Heidelbeeren",
+  "foodGroup": "dairy",
+  "tags": ["yogurt", "berries"],
+  "allergens": ["milk"],
+  "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 110, "basePortionG": 150 },
+  "ingredients": [
+    { "ingredientId": "joghurt_nature", "name": "Joghurt nature", "qtyPerBasePortionG": 130, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "heidelbeeren", "name": "Heidelbeeren", "qtyPerBasePortionG": 20, "categoryKey": "produce", "yield": 0.98, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_joghurt_kirschen",
+  "name": "Joghurt mit Kirschen",
+  "foodGroup": "dairy",
+  "tags": ["yogurt", "fruit"],
+  "allergens": ["milk"],
+  "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 120, "basePortionG": 150 },
+  "ingredients": [
+    { "ingredientId": "joghurt_nature", "name": "Joghurt nature", "qtyPerBasePortionG": 130, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "kirschen_entsteint", "name": "Kirschen (entsteint)", "qtyPerBasePortionG": 20, "categoryKey": "produce", "yield": 0.88, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_joghurtcreme_himbeeren",
+  "name": "Joghurtcrème mit Himbeeren",
+  "foodGroup": "dairy",
+  "tags": ["cream", "yogurt", "berries"],
+  "allergens": ["milk"],
+  "portion": { "basePortionG": 180, "portionGByGroup": { "erwachsene": 180, "senioren": 150, "kinder": 130 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 180, "basePortionG": 180 },
+  "ingredients": [
+    { "ingredientId": "joghurt_nature", "name": "Joghurt nature", "qtyPerBasePortionG": 140, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "rahm", "name": "Rahm", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "himbeeren_tk", "name": "Himbeeren (TK)", "qtyPerBasePortionG": 20, "categoryKey": "frozen", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_kirschen_joghurt",
+  "name": "Kirschenjoghurt",
+  "foodGroup": "dairy",
+  "tags": ["yogurt", "fruit"],
+  "allergens": ["milk"],
+  "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 120, "basePortionG": 150 },
+  "ingredients": [
+    { "ingredientId": "joghurt_nature", "name": "Joghurt nature", "qtyPerBasePortionG": 130, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "kirschen_entsteint", "name": "Kirschen (entsteint)", "qtyPerBasePortionG": 20, "categoryKey": "produce", "yield": 0.88, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_kirschen_kompott",
+  "name": "Kirschenkompott",
+  "foodGroup": "fruit",
+  "tags": ["fruit", "compote"],
+  "allergens": [],
+  "portion": { "basePortionG": 160, "portionGByGroup": { "erwachsene": 160, "senioren": 130, "kinder": 110 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 140, "basePortionG": 160 },
+  "ingredients": [
+    { "ingredientId": "kirschen_entsteint", "name": "Kirschen (entsteint)", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.88, "packSizeG": 1000, "isRaw": true },
+    { "ingredientId": "zucker", "name": "Zucker", "qtyPerBasePortionG": 8, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_kiwi_orangensalat",
+  "name": "Kiwi-Orangensalat",
+  "foodGroup": "fruit",
+  "tags": ["fruit", "salad"],
+  "allergens": [],
+  "portion": { "basePortionG": 140, "portionGByGroup": { "erwachsene": 140, "senioren": 120, "kinder": 100 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 100, "basePortionG": 140 },
+  "ingredients": [
+    { "ingredientId": "kiwi_frisch", "name": "Kiwi", "qtyPerBasePortionG": 70, "categoryKey": "produce", "yield": 0.78, "packSizeG": 1000, "isRaw": true },
+    { "ingredientId": "orange_frisch", "name": "Orange", "qtyPerBasePortionG": 70, "categoryKey": "produce", "yield": 0.8, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_mandarinensorbet",
+  "name": "Mandarinensorbet",
+  "foodGroup": "fruit",
+  "tags": ["sorbet", "citrus"],
+  "allergens": [],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 80 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 110, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "mandarine_frisch", "name": "Mandarine", "qtyPerBasePortionG": 120, "categoryKey": "produce", "yield": 0.65, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_mango_joghurt",
+  "name": "Mango-Joghurt",
+  "foodGroup": "dairy",
+  "tags": ["yogurt", "fruit"],
+  "allergens": ["milk"],
+  "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 125, "basePortionG": 150 },
+  "ingredients": [
+    { "ingredientId": "joghurt_nature", "name": "Joghurt nature", "qtyPerBasePortionG": 130, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "mango_frisch", "name": "Mango", "qtyPerBasePortionG": 20, "categoryKey": "produce", "yield": 0.65, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_mangosorbet",
+  "name": "Mangosorbet",
+  "foodGroup": "fruit",
+  "tags": ["sorbet"],
+  "allergens": [],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 80 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 130, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "mango_frisch", "name": "Mango", "qtyPerBasePortionG": 120, "categoryKey": "produce", "yield": 0.65, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_marinierte_ananas",
+  "name": "Marinierte Ananas",
+  "foodGroup": "fruit",
+  "tags": ["fruit"],
+  "allergens": [],
+  "portion": { "basePortionG": 140, "portionGByGroup": { "erwachsene": 140, "senioren": 120, "kinder": 100 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 90, "basePortionG": 140 },
+  "ingredients": [
+    { "ingredientId": "ananas_frisch", "name": "Ananas", "qtyPerBasePortionG": 140, "categoryKey": "produce", "yield": 0.55, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_marinierte_erdbeeren",
+  "name": "Marinierte Erdbeeren",
+  "foodGroup": "fruit",
+  "tags": ["fruit", "berries"],
+  "allergens": [],
+  "portion": { "basePortionG": 140, "portionGByGroup": { "erwachsene": 140, "senioren": 120, "kinder": 100 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 80, "basePortionG": 140 },
+  "ingredients": [
+    { "ingredientId": "erdbeeren_frisch", "name": "Erdbeeren", "qtyPerBasePortionG": 140, "categoryKey": "produce", "yield": 0.98, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_marmorcake",
+  "name": "Marmorcake",
+  "foodGroup": "starch",
+  "tags": ["cake", "chocolate"],
+  "allergens": ["gluten", "egg", "milk", "soy"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 400, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "marmorcake_fertig", "name": "Marmorkuchen (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1200, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_meringue_rahm",
+  "name": "Meringue mit Rahm",
+  "foodGroup": "dairy",
+  "tags": ["meringue", "cream", "swiss"],
+  "allergens": ["egg", "milk"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 350, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "meringue_fertig", "name": "Meringue", "qtyPerBasePortionG": 60, "categoryKey": "bakery", "yield": 1, "packSizeG": 400, "isRaw": false },
+    { "ingredientId": "rahm", "name": "Rahm", "qtyPerBasePortionG": 60, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_mini_berliner",
+  "name": "Mini Berliner",
+  "foodGroup": "starch",
+  "tags": ["pastry", "fried"],
+  "allergens": ["gluten", "egg"],
+  "portion": { "basePortionG": 60, "portionGByGroup": { "erwachsene": 60, "senioren": 55, "kinder": 50 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 280, "basePortionG": 60 },
+  "ingredients": [
+    { "ingredientId": "berliner_mini_fertig", "name": "Mini Berliner (fertig)", "qtyPerBasePortionG": 60, "categoryKey": "bakery", "yield": 1, "packSizeG": 600, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_mini_schwarzwaelder",
+  "name": "Mini Schwarzwälder",
+  "foodGroup": "starch",
+  "tags": ["cake", "cherry", "cream"],
+  "allergens": ["gluten", "egg", "milk", "soy"],
+  "portion": { "basePortionG": 100, "portionGByGroup": { "erwachsene": 100, "senioren": 85, "kinder": 75 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 420, "basePortionG": 100 },
+  "ingredients": [
+    { "ingredientId": "schwarzwaelder_torte_mini", "name": "Mini-Schwarzwäldertorte (fertig)", "qtyPerBasePortionG": 100, "categoryKey": "bakery", "yield": 1, "packSizeG": 800, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_mini_windbeutel",
+  "name": "Mini Windbeutel",
+  "foodGroup": "starch",
+  "tags": ["choux", "cream"],
+  "allergens": ["gluten", "egg", "milk"],
+  "portion": { "basePortionG": 60, "portionGByGroup": { "erwachsene": 60, "senioren": 55, "kinder": 50 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 300, "basePortionG": 60 },
+  "ingredients": [
+    { "ingredientId": "windbeutel_mini_fertig", "name": "Mini Windbeutel (fertig)", "qtyPerBasePortionG": 60, "categoryKey": "bakery", "yield": 1, "packSizeG": 600, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_mirabellen_quark",
+  "name": "Mirabellenquark",
+  "foodGroup": "dairy",
+  "tags": ["quark", "fruit"],
+  "allergens": ["milk"],
+  "portion": { "basePortionG": 180, "portionGByGroup": { "erwachsene": 180, "senioren": 150, "kinder": 130 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 160, "basePortionG": 180 },
+  "ingredients": [
+    { "ingredientId": "magerquark", "name": "Magerquark", "qtyPerBasePortionG": 140, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "mirabellen", "name": "Mirabellen", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.92, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_mohrenkopf",
+  "name": "Mohrenkopf",
+  "foodGroup": "starch",
+  "tags": ["pastry", "marshmallow", "chocolate"],
+  "allergens": ["gluten", "egg", "soy"],
+  "portion": { "basePortionG": 60, "portionGByGroup": { "erwachsene": 60, "senioren": 55, "kinder": 50 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 150, "basePortionG": 60 },
+  "ingredients": [
+    { "ingredientId": "mohrenkopf_fertig", "name": "Schaumkuss (fertig)", "qtyPerBasePortionG": 60, "categoryKey": "bakery", "yield": 1, "packSizeG": 600, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_orangen_parfait",
+  "name": "Orangen-Parfait",
+  "foodGroup": "dairy",
+  "tags": ["parfait", "frozen"],
+  "allergens": ["egg", "milk"],
+  "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 120 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 300, "basePortionG": 150 },
+  "ingredients": [
+    { "ingredientId": "rahm", "name": "Rahm", "qtyPerBasePortionG": 90, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "eigelb", "name": "Eigelb", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 0.88, "packSizeG": 3600, "isRaw": true },
+    { "ingredientId": "orangensaft", "name": "Orangensaft", "qtyPerBasePortionG": 30, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_orangen_geschnitten",
+  "name": "Orangen geschnitten",
+  "foodGroup": "fruit",
+  "tags": ["fruit", "simple"],
+  "allergens": [],
+  "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 70, "basePortionG": 150 },
+  "ingredients": [
+    { "ingredientId": "orange_frisch", "name": "Orange", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.8, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_orangensalat",
+  "name": "Orangensalat",
+  "foodGroup": "fruit",
+  "tags": ["fruit", "salad", "citrus"],
+  "allergens": [],
+  "portion": { "basePortionG": 140, "portionGByGroup": { "erwachsene": 140, "senioren": 120, "kinder": 100 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 80, "basePortionG": 140 },
+  "ingredients": [
+    { "ingredientId": "orange_frisch", "name": "Orange", "qtyPerBasePortionG": 140, "categoryKey": "produce", "yield": 0.8, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_osternestli_meringue",
+  "name": "Osternestli mit Meringue",
+  "foodGroup": "dairy",
+  "tags": ["easter", "meringue", "cream"],
+  "allergens": ["egg", "milk", "nuts"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 380, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "meringue_fertig", "name": "Meringue", "qtyPerBasePortionG": 50, "categoryKey": "bakery", "yield": 1, "packSizeG": 400, "isRaw": false },
+    { "ingredientId": "rahm", "name": "Rahm", "qtyPerBasePortionG": 50, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "gehackte_nuesse", "name": "Nussmix (gehackt)", "qtyPerBasePortionG": 20, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_panna_cotta_basic",
+  "name": "Panna Cotta",
+  "foodGroup": "dairy",
+  "tags": ["panna_cotta"],
+  "allergens": ["milk"],
+  "portion": { "basePortionG": 140, "portionGByGroup": { "erwachsene": 140, "senioren": 120, "kinder": 100 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 320, "basePortionG": 140 },
+  "ingredients": [
+    { "ingredientId": "rahm", "name": "Rahm", "qtyPerBasePortionG": 120, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "zucker", "name": "Zucker", "qtyPerBasePortionG": 15, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_panna_cotta_aprikose",
+  "name": "Panna Cotta mit Aprikose",
+  "foodGroup": "dairy",
+  "tags": ["panna_cotta", "fruit"],
+  "allergens": ["milk"],
+  "portion": { "basePortionG": 160, "portionGByGroup": { "erwachsene": 160, "senioren": 130, "kinder": 120 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 340, "basePortionG": 160 },
+  "ingredients": [
+    { "ingredientId": "rahm", "name": "Rahm", "qtyPerBasePortionG": 120, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "aprikosen_frisch", "name": "Aprikosen", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.94, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_panna_cotta_erdbeersauce",
+  "name": "Panna Cotta mit Erdbeersauce",
+  "foodGroup": "dairy",
+  "tags": ["panna_cotta", "berries"],
+  "allergens": ["milk"],
+  "portion": { "basePortionG": 160, "portionGByGroup": { "erwachsene": 160, "senioren": 130, "kinder": 120 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 320, "basePortionG": 160 },
+  "ingredients": [
+    { "ingredientId": "rahm", "name": "Rahm", "qtyPerBasePortionG": 80, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "erdbeeren_frisch", "name": "Erdbeeren", "qtyPerBasePortionG": 50, "categoryKey": "produce", "yield": 0.98, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_panna_cotta_passionsfrucht",
+  "name": "Panna Cotta mit Passionsfrucht",
+  "foodGroup": "dairy",
+  "tags": ["panna_cotta", "fruit"],
+  "allergens": ["milk"],
+  "portion": { "basePortionG": 160, "portionGByGroup": { "erwachsene": 160, "senioren": 130, "kinder": 120 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 330, "basePortionG": 160 },
+  "ingredients": [
+    { "ingredientId": "rahm", "name": "Rahm", "qtyPerBasePortionG": 120, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "passionsfrucht", "name": "Passionsfrucht", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.45, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_quark_beeren",
+  "name": "Quark mit Beeren",
+  "foodGroup": "dairy",
+  "tags": ["quark", "berries"],
+  "allergens": ["milk"],
+  "portion": { "basePortionG": 180, "portionGByGroup": { "erwachsene": 180, "senioren": 150, "kinder": 130 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 150, "basePortionG": 180 },
+  "ingredients": [
+    { "ingredientId": "magerquark", "name": "Magerquark", "qtyPerBasePortionG": 140, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "beerenmix_tk", "name": "Beerenmischung (TK)", "qtyPerBasePortionG": 40, "categoryKey": "frozen", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_rhabarber_kompott",
+  "name": "Rhabarberkompott",
+  "foodGroup": "fruit",
+  "tags": ["fruit", "compote", "seasonal"],
+  "allergens": [],
+  "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 130, "basePortionG": 150 },
+  "ingredients": [
+    { "ingredientId": "rhabarber", "name": "Rhabarber", "qtyPerBasePortionG": 140, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true },
+    { "ingredientId": "zucker", "name": "Zucker", "qtyPerBasePortionG": 10, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_schenkeli",
+  "name": "Schenkeli",
+  "foodGroup": "starch",
+  "tags": ["fried", "swiss"],
+  "allergens": ["gluten", "egg"],
+  "portion": { "basePortionG": 80, "portionGByGroup": { "erwachsene": 80, "senioren": 70, "kinder": 60 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 220, "basePortionG": 80 },
+  "ingredients": [
+    { "ingredientId": "schenkeli_fertig", "name": "Schenkeli (fertig)", "qtyPerBasePortionG": 80, "categoryKey": "bakery", "yield": 1, "packSizeG": 800, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_schoggicake",
+  "name": "Schoggicake",
+  "foodGroup": "starch",
+  "tags": ["cake", "chocolate"],
+  "allergens": ["gluten", "egg", "milk", "soy"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 420, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "schoggicake_fertig", "name": "Schokoladenkuchen (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1200, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_schoggichoepli",
+  "name": "Schoggichöpfli",
+  "foodGroup": "dairy",
+  "tags": ["pudding", "chocolate"],
+  "allergens": ["milk", "egg", "soy"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 300, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "schokokoepfli_fertig", "name": "Schokoladenköpfli (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_schoggicreme",
+  "name": "Schoggicréme",
+  "foodGroup": "dairy",
+  "tags": ["cream", "chocolate"],
+  "allergens": ["milk", "egg", "soy"],
+  "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 320, "basePortionG": 150 },
+  "ingredients": [
+    { "ingredientId": "couverture", "name": "Couverture", "qtyPerBasePortionG": 50, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 2500, "isRaw": true },
+    { "ingredientId": "eier", "name": "Eier", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 0.88, "packSizeG": 3600, "isRaw": true },
+    { "ingredientId": "rahm", "name": "Rahm", "qtyPerBasePortionG": 40, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_schokoladenkuchen",
+  "name": "Schokoladenkuchen",
+  "foodGroup": "starch",
+  "tags": ["cake", "chocolate"],
+  "allergens": ["gluten", "egg", "milk", "soy"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 430, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "schokoladenkuchen_fertig", "name": "Schokoladenkuchen (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1200, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_schokoladenkoepfli",
+  "name": "Schokoladenköpfli",
+  "foodGroup": "starch",
+  "tags": ["cake", "chocolate"],
+  "allergens": ["gluten", "egg", "milk", "soy"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 380, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "schokoladenkoepfli_fertig", "name": "Schokoladenköpfli (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_schokoladenmousse",
+  "name": "Schokoladenmousse",
+  "foodGroup": "dairy",
+  "tags": ["mousse", "chocolate"],
+  "allergens": ["milk", "egg", "soy"],
+  "portion": { "basePortionG": 130, "portionGByGroup": { "erwachsene": 130, "senioren": 110, "kinder": 100 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 350, "basePortionG": 130 },
+  "ingredients": [
+    { "ingredientId": "couverture", "name": "Couverture", "qtyPerBasePortionG": 50, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 2500, "isRaw": true },
+    { "ingredientId": "eier", "name": "Eier", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 0.88, "packSizeG": 3600, "isRaw": true },
+    { "ingredientId": "rahm", "name": "Rahm", "qtyPerBasePortionG": 40, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_schokoladenriegel_himbeeren",
+  "name": "Schokoladenriegel mit Himbeeren",
+  "foodGroup": "fat_oil",
+  "tags": ["confectionery"],
+  "allergens": ["milk", "soy"],
+  "portion": { "basePortionG": 60, "portionGByGroup": { "erwachsene": 60, "senioren": 55, "kinder": 50 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 280, "basePortionG": 60 },
+  "ingredients": [
+    { "ingredientId": "schokoriegel_fertig", "name": "Schokoladenriegel (fertig)", "qtyPerBasePortionG": 60, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 600, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_schwarzwaelder_schnitte",
+  "name": "Schwarzwälderschnitte",
+  "foodGroup": "starch",
+  "tags": ["cake", "cream", "cherry"],
+  "allergens": ["gluten", "egg", "milk", "soy"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 450, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "schwarzwaelder_schnitte_fertig", "name": "Schwarzwälderschnitte (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1200, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_sorbet_basic",
+  "name": "Sorbet",
+  "foodGroup": "fruit",
+  "tags": ["sorbet"],
+  "allergens": [],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 80 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 120, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "sorbet_mischung", "name": "Sorbet (versch. Sorten)", "qtyPerBasePortionG": 120, "categoryKey": "frozen", "yield": 1, "packSizeG": 2500, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_stracciatella_glace",
+  "name": "Stracciatella-Glacé",
+  "foodGroup": "dairy",
+  "tags": ["ice_cream"],
+  "allergens": ["milk", "soy"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 220, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "stracciatella_glace", "name": "Stracciatella-Glacé", "qtyPerBasePortionG": 120, "categoryKey": "frozen", "yield": 1, "packSizeG": 5000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_streuselkuchen",
+  "name": "Streuselkuchen",
+  "foodGroup": "starch",
+  "tags": ["cake", "crumb"],
+  "allergens": ["gluten", "milk"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 390, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "streuselkuchen_fertig", "name": "Streuselkuchen (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1200, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_suessmost_creme",
+  "name": "Süssmostcrème",
+  "foodGroup": "dairy",
+  "tags": ["cream", "swiss"],
+  "allergens": ["milk", "egg"],
+  "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 260, "basePortionG": 150 },
+  "ingredients": [
+    { "ingredientId": "milch", "name": "Milch", "qtyPerBasePortionG": 110, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "eier", "name": "Eier", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 0.88, "packSizeG": 3600, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_tiramisu_classic",
+  "name": "Tiramisu",
+  "foodGroup": "dairy",
+  "tags": ["tiramisu", "classic"],
+  "allergens": ["gluten", "egg", "milk", "soy"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 400, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "mascarpone", "name": "Mascarpone", "qtyPerBasePortionG": 50, "categoryKey": "dairy", "yield": 1, "packSizeG": 500, "isRaw": false },
+    { "ingredientId": "loeffelbiskuits", "name": "Löffelbiskuits", "qtyPerBasePortionG": 30, "categoryKey": "bakery", "yield": 1, "packSizeG": 400, "isRaw": false },
+    { "ingredientId": "ei", "name": "Ei", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 0.88, "packSizeG": 3600, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_tiroler_cake",
+  "name": "Tiroler Cake",
+  "foodGroup": "starch",
+  "tags": ["cake", "nuts"],
+  "allergens": ["gluten", "egg", "milk", "nuts"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 420, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "tiroler_cake_fertig", "name": "Tiroler Cake (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1200, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_truffes_schnitte",
+  "name": "Truffesschnitte",
+  "foodGroup": "fat_oil",
+  "tags": ["cake", "truffle", "rich"],
+  "allergens": ["gluten", "egg", "milk", "soy", "nuts"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 480, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "truffe_schnitte_fertig", "name": "Truffes-Schnitte (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1200, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_valentins_herz",
+  "name": "Valentins-Herz",
+  "foodGroup": "starch",
+  "tags": ["cake", "festive"],
+  "allergens": ["gluten", "egg", "milk"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 350, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "valentins_herz_fertig", "name": "Valentins-Herz (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1200, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_vanille_eclair",
+  "name": "Vanille Eclair",
+  "foodGroup": "starch",
+  "tags": ["choux", "filled"],
+  "allergens": ["gluten", "egg", "milk"],
+  "portion": { "basePortionG": 100, "portionGByGroup": { "erwachsene": 100, "senioren": 85, "kinder": 75 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 320, "basePortionG": 100 },
+  "ingredients": [
+    { "ingredientId": "eclair_vanille_fertig", "name": "Vanille-Eclair (fertig)", "qtyPerBasePortionG": 100, "categoryKey": "bakery", "yield": 1, "packSizeG": 800, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_vanille_heidelbeer_traum",
+  "name": "Vanille-Heidelbeertraum",
+  "foodGroup": "dairy",
+  "tags": ["cream", "berries"],
+  "allergens": ["milk"],
+  "portion": { "basePortionG": 160, "portionGByGroup": { "erwachsene": 160, "senioren": 140, "kinder": 120 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 280, "basePortionG": 160 },
+  "ingredients": [
+    { "ingredientId": "vanillecreme", "name": "Vanillecreme", "qtyPerBasePortionG": 120, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "heidelbeeren", "name": "Heidelbeeren", "qtyPerBasePortionG": 40, "categoryKey": "produce", "yield": 0.98, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_vanillecreme_beeren",
+  "name": "Vanillecreme mit Beeren",
+  "foodGroup": "dairy",
+  "tags": ["cream", "berries"],
+  "allergens": ["milk", "egg"],
+  "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 260, "basePortionG": 150 },
+  "ingredients": [
+    { "ingredientId": "vanillecreme", "name": "Vanillecreme", "qtyPerBasePortionG": 110, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "beerenmix_tk", "name": "Beerenmischung (TK)", "qtyPerBasePortionG": 40, "categoryKey": "frozen", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_vanillecreme_beeren",
+  "name": "Vanillecreme mit Beeren",
+  "foodGroup": "dairy",
+  "tags": ["cream", "berries"],
+  "allergens": ["milk", "egg"],
+  "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 260, "basePortionG": 150 },
+  "ingredients": [
+    { "ingredientId": "vanillecreme", "name": "Vanillecreme", "qtyPerBasePortionG": 110, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "beerenmix_tk", "name": "Beerenmischung (TK)", "qtyPerBasePortionG": 40, "categoryKey": "frozen", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_vanillecreme_erdbeeren",
+  "name": "Vanillecréme mit Erdbeeren",
+  "foodGroup": "dairy",
+  "tags": ["cream", "berries"],
+  "allergens": ["milk", "egg"],
+  "portion": { "basePortionG": 160, "portionGByGroup": { "erwachsene": 160, "senioren": 140, "kinder": 120 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 270, "basePortionG": 160 },
+  "ingredients": [
+    { "ingredientId": "vanillecreme", "name": "Vanillecreme", "qtyPerBasePortionG": 110, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "erdbeeren_frisch", "name": "Erdbeeren", "qtyPerBasePortionG": 50, "categoryKey": "produce", "yield": 0.98, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_vanilleglace",
+  "name": "Vanilleglacé",
+  "foodGroup": "dairy",
+  "tags": ["ice_cream"],
+  "allergens": ["milk", "egg"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 200, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "vanille_glace", "name": "Vanille-Glacé", "qtyPerBasePortionG": 120, "categoryKey": "frozen", "yield": 1, "packSizeG": 5000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_vanillekoepfli",
+  "name": "Vanilleköpfli",
+  "foodGroup": "starch",
+  "tags": ["cake", "vanilla"],
+  "allergens": ["gluten", "milk", "egg", "nuts"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 250, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "vanillekoepfli_fertig", "name": "Vanilleköpfli (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_wassermelone",
+  "name": "Wassermelone",
+  "foodGroup": "fruit",
+  "tags": ["fruit", "simple", "summer"],
+  "allergens": [],
+  "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 45, "basePortionG": 150 },
+  "ingredients": [
+    { "ingredientId": "wassermelone", "name": "Wassermelone", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.65, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_zitronencake",
+  "name": "Zitronencake",
+  "foodGroup": "starch",
+  "tags": ["cake", "citrus"],
+  "allergens": ["gluten", "egg", "milk"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 390, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "zitronencake_fertig", "name": "Zitronencake (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1200, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_zitronencreme",
+  "name": "Zitronencreme",
+  "foodGroup": "dairy",
+  "tags": ["cream", "citrus"],
+  "allergens": ["milk", "egg"],
+  "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 280, "basePortionG": 150 },
+  "ingredients": [
+    { "ingredientId": "milch", "name": "Milch", "qtyPerBasePortionG": 110, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "zitrone", "name": "Zitrone (Saft/Schale)", "qtyPerBasePortionG": 10, "categoryKey": "produce", "yield": 0.7, "packSizeG": 1000, "isRaw": true },
+    { "ingredientId": "eigelb", "name": "Eigelb", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 0.88, "packSizeG": 3600, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_zitronen_quark",
+  "name": "Zitronenquark",
+  "foodGroup": "dairy",
+  "tags": ["quark", "citrus"],
+  "allergens": ["milk"],
+  "portion": { "basePortionG": 180, "portionGByGroup": { "erwachsene": 180, "senioren": 150, "kinder": 130 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 160, "basePortionG": 180 },
+  "ingredients": [
+    { "ingredientId": "magerquark", "name": "Magerquark", "qtyPerBasePortionG": 160, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "zitrone", "name": "Zitrone (Saft/Schale)", "qtyPerBasePortionG": 10, "categoryKey": "produce", "yield": 0.7, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_zwetschgen_kompott",
+  "name": "Zwetschgenkompott",
+  "foodGroup": "fruit",
+  "tags": ["fruit", "compote", "seasonal"],
+  "allergens": [],
+  "portion": { "basePortionG": 160, "portionGByGroup": { "erwachsene": 160, "senioren": 130, "kinder": 110 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 150, "basePortionG": 160 },
+  "ingredients": [
+    { "ingredientId": "zwetschgen_entsteint", "name": "Zwetschgen (entsteint)", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_zwetschgen_sorbet",
+  "name": "Zwetschgensorbet",
+  "foodGroup": "fruit",
+  "tags": ["sorbet"],
+  "allergens": [],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 80 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 130, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "zwetschgen_entsteint", "name": "Zwetschgen (entsteint)", "qtyPerBasePortionG": 120, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_apfelstrudel_vanillesauce",
+  "name": "Apfelstrudel mit Vanillesauce",
+  "foodGroup": "fruit",
+  "tags": ["strudel", "pastry", "sauce"],
+  "allergens": ["gluten", "milk"],
+  "portion": { "basePortionG": 160, "portionGByGroup": { "erwachsene": 160, "senioren": 140, "kinder": 120 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 420, "basePortionG": 160 },
+  "ingredients": [
+    { "ingredientId": "blaetterteig_strudel", "name": "Blätterteig (Strudel, fertig)", "qtyPerBasePortionG": 60, "categoryKey": "frozen", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "apfel_frisch", "name": "Apfel", "qtyPerBasePortionG": 100, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_kaiserschmarrn_apfelmus",
+  "name": "Kaiserschmarrn mit Apfelmus",
+  "foodGroup": "starch",
+  "tags": ["austrian", "pan"],
+  "allergens": ["gluten", "egg", "milk"],
+  "portion": { "basePortionG": 220, "portionGByGroup": { "erwachsene": 220, "senioren": 180, "kinder": 160 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 480, "basePortionG": 220 },
+  "ingredients": [
+    { "ingredientId": "weizenmehl", "name": "Mehl", "qtyPerBasePortionG": 50, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true },
+    { "ingredientId": "eier", "name": "Eier", "qtyPerBasePortionG": 60, "categoryKey": "dairy", "yield": 0.88, "packSizeG": 3600, "isRaw": true },
+    { "ingredientId": "apfelmus", "name": "Apfelmus", "qtyPerBasePortionG": 100, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_milchreis_zimt_zucker",
+  "name": "Milchreis mit Zimt und Zucker",
+  "foodGroup": "dairy",
+  "tags": ["rice_pudding", "classic"],
+  "allergens": ["milk"],
+  "portion": { "basePortionG": 180, "portionGByGroup": { "erwachsene": 180, "senioren": 150, "kinder": 130 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 320, "basePortionG": 180 },
+  "ingredients": [
+    { "ingredientId": "milchreis_roh", "name": "Milchreis (roh)", "qtyPerBasePortionG": 50, "categoryKey": "dry_goods", "yield": 2.2, "packSizeG": 1000, "isRaw": true },
+    { "ingredientId": "milch", "name": "Milch", "qtyPerBasePortionG": 150, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "zimt", "name": "Zimt", "qtyPerBasePortionG": 2, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 50, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_rote_gruetze_vanillesauce",
+  "name": "Rote Grütze mit Vanillesauce",
+  "foodGroup": "fruit",
+  "tags": ["berries", "sauce"],
+  "allergens": ["milk"],
+  "portion": { "basePortionG": 180, "portionGByGroup": { "erwachsene": 180, "senioren": 150, "kinder": 130 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 250, "basePortionG": 180 },
+  "ingredients": [
+    { "ingredientId": "beerenmix_tk", "name": "Beerenmischung (TK)", "qtyPerBasePortionG": 150, "categoryKey": "frozen", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "vanillesauce_fertig", "name": "Vanillesauce (fertig)", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_heisse_liebe",
+  "name": "Heisse Liebe (Vanille-Glacé mit heissen Himbeeren)",
+  "foodGroup": "dairy",
+  "tags": ["ice_cream", "berries", "hot_cold"],
+  "allergens": ["milk", "egg"],
+  "portion": { "basePortionG": 180, "portionGByGroup": { "erwachsene": 180, "senioren": 150, "kinder": 130 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 300, "basePortionG": 180 },
+  "ingredients": [
+    { "ingredientId": "vanille_glace", "name": "Vanille-Glacé", "qtyPerBasePortionG": 100, "categoryKey": "frozen", "yield": 1, "packSizeG": 5000, "isRaw": false },
+    { "ingredientId": "himbeeren_tk", "name": "Himbeeren (heiss)", "qtyPerBasePortionG": 80, "categoryKey": "frozen", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_coupe_daenemark",
+  "name": "Coupe Dänemark",
+  "foodGroup": "dairy",
+  "tags": ["ice_cream", "chocolate_sauce"],
+  "allergens": ["milk", "egg", "soy"],
+  "portion": { "basePortionG": 180, "portionGByGroup": { "erwachsene": 180, "senioren": 150, "kinder": 130 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 380, "basePortionG": 180 },
+  "ingredients": [
+    { "ingredientId": "vanille_glace", "name": "Vanille-Glacé", "qtyPerBasePortionG": 120, "categoryKey": "frozen", "yield": 1, "packSizeG": 5000, "isRaw": false },
+    { "ingredientId": "schokoladensauce", "name": "Schokoladensauce", "qtyPerBasePortionG": 40, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_buendner_nusstorte",
+  "name": "Bündner Nusstorte",
+  "foodGroup": "fat_oil",
+  "tags": ["cake", "nuts", "swiss"],
+  "allergens": ["gluten", "egg", "milk", "nuts"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 550, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "nusstorte_fertig", "name": "Bündner Nusstorte (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1200, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_linzer_torte",
+  "name": "Linzer Torte",
+  "foodGroup": "fat_oil",
+  "tags": ["cake", "nuts", "jam"],
+  "allergens": ["gluten", "egg", "nuts"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 480, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "linzer_torte_fertig", "name": "Linzer Torte (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1200, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_topfenknoedel_marillen",
+  "name": "Topfenknödel mit Marillenröster",
+  "foodGroup": "dairy",
+  "tags": ["dumpling", "austrian"],
+  "allergens": ["gluten", "egg", "milk"],
+  "portion": { "basePortionG": 200, "portionGByGroup": { "erwachsene": 200, "senioren": 170, "kinder": 150 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 390, "basePortionG": 200 },
+  "ingredients": [
+    { "ingredientId": "quark", "name": "Quark", "qtyPerBasePortionG": 80, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "aprikosen_frisch", "name": "Aprikosen", "qtyPerBasePortionG": 100, "categoryKey": "produce", "yield": 0.94, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_ofenschlupfer",
+  "name": "Ofenschlupfer (Brot-Apfel-Auflauf)",
+  "foodGroup": "starch",
+  "tags": ["baked", "bread_pudding"],
+  "allergens": ["gluten", "egg", "milk"],
+  "portion": { "basePortionG": 180, "portionGByGroup": { "erwachsene": 180, "senioren": 150, "kinder": 130 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 410, "basePortionG": 180 },
+  "ingredients": [
+    { "ingredientId": "brot_alt", "name": "Altes Brot", "qtyPerBasePortionG": 60, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "apfel_frisch", "name": "Apfel", "qtyPerBasePortionG": 80, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_bayrisch_creme_fruchtsauce",
+  "name": "Bayrisch Creme mit Fruchtsauce",
+  "foodGroup": "dairy",
+  "tags": ["cream", "classic"],
+  "allergens": ["milk", "egg"],
+  "portion": { "basePortionG": 160, "portionGByGroup": { "erwachsene": 160, "senioren": 140, "kinder": 120 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 340, "basePortionG": 160 },
+  "ingredients": [
+    { "ingredientId": "rahm", "name": "Rahm", "qtyPerBasePortionG": 80, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "eigelb", "name": "Eigelb", "qtyPerBasePortionG": 20, "categoryKey": "dairy", "yield": 0.88, "packSizeG": 3600, "isRaw": true },
+    { "ingredientId": "fruchtsauce", "name": "Fruchtsauce", "qtyPerBasePortionG": 60, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_mohnkuchen",
+  "name": "Mohnkuchen",
+  "foodGroup": "starch",
+  "tags": ["cake", "poppy"],
+  "allergens": ["gluten", "egg", "milk"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 430, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "mohnkuchen_fertig", "name": "Mohnkuchen (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1200, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_zuger_kirschtorte",
+  "name": "Zuger Kirschtorte (Schnitte)",
+  "foodGroup": "fat_oil",
+  "tags": ["cake", "nuts", "swiss"],
+  "allergens": ["gluten", "egg", "milk", "nuts"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 500, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "zuger_kirschtorte_fertig", "name": "Zuger Kirschtorte (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1200, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_rueeblitorte",
+  "name": "Rüeblitorte",
+  "foodGroup": "vegetable",
+  "tags": ["cake", "carrot", "nuts"],
+  "allergens": ["gluten", "egg", "nuts"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 460, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "rueeblitorte_fertig", "name": "Rüeblitorte (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1200, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_waehe_saisonal",
+  "name": "Wähe (saisonal, z.B. Aprikosen, Zwetschgen)",
+  "foodGroup": "fruit",
+  "tags": ["tart", "seasonal"],
+  "allergens": ["gluten", "egg", "milk"],
+  "portion": { "basePortionG": 140, "portionGByGroup": { "erwachsene": 140, "senioren": 120, "kinder": 100 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 390, "basePortionG": 140 },
+  "ingredients": [
+    { "ingredientId": "muerbeteig", "name": "Mürbeteig", "qtyPerBasePortionG": 70, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "saisonfruechte", "name": "Saisonfrüchte", "qtyPerBasePortionG": 100, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_fotzelschnitten",
+  "name": "Fotzelschnitten",
+  "foodGroup": "starch",
+  "tags": ["french_toast", "pan"],
+  "allergens": ["gluten", "egg", "milk"],
+  "portion": { "basePortionG": 200, "portionGByGroup": { "erwachsene": 200, "senioren": 170, "kinder": 150 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 350, "basePortionG": 200 },
+  "ingredients": [
+    { "ingredientId": "brot_alt", "name": "Altes Brot", "qtyPerBasePortionG": 80, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "ei", "name": "Ei", "qtyPerBasePortionG": 50, "categoryKey": "dairy", "yield": 0.88, "packSizeG": 3600, "isRaw": true },
+    { "ingredientId": "milch", "name": "Milch", "qtyPerBasePortionG": 70, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_toblerone_mousse",
+  "name": "Toblerone-Mousse",
+  "foodGroup": "dairy",
+  "tags": ["mousse", "chocolate"],
+  "allergens": ["milk", "egg", "soy", "nuts"],
+  "portion": { "basePortionG": 130, "portionGByGroup": { "erwachsene": 130, "senioren": 110, "kinder": 100 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 400, "basePortionG": 130 },
+  "ingredients": [
+    { "ingredientId": "toblerone", "name": "Toblerone", "qtyPerBasePortionG": 60, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 360, "isRaw": true },
+    { "ingredientId": "rahm", "name": "Rahm", "qtyPerBasePortionG": 40, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "ei", "name": "Ei", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 0.88, "packSizeG": 3600, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_pflaumen_speckmantel",
+  "name": "Pflaumen im Speckmantel (Dessertportion)",
+  "foodGroup": "fruit",
+  "tags": ["warm", "fruit", "salty_sweet"],
+  "allergens": [],
+  "portion": { "basePortionG": 90, "portionGByGroup": { "erwachsene": 90, "senioren": 80, "kinder": 70 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 220, "basePortionG": 90 },
+  "ingredients": [
+    { "ingredientId": "doerrpflaumen", "name": "Dörrpflaumen", "qtyPerBasePortionG": 60, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 500, "isRaw": true },
+    { "ingredientId": "speck_scheiben", "name": "Speck (Scheiben)", "qtyPerBasePortionG": 30, "categoryKey": "butchery", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_coupe_nesselrode",
+  "name": "Coupe Nesselrode (Vermicelles)",
+  "foodGroup": "dairy",
+  "tags": ["ice_cream", "meringue", "chestnut"],
+  "allergens": ["milk", "egg"],
+  "portion": { "basePortionG": 180, "portionGByGroup": { "erwachsene": 180, "senioren": 150, "kinder": 130 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 420, "basePortionG": 180 },
+  "ingredients": [
+    { "ingredientId": "vermicelles", "name": "Vermicelles", "qtyPerBasePortionG": 80, "categoryKey": "frozen", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "meringue_fertig", "name": "Meringue", "qtyPerBasePortionG": 20, "categoryKey": "bakery", "yield": 1, "packSizeG": 400, "isRaw": false },
+    { "ingredientId": "vanille_glace", "name": "Vanille-Glacé", "qtyPerBasePortionG": 80, "categoryKey": "frozen", "yield": 1, "packSizeG": 5000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_holunder_mousse",
+  "name": "Holunderblütensirup-Mousse",
+  "foodGroup": "dairy",
+  "tags": ["mousse", "spring"],
+  "allergens": ["milk", "egg"],
+  "portion": { "basePortionG": 130, "portionGByGroup": { "erwachsene": 130, "senioren": 110, "kinder": 100 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 260, "basePortionG": 130 },
+  "ingredients": [
+    { "ingredientId": "holunder_sirup", "name": "Holunderblütensirup", "qtyPerBasePortionG": 30, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 700, "isRaw": false },
+    { "ingredientId": "rahm", "name": "Rahm", "qtyPerBasePortionG": 70, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "eiweiss", "name": "Eiweiss", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 0.88, "packSizeG": 3600, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_beeren_gratin_vanille",
+  "name": "Beeren Gratin mit Vanillesauce",
+  "foodGroup": "fruit",
+  "tags": ["gratin", "berries"],
+  "allergens": ["milk", "egg"],
+  "portion": { "basePortionG": 180, "portionGByGroup": { "erwachsene": 180, "senioren": 150, "kinder": 130 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 310, "basePortionG": 180 },
+  "ingredients": [
+    { "ingredientId": "beerenmix_tk", "name": "Beerenmischung (TK)", "qtyPerBasePortionG": 120, "categoryKey": "frozen", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "vanillesauce_fertig", "name": "Vanillesauce (fertig)", "qtyPerBasePortionG": 60, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_quarkauflauf_fruechte",
+  "name": "Quarkauflauf mit Früchten",
+  "foodGroup": "dairy",
+  "tags": ["baked", "quark"],
+  "allergens": ["milk", "egg"],
+  "portion": { "basePortionG": 200, "portionGByGroup": { "erwachsene": 200, "senioren": 170, "kinder": 150 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 280, "basePortionG": 200 },
+  "ingredients": [
+    { "ingredientId": "magerquark", "name": "Magerquark", "qtyPerBasePortionG": 100, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "fruchtmix_wuerfel", "name": "Fruchtmix (gewürfelt)", "qtyPerBasePortionG": 100, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_gefuellte_aepfel_nuesse_honig",
+  "name": "Gefüllte Äpfel mit Nüssen und Honig",
+  "foodGroup": "fruit",
+  "tags": ["baked", "nuts", "honey"],
+  "allergens": ["nuts"],
+  "portion": { "basePortionG": 170, "portionGByGroup": { "erwachsene": 170, "senioren": 140, "kinder": 120 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 250, "basePortionG": 170 },
+  "ingredients": [
+    { "ingredientId": "apfel_frisch", "name": "Apfel", "qtyPerBasePortionG": 150, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true },
+    { "ingredientId": "baumnuesse", "name": "Baumnüsse", "qtyPerBasePortionG": 20, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_mohnschnecke",
+  "name": "Mohnschnecke",
+  "foodGroup": "starch",
+  "tags": ["pastry", "poppy"],
+  "allergens": ["gluten", "milk", "egg"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 380, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "hefeteig_rolle", "name": "Hefeteig (Rolle)", "qtyPerBasePortionG": 80, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "mohnfuellung", "name": "Mohnfüllung", "qtyPerBasePortionG": 40, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 500, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_profiteroles_schokosauce",
+  "name": "Profiteroles mit Schokoladensauce",
+  "foodGroup": "starch",
+  "tags": ["choux", "chocolate"],
+  "allergens": ["gluten", "egg", "milk", "soy"],
+  "portion": { "basePortionG": 140, "portionGByGroup": { "erwachsene": 140, "senioren": 120, "kinder": 100 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 400, "basePortionG": 140 },
+  "ingredients": [
+    { "ingredientId": "brandteig_profiteroles", "name": "Brandteig-Profiteroles (fertig)", "qtyPerBasePortionG": 80, "categoryKey": "bakery", "yield": 1, "packSizeG": 800, "isRaw": false },
+    { "ingredientId": "schokoladensauce", "name": "Schokoladensauce", "qtyPerBasePortionG": 60, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_zabaione",
+  "name": "Zabaione",
+  "foodGroup": "dairy",
+  "tags": ["cream", "wine"],
+  "allergens": ["egg"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 290, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "eigelb", "name": "Eigelb", "qtyPerBasePortionG": 40, "categoryKey": "dairy", "yield": 0.88, "packSizeG": 3600, "isRaw": true },
+    { "ingredientId": "zucker", "name": "Zucker", "qtyPerBasePortionG": 30, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_haselnuss_glace",
+  "name": "Haselnuss-Glacé",
+  "foodGroup": "dairy",
+  "tags": ["ice_cream", "nuts"],
+  "allergens": ["milk", "nuts"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 240, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "haselnuss_glace", "name": "Haselnuss-Glacé", "qtyPerBasePortionG": 120, "categoryKey": "frozen", "yield": 1, "packSizeG": 5000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_pistazien_glace",
+  "name": "Pistazien-Glacé",
+  "foodGroup": "dairy",
+  "tags": ["ice_cream", "nuts"],
+  "allergens": ["milk", "nuts"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 250, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "pistazien_glace", "name": "Pistazien-Glacé", "qtyPerBasePortionG": 120, "categoryKey": "frozen", "yield": 1, "packSizeG": 5000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_mandelgipfel",
+  "name": "Mandelgipfel",
+  "foodGroup": "starch",
+  "tags": ["croissant", "nuts"],
+  "allergens": ["gluten", "milk", "egg", "nuts"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 450, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "mandelgipfel_fertig", "name": "Mandelgipfel (fertig)", "qtyPerBasePortionG": 120, "categoryKey": "bakery", "yield": 1, "packSizeG": 1200, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_oepfelchueechli_zimt",
+  "name": "Öpfelchüechli mit Zimt",
+  "foodGroup": "fruit",
+  "tags": ["fried", "apple"],
+  "allergens": ["gluten", "egg"],
+  "portion": { "basePortionG": 120, "portionGByGroup": { "erwachsene": 120, "senioren": 100, "kinder": 90 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 320, "basePortionG": 120 },
+  "ingredients": [
+    { "ingredientId": "apfel_frisch", "name": "Apfel", "qtyPerBasePortionG": 100, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_schokoladenpudding",
+  "name": "Schokoladenpudding",
+  "foodGroup": "dairy",
+  "tags": ["pudding", "chocolate"],
+  "allergens": ["milk", "soy"],
+  "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 280, "basePortionG": 150 },
+  "ingredients": [
+    { "ingredientId": "puddingpulver_schoko", "name": "Puddingpulver Schokolade", "qtyPerBasePortionG": 20, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 300, "isRaw": true },
+    { "ingredientId": "milch", "name": "Milch", "qtyPerBasePortionG": 130, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_vanillepudding",
+  "name": "Vanillepudding",
+  "foodGroup": "dairy",
+  "tags": ["pudding", "vanilla"],
+  "allergens": ["milk"],
+  "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 260, "basePortionG": 150 },
+  "ingredients": [
+    { "ingredientId": "puddingpulver_vanille", "name": "Puddingpulver Vanille", "qtyPerBasePortionG": 20, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 300, "isRaw": true },
+    { "ingredientId": "milch", "name": "Milch", "qtyPerBasePortionG": 130, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_welfenspeise",
+  "name": "Welfenspeise (Vanille- und Weinschaumcreme)",
+  "foodGroup": "dairy",
+  "tags": ["cream", "layered"],
+  "allergens": ["milk", "egg"],
+  "portion": { "basePortionG": 160, "portionGByGroup": { "erwachsene": 160, "senioren": 140, "kinder": 120 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 330, "basePortionG": 160 },
+  "ingredients": [
+    { "ingredientId": "vanillecreme", "name": "Vanillecreme", "qtyPerBasePortionG": 100, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "weinschaum", "name": "Weinschaum (Sabayon)", "qtyPerBasePortionG": 60, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 700, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_dampfnudeln_vanillesauce",
+  "name": "Dampfnudeln mit Vanillesauce",
+  "foodGroup": "starch",
+  "tags": ["yeast", "sauce"],
+  "allergens": ["gluten", "egg", "milk"],
+  "portion": { "basePortionG": 220, "portionGByGroup": { "erwachsene": 220, "senioren": 180, "kinder": 160 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 450, "basePortionG": 220 },
+  "ingredients": [
+    { "ingredientId": "hefeteig_kugel", "name": "Hefeteig (Kugel)", "qtyPerBasePortionG": 140, "categoryKey": "bakery", "yield": 1, "packSizeG": 1400, "isRaw": false },
+    { "ingredientId": "vanillesauce_fertig", "name": "Vanillesauce (fertig)", "qtyPerBasePortionG": 80, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_griessbrei_kompott",
+  "name": "Grießbrei mit Kompott",
+  "foodGroup": "starch",
+  "tags": ["pudding", "classic"],
+  "allergens": ["gluten", "milk"],
+  "portion": { "basePortionG": 180, "portionGByGroup": { "erwachsene": 180, "senioren": 150, "kinder": 130 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 280, "basePortionG": 180 },
+  "ingredients": [
+    { "ingredientId": "hartweizengriess", "name": "Hartweizengriess", "qtyPerBasePortionG": 40, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": true },
+    { "ingredientId": "milch", "name": "Milch", "qtyPerBasePortionG": 110, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "kompott_mix", "name": "Kompott (Mix)", "qtyPerBasePortionG": 30, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_frucht_crumble",
+  "name": "Frucht-Crumble (saisonal)",
+  "foodGroup": "fruit",
+  "tags": ["baked", "crumble", "seasonal"],
+  "allergens": ["gluten", "milk"],
+  "portion": { "basePortionG": 170, "portionGByGroup": { "erwachsene": 170, "senioren": 140, "kinder": 120 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 390, "basePortionG": 170 },
+  "ingredients": [
+    { "ingredientId": "saisonfruechte", "name": "Saisonfrüchte", "qtyPerBasePortionG": 120, "categoryKey": "produce", "yield": 0.9, "packSizeG": 1000, "isRaw": true },
+    { "ingredientId": "streusel", "name": "Streusel (fertig)", "qtyPerBasePortionG": 50, "categoryKey": "bakery", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_mousse_chocolat_blanc",
+  "name": "Mousse au Chocolat blanc",
+  "foodGroup": "dairy",
+  "tags": ["mousse", "white_chocolate"],
+  "allergens": ["milk", "egg", "soy"],
+  "portion": { "basePortionG": 130, "portionGByGroup": { "erwachsene": 130, "senioren": 110, "kinder": 100 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 370, "basePortionG": 130 },
+  "ingredients": [
+    { "ingredientId": "weisse_couverture", "name": "Weisse Couverture", "qtyPerBasePortionG": 60, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 2500, "isRaw": true },
+    { "ingredientId": "rahm", "name": "Rahm", "qtyPerBasePortionG": 40, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "ei", "name": "Ei", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 0.88, "packSizeG": 3600, "isRaw": true }
+  ]
+},
+{
+  "recipeId": "d_reis_trauttmansdorff",
+  "name": "Reis Trauttmansdorff (kalter Milchreis)",
+  "foodGroup": "dairy",
+  "tags": ["rice_pudding", "cold"],
+  "allergens": ["milk"],
+  "portion": { "basePortionG": 180, "portionGByGroup": { "erwachsene": 180, "senioren": 150, "kinder": 130 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 340, "basePortionG": 180 },
+  "ingredients": [
+    { "ingredientId": "milchreis_roh", "name": "Milchreis (roh)", "qtyPerBasePortionG": 50, "categoryKey": "dry_goods", "yield": 2.2, "packSizeG": 1000, "isRaw": true },
+    { "ingredientId": "milch", "name": "Milch", "qtyPerBasePortionG": 130, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false }
+  ]
+},
+{
+  "recipeId": "d_zimtparfait",
+  "name": "Zimtparfait",
+  "foodGroup": "dairy",
+  "tags": ["parfait", "frozen"],
+  "allergens": ["milk", "egg"],
+  "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 120 } },
+  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 310, "basePortionG": 150 },
+  "ingredients": [
+    { "ingredientId": "rahm", "name": "Rahm", "qtyPerBasePortionG": 90, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
+    { "ingredientId": "eigelb", "name": "Eigelb", "qtyPerBasePortionG": 30, "categoryKey": "dairy", "yield": 0.88, "packSizeG": 3600, "isRaw": true },
+    { "ingredientId": "zimt", "name": "Zimt", "qtyPerBasePortionG": 2, "categoryKey": "dry_goods", "yield": 1, "packSizeG": 50, "isRaw": true }
+  ]
+}
+]
+}

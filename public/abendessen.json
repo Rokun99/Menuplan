@@ -1,0 +1,3159 @@
+{
+  "abendessen": {
+    "menu": [
+      {
+        "recipeId": "a_apfelwaehe_schnitzli_rahm",
+        "name": "Apfelwähe mit Schnitzli mit Rahm",
+        "foodGroup": "protein",
+        "tags": [
+          "schweizerisch",
+          "wähe",
+          "fleisch",
+          "klassiker"
+        ],
+        "allergens": [
+          "Gluten",
+          "Eier",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 400,
+          "portionGByGroup": {
+            "erwachsene": 400,
+            "senioren": 360,
+            "kinder": 300
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 680,
+          "basePortionG": 400
+        },
+        "ingredients": [
+          {
+            "ingredientId": "kalbsschnitzel_paniert",
+            "name": "Kalbsschnitzel (paniert)",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "apfelwaehe_stueck",
+            "name": "Apfelwähe (Stück)",
+            "qtyPerBasePortionG": 150,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1200,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "rahmsauce",
+            "name": "Rahmsauce",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_aufschnittteller_garniert",
+        "name": "Aufschnitteller garniert mit Brot und Butter",
+        "foodGroup": "protein",
+        "tags": [
+          "kalt",
+          "platte",
+          "klassiker",
+          "schweizerisch"
+        ],
+        "allergens": [
+          "Gluten",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 300,
+          "portionGByGroup": {
+            "erwachsene": 300,
+            "senioren": 270,
+            "kinder": 225
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 600,
+          "basePortionG": 300
+        },
+        "ingredients": [
+          {
+            "ingredientId": "aufschnitt_gemischt",
+            "name": "Aufschnitt (gemischt)",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "brot_gemischt",
+            "name": "Brot (gemischt)",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "butter",
+            "name": "Butter",
+            "qtyPerBasePortionG": 15,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 250,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "garnitur_gemuese",
+            "name": "Garnitur (Essiggurke, Tomate)",
+            "qtyPerBasePortionG": 50,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_silserli_salami_gruyere",
+        "name": "Belegte Silserli mit Salami und Gruyère",
+        "foodGroup": "protein",
+        "tags": [
+          "sandwich",
+          "kalt",
+          "schweizerisch"
+        ],
+        "allergens": [
+          "Gluten",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 150,
+          "portionGByGroup": {
+            "erwachsene": 150,
+            "senioren": 135,
+            "kinder": 110
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 420,
+          "basePortionG": 150
+        },
+        "ingredients": [
+          {
+            "ingredientId": "silserli",
+            "name": "Silserli",
+            "qtyPerBasePortionG": 70,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 70,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "salami_milano",
+            "name": "Salami Milano",
+            "qtyPerBasePortionG": 30,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 200,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "gruyere_kaese",
+            "name": "Gruyère AOP",
+            "qtyPerBasePortionG": 30,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_bratenaufschnitt_tatarsauce_brot",
+        "name": "Bratenaufschnitt mit Tatarsauce, Garnitur und Bauernbrot",
+        "foodGroup": "protein",
+        "tags": [
+          "kalt",
+          "platte",
+          "klassiker"
+        ],
+        "allergens": [
+          "Gluten",
+          "Eier",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 250,
+          "portionGByGroup": {
+            "erwachsene": 250,
+            "senioren": 225,
+            "kinder": 190
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 520,
+          "basePortionG": 250
+        },
+        "ingredients": [
+          {
+            "ingredientId": "bratenaufschnitt_kalt",
+            "name": "Kalter Bratenaufschnitt",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "tatarsauce",
+            "name": "Tatarsauce",
+            "qtyPerBasePortionG": 40,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "bauernbrot",
+            "name": "Bauernbrot",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_buendnerteller_brot",
+        "name": "Bündnerteller mit Rohschinken, Salsiz, Bündnerfleisch und Brot",
+        "foodGroup": "protein",
+        "tags": [
+          "kalt",
+          "platte",
+          "schweizerisch",
+          "spezialitaet"
+        ],
+        "allergens": [
+          "Gluten"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 220,
+          "portionGByGroup": {
+            "erwachsene": 220,
+            "senioren": 200,
+            "kinder": 165
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 550,
+          "basePortionG": 220
+        },
+        "ingredients": [
+          {
+            "ingredientId": "buendnerfleisch",
+            "name": "Bündnerfleisch",
+            "qtyPerBasePortionG": 40,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 200,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "rohschinken",
+            "name": "Rohschinken",
+            "qtyPerBasePortionG": 40,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 200,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "salsiz",
+            "name": "Salsiz",
+            "qtyPerBasePortionG": 40,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 150,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "brot_gemischt",
+            "name": "Brot",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_chabis_eintopf_rindfleisch",
+        "name": "Chabis-Eintopf mit Rindfleisch, Kartoffeln und Rüebli",
+        "foodGroup": "protein",
+        "tags": [
+          "eintopf",
+          "suppe",
+          "schweizerisch"
+        ],
+        "allergens": [
+          "Sellerie"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 450,
+          "portionGByGroup": {
+            "erwachsene": 450,
+            "senioren": 405,
+            "kinder": 340
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 450,
+          "basePortionG": 450
+        },
+        "ingredients": [
+          {
+            "ingredientId": "rindsvoressen",
+            "name": "Rindsvoressen",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "butchery",
+            "yield": 0.7,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "weisskabis",
+            "name": "Weisskabis",
+            "qtyPerBasePortionG": 150,
+            "categoryKey": "produce",
+            "yield": 0.8,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "kartoffeln",
+            "name": "Kartoffeln",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "produce",
+            "yield": 0.9,
+            "packSizeG": 5000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "karotten",
+            "name": "Karotten",
+            "qtyPerBasePortionG": 50,
+            "categoryKey": "produce",
+            "yield": 0.9,
+            "packSizeG": 1000,
+            "isRaw": true
+          }
+        ]
+      },
+      {
+        "recipeId": "a_chicken_nuggets_kartoffelecken_coleslaw",
+        "name": "Chicken Nuggets mit Kartoffelecken und Coleslawsalat",
+        "foodGroup": "protein",
+        "tags": [
+          "poulet",
+          "gebacken",
+          "kinder"
+        ],
+        "allergens": [
+          "Gluten",
+          "Eier",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 420,
+          "portionGByGroup": {
+            "erwachsene": 420,
+            "senioren": 380,
+            "kinder": 315
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 650,
+          "basePortionG": 420
+        },
+        "ingredients": [
+          {
+            "ingredientId": "chicken_nuggets",
+            "name": "Chicken Nuggets (TK)",
+            "qtyPerBasePortionG": 150,
+            "categoryKey": "frozen",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "kartoffelecken",
+            "name": "Kartoffelecken (TK)",
+            "qtyPerBasePortionG": 150,
+            "categoryKey": "frozen",
+            "yield": 1,
+            "packSizeG": 2500,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "coleslaw",
+            "name": "Coleslaw (Fertigsalat)",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_chili_con_carne_brot",
+        "name": "Chili con Carne mit Rindfleisch und Brot",
+        "foodGroup": "protein",
+        "tags": [
+          "eintopf",
+          "scharf",
+          "mexikanisch",
+          "rind"
+        ],
+        "allergens": [
+          "Gluten"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 420,
+          "portionGByGroup": {
+            "erwachsene": 420,
+            "senioren": 380,
+            "kinder": 315
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 550,
+          "basePortionG": 420
+        },
+        "ingredients": [
+          {
+            "ingredientId": "rindshackfleisch",
+            "name": "Rindshackfleisch",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "butchery",
+            "yield": 0.8,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "kidneybohnen_konserve",
+            "name": "Kidneybohnen (Konserve)",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 800,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "tomaten_gehackt",
+            "name": "Tomaten (gehackt, Konserve)",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 800,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "brot_gemischt",
+            "name": "Brot",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_flammkuchen_elsaesser",
+        "name": "Elsässischer Flammkuchen mit Sauerrahm, Speck und Zwiebeln",
+        "foodGroup": "protein",
+        "tags": [
+          "flammkuchen",
+          "ofen",
+          "klassiker"
+        ],
+        "allergens": [
+          "Gluten",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 280,
+          "portionGByGroup": {
+            "erwachsene": 280,
+            "senioren": 250,
+            "kinder": 210
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 600,
+          "basePortionG": 280
+        },
+        "ingredients": [
+          {
+            "ingredientId": "flammkuchenteig",
+            "name": "Flammkuchenteig",
+            "qtyPerBasePortionG": 150,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "sauerrahm",
+            "name": "Sauerrahm",
+            "qtyPerBasePortionG": 60,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "speckwuerfel",
+            "name": "Speckwürfel",
+            "qtyPerBasePortionG": 40,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "zwiebel",
+            "name": "Zwiebeln",
+            "qtyPerBasePortionG": 30,
+            "categoryKey": "produce",
+            "yield": 0.9,
+            "packSizeG": 1000,
+            "isRaw": true
+          }
+        ]
+      },
+      {
+        "recipeId": "a_pouletfluegeli_gebacken_salat_brot",
+        "name": "Gebackene Pouletflügeli mit Salat und Brot",
+        "foodGroup": "protein",
+        "tags": [
+          "poulet",
+          "gebacken",
+          "fingerfood"
+        ],
+        "allergens": [
+          "Gluten"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 400,
+          "portionGByGroup": {
+            "erwachsene": 400,
+            "senioren": 360,
+            "kinder": 300
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 650,
+          "basePortionG": 400
+        },
+        "ingredients": [
+          {
+            "ingredientId": "pouletfluegeli",
+            "name": "Pouletflügeli (mariniert)",
+            "qtyPerBasePortionG": 200,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "blattsalat",
+            "name": "Blattsalat",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "brot_gemischt",
+            "name": "Brot",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_wurstweggen_senf_salat",
+        "name": "Gebackene Wurstweggen mit Senf und Blattsalat",
+        "foodGroup": "protein",
+        "tags": [
+          "gebäck",
+          "klassiker",
+          "schweizerisch"
+        ],
+        "allergens": [
+          "Gluten",
+          "Milch",
+          "Eier"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 250,
+          "portionGByGroup": {
+            "erwachsene": 250,
+            "senioren": 225,
+            "kinder": 190
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 550,
+          "basePortionG": 250
+        },
+        "ingredients": [
+          {
+            "ingredientId": "wurstwegge",
+            "name": "Wurstwegge",
+            "qtyPerBasePortionG": 150,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 150,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "blattsalat",
+            "name": "Blattsalat",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_fleischkaese_gebacken_salat_brot",
+        "name": "Gebackener Fleischkäse mit Senf, Randensalat & Brot",
+        "foodGroup": "protein",
+        "tags": [
+          "klassiker",
+          "ofen",
+          "schweizerisch"
+        ],
+        "allergens": [
+          "Gluten"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 380,
+          "portionGByGroup": {
+            "erwachsene": 380,
+            "senioren": 340,
+            "kinder": 285
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 630,
+          "basePortionG": 380
+        },
+        "ingredients": [
+          {
+            "ingredientId": "fleischkaese",
+            "name": "Fleischkäse (zum Backen)",
+            "qtyPerBasePortionG": 150,
+            "categoryKey": "butchery",
+            "yield": 0.9,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "randensalat",
+            "name": "Randensalat",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "brot_gemischt",
+            "name": "Brot",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_gefluegelpastete_preiselbeer_selleriesalat",
+        "name": "Geflügelpastete mit Preiselbeersauce und Selleriesalat",
+        "foodGroup": "protein",
+        "tags": [
+          "pastete",
+          "vorspeise",
+          "kalt"
+        ],
+        "allergens": [
+          "Gluten",
+          "Eier",
+          "Milch",
+          "Sellerie"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 280,
+          "portionGByGroup": {
+            "erwachsene": 280,
+            "senioren": 250,
+            "kinder": 210
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 550,
+          "basePortionG": 280
+        },
+        "ingredients": [
+          {
+            "ingredientId": "gefluegelpastete",
+            "name": "Geflügelpastete",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "selleriesalat",
+            "name": "Selleriesalat",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "preiselbeeren_konfi",
+            "name": "Preiselbeeren",
+            "qtyPerBasePortionG": 30,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_eier_gefuellt_salami_brot",
+        "name": "Gefüllte Eier und Salami mit Brot",
+        "foodGroup": "protein",
+        "tags": [
+          "ei",
+          "kalt",
+          "platte",
+          "apero"
+        ],
+        "allergens": [
+          "Eier",
+          "Gluten",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 250,
+          "portionGByGroup": {
+            "erwachsene": 250,
+            "senioren": 225,
+            "kinder": 190
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 450,
+          "basePortionG": 250
+        },
+        "ingredients": [
+          {
+            "ingredientId": "ei_gefuellt",
+            "name": "Gefüllte Eier",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 10,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "salami_milano",
+            "name": "Salami",
+            "qtyPerBasePortionG": 40,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 200,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "brot_gemischt",
+            "name": "Brot",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_kartoffel_gefuellt_sauerrahm_speck",
+        "name": "Gefüllte Kartoffeln mit Sauerrahm, Speck und Frühlingszwiebeln",
+        "foodGroup": "protein",
+        "tags": [
+          "kartoffel",
+          "gefuellt",
+          "ofen"
+        ],
+        "allergens": [
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 350,
+          "portionGByGroup": {
+            "erwachsene": 350,
+            "senioren": 315,
+            "kinder": 260
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 500,
+          "basePortionG": 350
+        },
+        "ingredients": [
+          {
+            "ingredientId": "kartoffel_gross",
+            "name": "Grosse Kartoffel",
+            "qtyPerBasePortionG": 250,
+            "categoryKey": "produce",
+            "yield": 0.95,
+            "packSizeG": 5000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "sauerrahm",
+            "name": "Sauerrahm",
+            "qtyPerBasePortionG": 60,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "speckwuerfel",
+            "name": "Speckwürfel",
+            "qtyPerBasePortionG": 30,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": true
+          }
+        ]
+      },
+      {
+        "recipeId": "a_ravioli_rindfleisch_tomatensauce",
+        "name": "Gefüllte Rindfleisch-Ravioli an Tomatensauce mit Reibkäse",
+        "foodGroup": "protein",
+        "tags": [
+          "pasta",
+          "gefuellt",
+          "rind",
+          "italienisch"
+        ],
+        "allergens": [
+          "Gluten",
+          "Eier",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 380,
+          "portionGByGroup": {
+            "erwachsene": 380,
+            "senioren": 340,
+            "kinder": 285
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 520,
+          "basePortionG": 380
+        },
+        "ingredients": [
+          {
+            "ingredientId": "ravioli_rindfleisch",
+            "name": "Rindfleisch-Ravioli (frisch)",
+            "qtyPerBasePortionG": 220,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "tomatensauce",
+            "name": "Tomatensauce",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "kaese_gerieben",
+            "name": "Reibkäse",
+            "qtyPerBasePortionG": 20,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_gelberbseneintopf_wienerli",
+        "name": "Gelberbseneintopf mit Wienerli",
+        "foodGroup": "protein",
+        "tags": [
+          "eintopf",
+          "suppe",
+          "hülsenfrüchte",
+          "klassiker"
+        ],
+        "allergens": [],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 450,
+          "portionGByGroup": {
+            "erwachsene": 450,
+            "senioren": 405,
+            "kinder": 340
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 480,
+          "basePortionG": 450
+        },
+        "ingredients": [
+          {
+            "ingredientId": "gelberbsen_getrocknet",
+            "name": "Gelberbsen (getrocknet)",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "wienerli",
+            "name": "Wienerli",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "wurzelgemuese",
+            "name": "Wurzelgemüse",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "produce",
+            "yield": 0.85,
+            "packSizeG": 1000,
+            "isRaw": true
+          }
+        ]
+      },
+      {
+        "recipeId": "a_truthahnschinken_apfelsalat_brot",
+        "name": "Geräucherter Truthahnschinken mit Apfelsalat und Brot",
+        "foodGroup": "protein",
+        "tags": [
+          "kalt",
+          "platte",
+          "geflügel"
+        ],
+        "allergens": [
+          "Gluten"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 320,
+          "portionGByGroup": {
+            "erwachsene": 320,
+            "senioren": 290,
+            "kinder": 240
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 480,
+          "basePortionG": 320
+        },
+        "ingredients": [
+          {
+            "ingredientId": "truthahnschinken",
+            "name": "Truthahnschinken",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "apfelsalat",
+            "name": "Apfelsalat",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "brot_gemischt",
+            "name": "Brot",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_gerstensuppe_wienerli_brot",
+        "name": "Gerstensuppe mit heissen Wienerli, Brot und Senf",
+        "foodGroup": "starch",
+        "tags": [
+          "suppe",
+          "eintopf",
+          "schweizerisch",
+          "klassiker"
+        ],
+        "allergens": [
+          "Gluten",
+          "Sellerie"
+        ],
+        "isVollkorn": true,
+        "portion": {
+          "basePortionG": 450,
+          "portionGByGroup": {
+            "erwachsene": 450,
+            "senioren": 405,
+            "kinder": 340
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 450,
+          "basePortionG": 450
+        },
+        "ingredients": [
+          {
+            "ingredientId": "gerstensuppe_basis",
+            "name": "Basis für Gerstensuppe",
+            "qtyPerBasePortionG": 300,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "wienerli",
+            "name": "Wienerli",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "brot_gemischt",
+            "name": "Brot",
+            "qtyPerBasePortionG": 70,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_gulaschsuppe_rind_brot",
+        "name": "Gulaschsuppe mit Rindfleisch und Paprika, Bauernbrot",
+        "foodGroup": "protein",
+        "tags": [
+          "suppe",
+          "eintopf",
+          "rind",
+          "ungarisch"
+        ],
+        "allergens": [
+          "Gluten",
+          "Sellerie"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 450,
+          "portionGByGroup": {
+            "erwachsene": 450,
+            "senioren": 405,
+            "kinder": 340
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 500,
+          "basePortionG": 450
+        },
+        "ingredients": [
+          {
+            "ingredientId": "rindsvoressen",
+            "name": "Rindsvoressen",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "butchery",
+            "yield": 0.7,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "kartoffeln",
+            "name": "Kartoffeln",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "produce",
+            "yield": 0.9,
+            "packSizeG": 5000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "paprika",
+            "name": "Paprika",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "produce",
+            "yield": 0.85,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "bauernbrot",
+            "name": "Bauernbrot",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_leberwurst_hausmacher_brot",
+        "name": "Hausmacherleberwurst, Tomaten und Essiggurken mit Brot",
+        "foodGroup": "protein",
+        "tags": [
+          "kalt",
+          "wurst",
+          "platte",
+          "zvieri"
+        ],
+        "allergens": [
+          "Gluten"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 220,
+          "portionGByGroup": {
+            "erwachsene": 220,
+            "senioren": 200,
+            "kinder": 165
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 450,
+          "basePortionG": 220
+        },
+        "ingredients": [
+          {
+            "ingredientId": "leberwurst_hausmacher",
+            "name": "Hausmacher Leberwurst",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 250,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "brot_gemischt",
+            "name": "Brot",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "garnitur_sauer",
+            "name": "Saure Garnitur (Gurke, Tomate)",
+            "qtyPerBasePortionG": 60,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_wienerli_kartoffelsalat",
+        "name": "Heisse Wienerli mit Kartoffelsalat und Senf",
+        "foodGroup": "protein",
+        "tags": [
+          "wurst",
+          "klassiker",
+          "schweizerisch"
+        ],
+        "allergens": [],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 350,
+          "portionGByGroup": {
+            "erwachsene": 350,
+            "senioren": 315,
+            "kinder": 260
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 500,
+          "basePortionG": 350
+        },
+        "ingredients": [
+          {
+            "ingredientId": "wienerli",
+            "name": "Wienerli",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "kartoffelsalat",
+            "name": "Kartoffelsalat",
+            "qtyPerBasePortionG": 200,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_beinschinken_heiss_kartoffelsalat",
+        "name": "Heisser Beinschinken mit Senf, Kartoffel- und Randensalat",
+        "foodGroup": "protein",
+        "tags": [
+          "schinken",
+          "klassiker"
+        ],
+        "allergens": [
+          "Senf"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 420,
+          "portionGByGroup": {
+            "erwachsene": 420,
+            "senioren": 380,
+            "kinder": 315
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 600,
+          "basePortionG": 420
+        },
+        "ingredients": [
+          {
+            "ingredientId": "beinschinken",
+            "name": "Beinschinken (heiss)",
+            "qtyPerBasePortionG": 150,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "kartoffelsalat",
+            "name": "Kartoffelsalat",
+            "qtyPerBasePortionG": 150,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "randensalat",
+            "name": "Randensalat",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_hoernli_gehacktes_apfelmus",
+        "name": "Hörnli mit Gehacktem, geriebenem Sbrinz und Apfelmus",
+        "foodGroup": "protein",
+        "tags": [
+          "pasta",
+          "schweizerisch",
+          "klassiker",
+          "rind"
+        ],
+        "allergens": [
+          "Gluten",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 450,
+          "portionGByGroup": {
+            "erwachsene": 450,
+            "senioren": 405,
+            "kinder": 340
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 650,
+          "basePortionG": 450
+        },
+        "ingredients": [
+          {
+            "ingredientId": "rindshackfleisch",
+            "name": "Rindshackfleisch",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "butchery",
+            "yield": 0.8,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "hoernli",
+            "name": "Hörnli",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "tomatensauce",
+            "name": "Tomatensauce",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "sbrinz_kaese",
+            "name": "Sbrinz (gerieben)",
+            "qtyPerBasePortionG": 20,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "apfelmus",
+            "name": "Apfelmus",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 800,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_melone_rohschinken_brot",
+        "name": "Melone mit Rohschinken und Dinkelbrot",
+        "foodGroup": "protein",
+        "tags": [
+          "vorspeise",
+          "kalt",
+          "sommer",
+          "italienisch"
+        ],
+        "allergens": [
+          "Gluten"
+        ],
+        "isVollkorn": true,
+        "portion": {
+          "basePortionG": 320,
+          "portionGByGroup": {
+            "erwachsene": 320,
+            "senioren": 290,
+            "kinder": 240
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 450,
+          "basePortionG": 320
+        },
+        "ingredients": [
+          {
+            "ingredientId": "melone_cantaloupe",
+            "name": "Cantaloupe-Melone",
+            "qtyPerBasePortionG": 200,
+            "categoryKey": "produce",
+            "yield": 0.6,
+            "packSizeG": 1500,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "rohschinken",
+            "name": "Rohschinken",
+            "qtyPerBasePortionG": 60,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 200,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "dinkelbrot",
+            "name": "Dinkelbrot",
+            "qtyPerBasePortionG": 60,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 750,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_weisswurst_brezel_senf",
+        "name": "Münchner Weisswurst mit süssem Senf, Laugenbrezel und Sauerkraut",
+        "foodGroup": "protein",
+        "tags": [
+          "wurst",
+          "deutsch",
+          "klassiker"
+        ],
+        "allergens": [
+          "Gluten",
+          "Senf"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 350,
+          "portionGByGroup": {
+            "erwachsene": 350,
+            "senioren": 315,
+            "kinder": 260
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 500,
+          "basePortionG": 350
+        },
+        "ingredients": [
+          {
+            "ingredientId": "weisswurst",
+            "name": "Weisswurst",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "laugenbrezel",
+            "name": "Laugenbrezel",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 80,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "senf_suess",
+            "name": "Süsser Senf",
+            "qtyPerBasePortionG": 20,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 250,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "sauerkraut_gekocht",
+            "name": "Sauerkraut (gekocht)",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_pouletsalat_florida",
+        "name": "Pouletsalat 'Florida' mit Ananas und Pfirsich, Kopfsalat und Brot",
+        "foodGroup": "protein",
+        "tags": [
+          "salat",
+          "poulet",
+          "fruchtig"
+        ],
+        "allergens": [
+          "Gluten"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 400,
+          "portionGByGroup": {
+            "erwachsene": 400,
+            "senioren": 360,
+            "kinder": 300
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 550,
+          "basePortionG": 400
+        },
+        "ingredients": [
+          {
+            "ingredientId": "pouletbrust_gekocht",
+            "name": "Pouletbrust (gekocht)",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "blattsalat",
+            "name": "Kopfsalat",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "fruechtemix_konserve",
+            "name": "Früchtemix (Ananas, Pfirsich)",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 800,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "brot_gemischt",
+            "name": "Brot",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_rindstatar_toast",
+        "name": "Rindfleisch-Tatar garniert mit Kapern und Zwiebeln dazu Toast",
+        "foodGroup": "protein",
+        "tags": [
+          "rind",
+          "roh",
+          "klassiker"
+        ],
+        "allergens": [
+          "Gluten",
+          "Fisch",
+          "Eier",
+          "Senf"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 220,
+          "portionGByGroup": {
+            "erwachsene": 220,
+            "senioren": 200,
+            "kinder": 165
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 550,
+          "basePortionG": 220
+        },
+        "ingredients": [
+          {
+            "ingredientId": "rindstatar",
+            "name": "Rindstatar",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "toastbrot",
+            "name": "Toast",
+            "qtyPerBasePortionG": 60,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "garnitur_tatar",
+            "name": "Garnitur (Kapern, Zwiebeln, Eigelb)",
+            "qtyPerBasePortionG": 40,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 200,
+            "isRaw": true
+          }
+        ]
+      },
+      {
+        "recipeId": "a_roesti_schinken_tomate_raclette",
+        "name": "Rösti mit Schinken und Tomaten überbacken mit Raclettekäse",
+        "foodGroup": "protein",
+        "tags": [
+          "rösti",
+          "kartoffel",
+          "käse",
+          "schweizerisch"
+        ],
+        "allergens": [
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 420,
+          "portionGByGroup": {
+            "erwachsene": 420,
+            "senioren": 380,
+            "kinder": 315
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 650,
+          "basePortionG": 420
+        },
+        "ingredients": [
+          {
+            "ingredientId": "roesti",
+            "name": "Rösti",
+            "qtyPerBasePortionG": 250,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "schinken_gekocht",
+            "name": "Hinterschinken",
+            "qtyPerBasePortionG": 50,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "tomaten",
+            "name": "Tomaten",
+            "qtyPerBasePortionG": 50,
+            "categoryKey": "produce",
+            "yield": 0.95,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "raclettekäse",
+            "name": "Raclettekäse",
+            "qtyPerBasePortionG": 70,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_schinkengipfeli_salat",
+        "name": "Schinkengipfeli mit Selleriesalat",
+        "foodGroup": "protein",
+        "tags": [
+          "gebäck",
+          "schweizerisch",
+          "klassiker"
+        ],
+        "allergens": [
+          "Gluten",
+          "Eier",
+          "Milch",
+          "Sellerie"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 250,
+          "portionGByGroup": {
+            "erwachsene": 250,
+            "senioren": 225,
+            "kinder": 190
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 460,
+          "basePortionG": 250
+        },
+        "ingredients": [
+          {
+            "ingredientId": "schinkengipfeli",
+            "name": "Schinkengipfeli",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 120,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "selleriesalat",
+            "name": "Selleriesalat",
+            "qtyPerBasePortionG": 130,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_siedfleischsalat_brot",
+        "name": "Siedfleischsalat 'Zigeunerart' mit Bauernbrot",
+        "foodGroup": "protein",
+        "tags": [
+          "salat",
+          "rind",
+          "schweizerisch",
+          "klassiker"
+        ],
+        "allergens": [
+          "Gluten"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 300,
+          "portionGByGroup": {
+            "erwachsene": 300,
+            "senioren": 270,
+            "kinder": 225
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 560,
+          "basePortionG": 300
+        },
+        "ingredients": [
+          {
+            "ingredientId": "siedfleisch",
+            "name": "Siedfleisch (gekocht)",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "salatsauce_zigeuner",
+            "name": "Zigeunersauce (Vinaigrette)",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "bauernbrot",
+            "name": "Bauernbrot",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_toast_hawaii",
+        "name": "Toast Hawaii mit Schinken, Ananas und Raclettekäse",
+        "foodGroup": "protein",
+        "tags": [
+          "toast",
+          "ofen",
+          "retro",
+          "klassiker"
+        ],
+        "allergens": [
+          "Gluten",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 250,
+          "portionGByGroup": {
+            "erwachsene": 250,
+            "senioren": 225,
+            "kinder": 190
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 600,
+          "basePortionG": 250
+        },
+        "ingredients": [
+          {
+            "ingredientId": "toastbrot",
+            "name": "Toastbrot",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "schinken_gekocht",
+            "name": "Hinterschinken",
+            "qtyPerBasePortionG": 50,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "ananas_scheibe",
+            "name": "Ananasscheibe (Konserve)",
+            "qtyPerBasePortionG": 50,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 800,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "raclettekäse",
+            "name": "Raclettekäse",
+            "qtyPerBasePortionG": 40,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_wurst_kaesesalat_garniert",
+        "name": "Wurst-Käsesalat garniert",
+        "foodGroup": "protein",
+        "tags": [
+          "salat",
+          "wurst",
+          "käse",
+          "schweizerisch",
+          "klassiker"
+        ],
+        "allergens": [
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 300,
+          "portionGByGroup": {
+            "erwachsene": 300,
+            "senioren": 270,
+            "kinder": 225
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 500,
+          "basePortionG": 300
+        },
+        "ingredients": [
+          {
+            "ingredientId": "cervelat",
+            "name": "Cervelat",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "appenzeller_kaese",
+            "name": "Appenzeller Käse",
+            "qtyPerBasePortionG": 60,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "salatsauce_franzoesisch",
+            "name": "Französische Salatsauce",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_spaghetti_carbonara_schweizer_art",
+        "name": "Spaghetti „Carbonara“ mit Schinken, Champignons, Schnittlauch, Eigelb und Rahm",
+        "foodGroup": "protein",
+        "tags": [
+          "pasta",
+          "schweizerisch",
+          "klassiker"
+        ],
+        "allergens": [
+          "Gluten",
+          "Eier",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 420,
+          "portionGByGroup": {
+            "erwachsene": 420,
+            "senioren": 380,
+            "kinder": 315
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 700,
+          "basePortionG": 420
+        },
+        "ingredients": [
+          {
+            "ingredientId": "spaghetti",
+            "name": "Spaghetti",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "schinken_gekocht",
+            "name": "Hinterschinken",
+            "qtyPerBasePortionG": 60,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "champignons",
+            "name": "Champignons",
+            "qtyPerBasePortionG": 60,
+            "categoryKey": "produce",
+            "yield": 0.85,
+            "packSizeG": 500,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "rahm_ei_mischung",
+            "name": "Rahm-Ei-Mischung",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": true
+          }
+        ]
+      },
+      {
+        "recipeId": "a_croque_monsieur",
+        "name": "Croque Monsieur",
+        "foodGroup": "protein",
+        "tags": [
+          "toast",
+          "sandwich",
+          "käse",
+          "französisch",
+          "ofen"
+        ],
+        "allergens": [
+          "Gluten",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 220,
+          "portionGByGroup": {
+            "erwachsene": 220,
+            "senioren": 200,
+            "kinder": 165
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 600,
+          "basePortionG": 220
+        },
+        "ingredients": [
+          {
+            "ingredientId": "toastbrot",
+            "name": "Toastbrot",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "schinken_gekocht",
+            "name": "Hinterschinken",
+            "qtyPerBasePortionG": 50,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "bechamelsauce",
+            "name": "Bechamelsauce",
+            "qtyPerBasePortionG": 40,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "kaese_gerieben",
+            "name": "Reibkäse",
+            "qtyPerBasePortionG": 40,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_fleischvogel_kartoffelstock",
+        "name": "Fleischvogel mit Kartoffelstock",
+        "foodGroup": "protein",
+        "tags": [
+          "rind",
+          "klassiker",
+          "schweizerisch"
+        ],
+        "allergens": [
+          "Milch",
+          "Gluten"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 420,
+          "portionGByGroup": {
+            "erwachsene": 420,
+            "senioren": 380,
+            "kinder": 315
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 650,
+          "basePortionG": 420
+        },
+        "ingredients": [
+          {
+            "ingredientId": "fleischvogel",
+            "name": "Fleischvogel (Rind)",
+            "qtyPerBasePortionG": 180,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 180,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "bratensauce",
+            "name": "Bratensauce",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "kartoffelstock",
+            "name": "Kartoffelstock",
+            "qtyPerBasePortionG": 160,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 5000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_linseneintopf_speck",
+        "name": "Linseneintopf mit Speckwürfeli",
+        "foodGroup": "protein",
+        "tags": [
+          "eintopf",
+          "hülsenfrüchte",
+          "klassiker"
+        ],
+        "allergens": [
+          "Sellerie"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 450,
+          "portionGByGroup": {
+            "erwachsene": 450,
+            "senioren": 405,
+            "kinder": 340
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 490,
+          "basePortionG": 450
+        },
+        "ingredients": [
+          {
+            "ingredientId": "linsen_braun",
+            "name": "Linsen (getrocknet)",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "speckwuerfel",
+            "name": "Speckwürfel",
+            "qtyPerBasePortionG": 40,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "wurzelgemuese",
+            "name": "Wurzelgemüse",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "produce",
+            "yield": 0.85,
+            "packSizeG": 1000,
+            "isRaw": true
+          }
+        ]
+      },
+      {
+        "recipeId": "a_bohneneintopf_rauchwurst",
+        "name": "Bohneneintopf mit Rauchwurst",
+        "foodGroup": "protein",
+        "tags": [
+          "eintopf",
+          "hülsenfrüchte",
+          "wurst"
+        ],
+        "allergens": [],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 450,
+          "portionGByGroup": {
+            "erwachsene": 450,
+            "senioren": 405,
+            "kinder": 340
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 520,
+          "basePortionG": 450
+        },
+        "ingredients": [
+          {
+            "ingredientId": "bohnen_weiss_konserve",
+            "name": "Weisse Bohnen (Konserve)",
+            "qtyPerBasePortionG": 180,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 800,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "rauchwurst",
+            "name": "Rauchwurst",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "kartoffeln",
+            "name": "Kartoffeln",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "produce",
+            "yield": 0.9,
+            "packSizeG": 5000,
+            "isRaw": true
+          }
+        ]
+      },
+      {
+        "recipeId": "a_quiche_lorraine",
+        "name": "Quiche Lorraine",
+        "foodGroup": "protein",
+        "tags": [
+          "quiche",
+          "speck",
+          "ofen",
+          "französisch",
+          "klassiker"
+        ],
+        "allergens": [
+          "Gluten",
+          "Eier",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 250,
+          "portionGByGroup": {
+            "erwachsene": 250,
+            "senioren": 225,
+            "kinder": 190
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 620,
+          "basePortionG": 250
+        },
+        "ingredients": [
+          {
+            "ingredientId": "muerbeteig",
+            "name": "Mürbeteig",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "speckwuerfel",
+            "name": "Speckwürfel",
+            "qtyPerBasePortionG": 60,
+            "categoryKey": "butchery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "kaese_gerieben",
+            "name": "Reibkäse",
+            "qtyPerBasePortionG": 30,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "rahmguss",
+            "name": "Rahmguss",
+            "qtyPerBasePortionG": 60,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": true
+          }
+        ]
+      },
+      {
+        "recipeId": "a_f_brötli_thon_ei",
+        "name": "Belegte Brötli mit Thon & Ei",
+        "foodGroup": "protein",
+        "tags": [
+          "sandwich",
+          "kalt",
+          "fisch"
+        ],
+        "allergens": [
+          "Gluten",
+          "Fisch",
+          "Eier"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 150,
+          "portionGByGroup": {
+            "erwachsene": 150,
+            "senioren": 135,
+            "kinder": 110
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 350,
+          "basePortionG": 150
+        },
+        "ingredients": [
+          {
+            "ingredientId": "broetli",
+            "name": "Brötli (gemischt)",
+            "qtyPerBasePortionG": 70,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 70,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "thon_mousse",
+            "name": "Thon-Mousse",
+            "qtyPerBasePortionG": 50,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "ei_gekocht",
+            "name": "Ei (gekocht, in Scheiben)",
+            "qtyPerBasePortionG": 30,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 10,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_f_silserli_rauchlachs_frischkaese",
+        "name": "Belegte Silserli mit Rauchlachs und Frischkäse",
+        "foodGroup": "protein",
+        "tags": [
+          "sandwich",
+          "kalt",
+          "fisch",
+          "lachs"
+        ],
+        "allergens": [
+          "Gluten",
+          "Fisch",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 150,
+          "portionGByGroup": {
+            "erwachsene": 150,
+            "senioren": 135,
+            "kinder": 110
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 380,
+          "basePortionG": 150
+        },
+        "ingredients": [
+          {
+            "ingredientId": "silserli",
+            "name": "Silserli",
+            "qtyPerBasePortionG": 70,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 70,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "rauchlachs",
+            "name": "Rauchlachs",
+            "qtyPerBasePortionG": 40,
+            "categoryKey": "seafood",
+            "yield": 1,
+            "packSizeG": 200,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "frischkaese",
+            "name": "Frischkäse",
+            "qtyPerBasePortionG": 40,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_f_forelle_geraeuchert_kartoffeln_quark",
+        "name": "Geräucherte Forelle mit Gschwellti und Kräuterquark",
+        "foodGroup": "protein",
+        "tags": [
+          "fisch",
+          "kalt",
+          "klassiker"
+        ],
+        "allergens": [
+          "Fisch",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 450,
+          "portionGByGroup": {
+            "erwachsene": 450,
+            "senioren": 405,
+            "kinder": 340
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 600,
+          "basePortionG": 450
+        },
+        "ingredients": [
+          {
+            "ingredientId": "forellenfilet_geraeuchert",
+            "name": "Forellenfilet (geräuchert)",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "seafood",
+            "yield": 1,
+            "packSizeG": 200,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "kartoffeln_klein",
+            "name": "Kleine Kartoffeln (Gschwellti)",
+            "qtyPerBasePortionG": 220,
+            "categoryKey": "produce",
+            "yield": 0.95,
+            "packSizeG": 2500,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "kraeuterquark",
+            "name": "Kräuterquark",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_f_matjes_hausfrauenart_kartoffeln",
+        "name": "Matjes 'Hausfrauenart' mit Salzkartoffeln",
+        "foodGroup": "protein",
+        "tags": [
+          "fisch",
+          "kalt",
+          "klassiker",
+          "deutsch"
+        ],
+        "allergens": [
+          "Fisch",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 420,
+          "portionGByGroup": {
+            "erwachsene": 420,
+            "senioren": 380,
+            "kinder": 315
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 580,
+          "basePortionG": 420
+        },
+        "ingredients": [
+          {
+            "ingredientId": "matjesfilet",
+            "name": "Matjesfilet",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "seafood",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "rahmsauce_hausfrauenart",
+            "name": "Hausfrauensauce (Rahm, Apfel, Zwiebel)",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "kartoffeln",
+            "name": "Salzkartoffeln",
+            "qtyPerBasePortionG": 200,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 5000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_f_thunfischsalat_ei_brot",
+        "name": "Thunfischsalat garniert mit Ei und Brot",
+        "foodGroup": "protein",
+        "tags": [
+          "salat",
+          "fisch",
+          "kalt"
+        ],
+        "allergens": [
+          "Fisch",
+          "Eier",
+          "Gluten"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 320,
+          "portionGByGroup": {
+            "erwachsene": 320,
+            "senioren": 290,
+            "kinder": 240
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 530,
+          "basePortionG": 320
+        },
+        "ingredients": [
+          {
+            "ingredientId": "thunfisch_konserve",
+            "name": "Thunfisch (Konserve)",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 185,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "salatsauce_cocktail",
+            "name": "Cocktailsauce",
+            "qtyPerBasePortionG": 50,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "ei_gekocht",
+            "name": "Ei (gekocht)",
+            "qtyPerBasePortionG": 50,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 10,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "brot_gemischt",
+            "name": "Brot",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_f_crevettencocktail_toast",
+        "name": "Crevetten-Cocktail mit Toast",
+        "foodGroup": "protein",
+        "tags": [
+          "vorspeise",
+          "kalt",
+          "retro",
+          "klassiker"
+        ],
+        "allergens": [
+          "Krebstiere",
+          "Gluten",
+          "Eier",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 250,
+          "portionGByGroup": {
+            "erwachsene": 250,
+            "senioren": 225,
+            "kinder": 190
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 450,
+          "basePortionG": 250
+        },
+        "ingredients": [
+          {
+            "ingredientId": "crevetten_gekocht",
+            "name": "Crevetten (gekocht)",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "seafood",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "salatsauce_cocktail",
+            "name": "Cocktailsauce",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "toastbrot",
+            "name": "Toast",
+            "qtyPerBasePortionG": 60,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_v_apfelchuechli_vanillesauce",
+        "name": "Apfelchüechli mit Vanillesauce",
+        "foodGroup": "fruit",
+        "tags": [
+          "dessert",
+          "schweizerisch",
+          "gebacken",
+          "klassiker"
+        ],
+        "allergens": [
+          "Gluten",
+          "Eier",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 300,
+          "portionGByGroup": {
+            "erwachsene": 300,
+            "senioren": 270,
+            "kinder": 225
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 480,
+          "basePortionG": 300
+        },
+        "ingredients": [
+          {
+            "ingredientId": "apfel",
+            "name": "Apfel (in Scheiben)",
+            "qtyPerBasePortionG": 150,
+            "categoryKey": "produce",
+            "yield": 0.9,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "backteig",
+            "name": "Backteig",
+            "qtyPerBasePortionG": 50,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "vanillesauce",
+            "name": "Vanillesauce",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_v_apfelwaehe_rahm",
+        "name": "Apfelwähe mit Rahm",
+        "foodGroup": "fruit",
+        "tags": [
+          "dessert",
+          "kuchen",
+          "wähe",
+          "schweizerisch"
+        ],
+        "allergens": [
+          "Gluten",
+          "Eier",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 220,
+          "portionGByGroup": {
+            "erwachsene": 220,
+            "senioren": 200,
+            "kinder": 165
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 500,
+          "basePortionG": 220
+        },
+        "ingredients": [
+          {
+            "ingredientId": "apfelwaehe_stueck",
+            "name": "Apfelwähe (Stück)",
+            "qtyPerBasePortionG": 180,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "rahm_geschlagen",
+            "name": "Schlagrahm",
+            "qtyPerBasePortionG": 40,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_v_kaeseteller_garniert_brot",
+        "name": "Appenzeller-Käse mit Trauben und Baumnüssen, Bürli",
+        "foodGroup": "dairy",
+        "tags": [
+          "käse",
+          "platte",
+          "schweizerisch"
+        ],
+        "allergens": [
+          "Gluten",
+          "Milch",
+          "Nüsse"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 250,
+          "portionGByGroup": {
+            "erwachsene": 250,
+            "senioren": 225,
+            "kinder": 190
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 600,
+          "basePortionG": 250
+        },
+        "ingredients": [
+          {
+            "ingredientId": "appenzeller_kaese",
+            "name": "Appenzeller Käse",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "trauben",
+            "name": "Trauben",
+            "qtyPerBasePortionG": 50,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "baumnuesse",
+            "name": "Baumnüsse",
+            "qtyPerBasePortionG": 20,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "buerli",
+            "name": "Bürli",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 80,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_v_birchermuesli_brot",
+        "name": "Birchermüesli mit Früchten und Brot",
+        "foodGroup": "starch",
+        "tags": [
+          "müesli",
+          "schweizerisch",
+          "frühstück",
+          "klassiker"
+        ],
+        "allergens": [
+          "Gluten",
+          "Milch",
+          "Nüsse"
+        ],
+        "isVollkorn": true,
+        "portion": {
+          "basePortionG": 350,
+          "portionGByGroup": {
+            "erwachsene": 350,
+            "senioren": 315,
+            "kinder": 260
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 480,
+          "basePortionG": 350
+        },
+        "ingredients": [
+          {
+            "ingredientId": "birchermuesli",
+            "name": "Birchermüesli (hausgemacht)",
+            "qtyPerBasePortionG": 250,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "brot_gemischt",
+            "name": "Brot",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_v_chaeschuechli_salat",
+        "name": "Chäschüechli mit Blattsalat",
+        "foodGroup": "dairy",
+        "tags": [
+          "käse",
+          "gebäck",
+          "schweizerisch",
+          "klassiker"
+        ],
+        "allergens": [
+          "Gluten",
+          "Eier",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 250,
+          "portionGByGroup": {
+            "erwachsene": 250,
+            "senioren": 225,
+            "kinder": 190
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 480,
+          "basePortionG": 250
+        },
+        "ingredients": [
+          {
+            "ingredientId": "chaeschuechli",
+            "name": "Chäschüechli (TK)",
+            "qtyPerBasePortionG": 150,
+            "categoryKey": "frozen",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "blattsalat",
+            "name": "Blattsalat",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_v_fotzelschnitten_apfelmus",
+        "name": "Fotzelschnitten mit Zimt und Zucker, dazu Apfelmus",
+        "foodGroup": "starch",
+        "tags": [
+          "dessert",
+          "resteverwertung",
+          "schweizerisch",
+          "klassiker"
+        ],
+        "allergens": [
+          "Gluten",
+          "Eier",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 300,
+          "portionGByGroup": {
+            "erwachsene": 300,
+            "senioren": 270,
+            "kinder": 225
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 480,
+          "basePortionG": 300
+        },
+        "ingredients": [
+          {
+            "ingredientId": "brot_alt",
+            "name": "Altes Brot",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "milch_ei_mischung",
+            "name": "Milch-Ei-Mischung",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "apfelmus",
+            "name": "Apfelmus",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "produce",
+            "yield": 1,
+            "packSizeG": 800,
+            "isRaw": false
+          }
+        ]
+      },
+      {
+        "recipeId": "a_v_kaeseschnitte_spiegelei",
+        "name": "Käseschnitte mit Spiegelei",
+        "foodGroup": "dairy",
+        "tags": [
+          "käse",
+          "brot",
+          "schweizerisch",
+          "klassiker",
+          "ofen"
+        ],
+        "allergens": [
+          "Gluten",
+          "Milch",
+          "Eier"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 280,
+          "portionGByGroup": {
+            "erwachsene": 280,
+            "senioren": 250,
+            "kinder": 210
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 620,
+          "basePortionG": 280
+        },
+        "ingredients": [
+          {
+            "ingredientId": "brot_alt",
+            "name": "Brot (Scheiben)",
+            "qtyPerBasePortionG": 120,
+            "categoryKey": "bakery",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "kaese_raclette",
+            "name": "Raclettekäse",
+            "qtyPerBasePortionG": 100,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "ei",
+            "name": "Ei",
+            "qtyPerBasePortionG": 55,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 10,
+            "isRaw": true
+          }
+        ]
+      },
+      {
+        "recipeId": "a_v_kaesespaetzle_roestzwiebeln",
+        "name": "Käsespätzle mit Röstzwiebeln",
+        "foodGroup": "starch",
+        "tags": [
+          "spätzli",
+          "käse",
+          "klassiker"
+        ],
+        "allergens": [
+          "Gluten",
+          "Eier",
+          "Milch"
+        ],
+        "isVollkorn": false,
+        "portion": {
+          "basePortionG": 320,
+          "portionGByGroup": {
+            "erwachsene": 320,
+            "senioren": 290,
+            "kinder": 240
+          }
+        },
+        "nutrition": {
+          "kind": "PER_PORTION",
+          "kcalPerPortion": 650,
+          "basePortionG": 320
+        },
+        "ingredients": [
+          {
+            "ingredientId": "spaetzli",
+            "name": "Spätzli",
+            "qtyPerBasePortionG": 180,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 500,
+            "isRaw": true
+          },
+          {
+            "ingredientId": "kaese_gerieben_wuerzig",
+            "name": "Würziger Reibkäse",
+            "qtyPerBasePortionG": 80,
+            "categoryKey": "dairy",
+            "yield": 1,
+            "packSizeG": 1000,
+            "isRaw": false
+          },
+          {
+            "ingredientId": "roestzwiebeln",
+            "name": "Röstzwiebeln",
+            "qtyPerBasePortionG": 20,
+            "categoryKey": "dry_goods",
+            "yield": 1,
+            "packSizeG": 200,
+            "isRaw": false
+          }
+        ]
+      }
+    ]
+  }
+}
