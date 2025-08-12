@@ -1,6 +1,5 @@
 {
-  "abendessen": {
-    "menu": [
+  "abendessen": [
       {
         "recipeId": "a_apfelwaehe_schnitzli_rahm",
         "name": "Apfelwähe mit Schnitzli mit Rahm",
@@ -3156,4 +3155,3 @@
       }
     ]
   }
-}
