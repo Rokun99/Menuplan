@@ -1893,7 +1893,7 @@
     "kcalPerPortion": 860,
     "proteinPerPortion": 46,
     "fatPerPortion": 52,
-    "basePortG": 360
+    "basePortionG": 360
   },
   "ingredients": [
     { "ingredientId": "ing-rindssteak", "name": "Rindssteak", "qtyPerBasePortionG": 200, "categoryKey": "butchery" },
@@ -3180,7 +3180,6 @@
       { "ingredientId": "ing-joghurt", "name": "Joghurt", "qtyPerBasePortionG": 30, "categoryKey": "dairy" }
     ]
   },
-  [
   {
     "recipeId": "bebbykloepfer-an-senfsauce-mit-pommes-frites-und-wintergemuese",
     "name": "Bebbyklöpfer an Senfsauce mit Pommes Frites und Wintergemüse",
@@ -4660,7 +4659,7 @@
       { "ingredientId": "ing-lammfleisch", "name": "Lammfleisch", "qtyPerBasePortionG": 180, "categoryKey": "butchery" },
       { "ingredientId": "ing-fruehlingsgemuese", "name": "Frühlingsgemüse", "qtyPerBasePortionG": 120, "categoryKey": "produce" },
       { "ingredientId": "ing-bruehe", "name": "Brühe", "qtyPerBasePortionG": 100, "categoryKey": "dry_goods" }
-      ]
-    }
-  ]
+    ]
+  }
+ ]
 }

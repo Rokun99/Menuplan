@@ -1125,19 +1125,6 @@
   ]
 },
 {
-  "recipeId": "d_vanillecreme_beeren",
-  "name": "Vanillecreme mit Beeren",
-  "foodGroup": "dairy",
-  "tags": ["cream", "berries"],
-  "allergens": ["milk", "egg"],
-  "portion": { "basePortionG": 150, "portionGByGroup": { "erwachsene": 150, "senioren": 130, "kinder": 110 } },
-  "nutrition": { "kind": "PER_PORTION", "kcalPerPortion": 260, "basePortionG": 150 },
-  "ingredients": [
-    { "ingredientId": "vanillecreme", "name": "Vanillecreme", "qtyPerBasePortionG": 110, "categoryKey": "dairy", "yield": 1, "packSizeG": 1000, "isRaw": false },
-    { "ingredientId": "beerenmix_tk", "name": "Beerenmischung (TK)", "qtyPerBasePortionG": 40, "categoryKey": "frozen", "yield": 1, "packSizeG": 1000, "isRaw": false }
-  ]
-},
-{
   "recipeId": "d_vanillecreme_erdbeeren",
   "name": "Vanillecréme mit Erdbeeren",
   "foodGroup": "dairy",
