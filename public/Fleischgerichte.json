@@ -1,7 +1,5 @@
 {
-  "category": "fleischgerichte",
-  "version": "1.0.0",
-  "recipes": [
+"fleischgerichte": [
     {
       "recipeId": "appenzeller-toast-williams-mit-speck-kaese-und-birne",
       "name": "Appenzeller Toast Williams mit Speck, Käse und Birne",
