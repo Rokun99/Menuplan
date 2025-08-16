@@ -44,7 +44,8 @@ const handlerImpl = async (event) => {
     if (event.httpMethod !== 'POST') {
         return err("METHOD_NOT_ALLOWED", "Method Not Allowed. Use POST.", "VALIDATION");
     }
-    if (!process.env.API_KEY) {
+    // Corrected to use the specific environment variable name from your Netlify settings
+    if (!process.env.GEMINI_API_KEY) {
         return err("NO_API_KEY", "API key is not configured on the server.", "CONFIGURATION");
     }
 
@@ -58,7 +59,8 @@ const handlerImpl = async (event) => {
     
     const currentDate = new Date(date);
     const season = getSeason(currentDate);
-    const ai = new GoogleGenAI(process.env.API_KEY);
+    // Corrected to use the specific environment variable name
+    const ai = new GoogleGenAI(process.env.GEMINI_API_KEY);
     
     const samples = {
         suppe: getSampleNames(recipes, r => r.sourceCategory === 'suppe', 20),
@@ -97,19 +99,16 @@ const handlerImpl = async (event) => {
     `;
 
     try {
-        // Corrected: 1. Get the model with the correct configuration
         const model = ai.getGenerativeModel({
-            model: 'gemini-1.5-flash', // Using a valid and current model name
+            model: 'gemini-1.5-flash',
             systemInstruction: systemInstruction,
             generationConfig: {
                 responseMimeType: "application/json",
             }
         });
 
-        // Corrected: 2. Call generateContent on the model instance
         const result = await model.generateContent(userPrompt);
 
-        // Corrected: 3. Get the response text correctly
         const rawText = result.response.text().trim();
         let plan;
         try {
