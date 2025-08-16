@@ -54,7 +54,7 @@ const handlerImpl = async (event) => {
     
     const currentDate = new Date(date);
     const season = getSeason(currentDate);
-    const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
     
     const samples = {
         suppe: getSampleNames(recipes, r => r.sourceCategory === 'suppe', 20),

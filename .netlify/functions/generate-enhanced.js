@@ -131,7 +131,7 @@ const handlerImpl = async (event) => {
         if (cached) return ok({ ...cached, diagnostics: { ...cached.diagnostics, cacheHit: true } });
     }
 
-    const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || "" });
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
     let previous = [];
     let lastError = null;
 

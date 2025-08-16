@@ -1,0 +1,17 @@
+# 1. Build-Einstellungen: Sagt Netlify, wie deine Seite gebaut wird.
+[build]
+  command = "npm run build" # Dieses Kommando wird ausgeführt, um deine Seite zu bauen.
+  publish = "dist"          # Der Ordner "dist" enthält die fertige Seite und wird veröffentlicht.
+
+# 2. Functions-Einstellungen: Sagt Netlify, wo sich deine Serverless Functions befinden.
+[functions]
+  directory = "functions"   # Der Ordner "functions" enthält deine .js-Dateien.
+
+# 3. Redirect-Regel: Wichtig für Single-Page-Applications (wie React/Vue).
+#    Diese Regel leitet alle Anfragen, die keine Datei finden, auf die index.html um.
+#    Netlify ist so konfiguriert, dass Funktionsaufrufe (/.netlify/functions/*)
+#    Vorrang vor dieser Regel haben und NICHT umgeleitet werden.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
