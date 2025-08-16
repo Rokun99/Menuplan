@@ -5,7 +5,7 @@ import { GoogleGenAI, HarmCategory, HarmBlockThreshold } from "@google/genai";
 const CONFIG = {
   MODELS: {
     FAST: "gemini-1.5-flash",
-    PRO: "gemini-1.5-flash", // Corrected: "gemini-2.0-flash" does not exist
+    PRO: "gemini-1.5-flash",
   },
   GENERATION: {
     temperatureBase: 0.5,
@@ -117,7 +117,8 @@ const handlerImpl = async (event) => {
     if (event.httpMethod === "OPTIONS") return { statusCode: 204, headers: CORS_HEADERS, body: "" };
     if (event.httpMethod !== "POST") return err("METHOD_NOT_ALLOWED", "Method Not Allowed. Use POST.", "VALIDATION");
     if (!checkRateLimit(getClientIp(event))) return err("RATE_LIMIT_EXCEEDED", "Rate limit exceeded.", "RATE_LIMIT");
-    if (!process.env.API_KEY) return err("NO_API_KEY", "API key is not configured on the server.", "CONFIGURATION");
+    // Corrected to use the specific environment variable name from your Netlify settings
+    if (!process.env.GEMINI_API_KEY) return err("NO_API_KEY", "API key is not configured on the server.", "CONFIGURATION");
     
     let body;
     try { body = JSON.parse(event.body || "{}"); } catch { return err("INVALID_JSON", "Invalid JSON body.", "VALIDATION"); }
@@ -132,7 +133,8 @@ const handlerImpl = async (event) => {
         if (cached) return ok({ ...cached, diagnostics: { ...cached.diagnostics, cacheHit: true } });
     }
 
-    const ai = new GoogleGenAI(process.env.API_KEY);
+    // Corrected to use the specific environment variable name
+    const ai = new GoogleGenAI(process.env.GEMINI_API_KEY);
     let previous = [];
     let lastError = null;
 
@@ -147,20 +149,17 @@ const handlerImpl = async (event) => {
                 responseSchema: schema || undefined,
             };
 
-            // Corrected: 1. Get the model with settings
             const model = ai.getGenerativeModel({
               model: modelName,
               safetySettings: CONFIG.SAFETY.settings,
               generationConfig
             });
 
-            // Corrected: 2. Call generateContent on the model instance
             const result = await withTimeout(
                 model.generateContent(promptString),
                 CONFIG.TIMEOUT_MS
             );
             
-            // Corrected: 3. Get the response text correctly
             const rawText = cleanJsonResponse(result.response.text() || "");
             let parsed;
             try { parsed = JSON.parse(rawText); } catch { return err("PARSE_FAILED", "Invalid JSON from model.", "PARSE", { rawPreview: rawText.slice(0, 100) }); }
