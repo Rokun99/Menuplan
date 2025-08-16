@@ -58,7 +58,7 @@ const handlerImpl = async (event) => {
     
     const currentDate = new Date(date);
     const season = getSeason(currentDate);
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const ai = new GoogleGenAI(process.env.API_KEY);
     
     const samples = {
         suppe: getSampleNames(recipes, r => r.sourceCategory === 'suppe', 20),
@@ -97,16 +97,20 @@ const handlerImpl = async (event) => {
     `;
 
     try {
-        const result = await ai.models.generateContent({
-            model: 'gemini-2.5-flash',
-            contents: userPrompt,
-            config: {
-                systemInstruction,
+        // Corrected: 1. Get the model with the correct configuration
+        const model = ai.getGenerativeModel({
+            model: 'gemini-1.5-flash', // Using a valid and current model name
+            systemInstruction: systemInstruction,
+            generationConfig: {
                 responseMimeType: "application/json",
             }
         });
 
-        const rawText = result.text.trim();
+        // Corrected: 2. Call generateContent on the model instance
+        const result = await model.generateContent(userPrompt);
+
+        // Corrected: 3. Get the response text correctly
+        const rawText = result.response.text().trim();
         let plan;
         try {
             plan = JSON.parse(rawText);
@@ -119,7 +123,7 @@ const handlerImpl = async (event) => {
              return err("INCOMPLETE_PLAN", "AI returned an incomplete plan.", "VALIDATION");
         }
 
-        return ok({ success: true, data: { plan }, diagnostics: { model: 'gemini-2.5-flash', usage: result.usageMetadata } });
+        return ok({ success: true, data: { plan }, diagnostics: { model: 'gemini-1.5-flash', usage: result.response.usageMetadata } });
 
     } catch (e) {
         return err("GENERATION_FAILED", `AI generation failed: ${e.message}`, "GENERATION");
