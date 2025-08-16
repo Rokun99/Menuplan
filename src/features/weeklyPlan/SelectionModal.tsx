@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import clsx from 'clsx';
+import { Type } from '@google/genai';
 import { Recipe } from '../../domain/types';
 import { getSeason, getWeekNumber } from '../../utils/dateHelpers';
 import { LoadingSpinner } from '../../components/LoadingSpinner';
@@ -174,38 +175,7 @@ export const SelectionModal: React.FC<SelectionModalProps> = ({
   }, [recipeCategoryList, searchTerm, dayPlan, weekPlan, preferences]);
 
   const cacheKey = useMemo(() => `suggestions::${getWeekNumber(currentDate)}::${categoryName || "general"}`, [currentDate, categoryName]);
-
-  const fetchSuggestionsWithRetry = useCallback(async (payload: any, retries = 2): Promise<string[]> => {
-    let lastErr: any;
-    for (let attempt = 0; attempt <= retries; attempt++) {
-      try {
-        const res = await fetch("/.netlify/functions/generate-enhanced", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
-        const data = await res.json();
-        if (!data.success) {
-          throw new Error(data.error?.message || "Generation failed with an unknown error.");
-        }
-        if (!data.data || !Array.isArray(data.data.suggestions) || data.data.suggestions.length === 0) {
-            throw new Error("AI returned no unique suggestions.");
-        }
-        return data.data.suggestions;
-      } catch (e: any) {
-        lastErr = e;
-        if (attempt < retries) {
-          const delay = 400 * Math.pow(2, attempt);
-          await new Promise((r) => setTimeout(r, delay));
-          continue;
-        } else {
-          throw lastErr;
-        }
-      }
-    }
-    throw lastErr;
-  }, []);
-
+  
   const generateSuggestions = useCallback(async () => {
     if (!categoryName) { setError("Bitte zuerst eine Kategorie auswählen."); return; }
     setIsLoading(true);
@@ -215,30 +185,70 @@ export const SelectionModal: React.FC<SelectionModalProps> = ({
     if (cached && Array.isArray(cached) && cached.length > 0) {
       setSuggestions(cached); setIsLoading(false); return;
     }
-
-    const payload = {
-      category: categoryName,
-      season: getSeason(currentDate),
-      week: getWeekNumber(currentDate),
-      existingItems: [
-        ...weekPlan.map(r => r.name), // Send names as backend might not have ID map
+    
+    const existing = Array.from(new Set([
+        ...weekPlan.map(r => r.name),
         ...dayPlan.map(r => r.name)
-      ],
-      maxSuggestions: 10,
-      preferTags: categoryName.toLowerCase().includes('vegi') ? ['vegetarian'] : undefined
-    };
+    ]));
+
+    const userPrompt = `
+      **Context:**
+      - Category: ${categoryName}
+      - Season: ${getSeason(currentDate)}
+      - Existing items this week (avoid these): ${existing.join(', ') || 'None'}
+      - Number of suggestions needed: 10
+      
+      **Available Recipes:**
+      ${recipeCategoryList.map(r => r.name).join(', ')}
+
+      Please generate 10 diverse suggestions for the category "${categoryName}".
+    `;
 
     try {
-      const list = await fetchSuggestionsWithRetry(payload, 2);
+        const schema = {
+            type: Type.OBJECT,
+            properties: {
+                suggestions: {
+                    type: Type.ARRAY,
+                    items: { type: Type.STRING }
+                }
+            }
+        };
+
+        const response = await fetch('/.netlify/functions/generate-enhanced', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+                promptString: userPrompt, 
+                schema,
+                existingItems: existing, 
+                maxSuggestions: 10,
+            }),
+        });
+
+        if (!response.ok) {
+            throw new Error(`Network response was not ok: ${response.statusText}`);
+        }
+
+        const result = await response.json();
+
+        if (!result.success || !result.data?.suggestions) {
+            const errorDetails = result.error ? `${result.error.stage}: ${result.error.message}` : 'No suggestions returned from function.';
+            throw new Error(errorDetails);
+        }
+
+        const list = result.data.suggestions;
       
       const existingIds = new Set<string>([
         ...weekPlan.map(r => r.recipeId),
         ...dayPlan.map(r => r.recipeId),
       ]);
 
-      const uniqueSuggestions = Array.from(new Set(list));
+      const uniqueSuggestions = Array.from(new Set(list))
+        .filter((s): s is string => typeof s === 'string');
+
       const mappedIds = uniqueSuggestions
-        .map(s => recipeMap.get(s) || byName.get(s)) // Attempt lookup by ID then by name
+        .map(s => byName.get(s))
         .filter(Boolean)
         .map(r => (r as Recipe).recipeId)
         .filter(id => !existingIds.has(id));
@@ -252,7 +262,7 @@ export const SelectionModal: React.FC<SelectionModalProps> = ({
     } finally {
       setIsLoading(false);
     }
-  }, [cacheKey, categoryName, fetchSuggestionsWithRetry, dayPlan, weekPlan, currentDate, recipeMap, byName]);
+  }, [cacheKey, categoryName, dayPlan, weekPlan, currentDate, recipeMap, byName, recipeCategoryList]);
 
   const handleSelection = useCallback((selectionId: string, source: 'database' | 'ai') => {
     trackSelection(selectionId, target.category, source);
