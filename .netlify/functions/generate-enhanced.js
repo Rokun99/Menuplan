@@ -4,8 +4,8 @@ import { GoogleGenAI, HarmCategory, HarmBlockThreshold, Type } from "@google/gen
 
 const CONFIG = {
   MODELS: {
-    FAST: "gemini-2.5-flash",
-    PRO: "gemini-2.5-flash", 
+    FAST: "gemini-1.5-flash",
+    PRO: "gemini-2.0-flash", 
   },
   GENERATION: {
     temperatureBase: 0.5,
