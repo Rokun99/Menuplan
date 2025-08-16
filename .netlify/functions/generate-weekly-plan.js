@@ -29,7 +29,8 @@ const getSampleNames = (list, filterFn, max = 15) => {
 }
 
 const getSeason = (date) => {
-    const month = date.getMonth();
+    const d = new Date(date);
+    const month = d.getMonth();
     if (month > 1 && month < 5) return 'Frühling';
     if (month > 4 && month < 8) return 'Sommer';
     if (month > 7 && month < 11) return 'Herbst';
@@ -42,6 +43,9 @@ const handlerImpl = async (event) => {
     }
     if (event.httpMethod !== 'POST') {
         return err("METHOD_NOT_ALLOWED", "Method Not Allowed. Use POST.", "VALIDATION");
+    }
+    if (!process.env.API_KEY) {
+        return err("NO_API_KEY", "API key is not configured on the server.", "CONFIGURATION");
     }
 
     let body;
