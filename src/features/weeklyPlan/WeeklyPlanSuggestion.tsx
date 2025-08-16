@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { getWeekNumber } from '../../utils/dateHelpers';
+import { getWeekNumber, getSeason } from '../../utils/dateHelpers';
 import { Recipe } from '../../domain/types';
 import { getCache, setCache } from '../../utils/cacheManager';
 import { LoadingSpinner } from '../../components/LoadingSpinner';
+import { cleanJsonResponse, attemptJsonFix } from '../../utils/jsonSanitizer';
 
 /* ---- TYPES ---- */
 interface WeeklyPlanSuggestionProps {
@@ -32,7 +33,6 @@ const HEADER_LABELS: Record<string, string> = {
 };
 const SUGGESTION_TTL_MS = 24 * 60 * 60 * 1000;
 
-
 /* ---- COMPONENT ---- */
 export const WeeklyPlanSuggestion: React.FC<WeeklyPlanSuggestionProps> = ({
   currentDate,
@@ -58,22 +58,31 @@ export const WeeklyPlanSuggestion: React.FC<WeeklyPlanSuggestionProps> = ({
     }
 
     try {
-        const res = await fetch('/.netlify/functions/generate-weekly-plan', {
+        const response = await fetch('/.netlify/functions/generate-weekly-plan', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                date: currentDate.toISOString(),
-                recipes,
-            }),
+            body: JSON.stringify({ date: currentDate, recipes }),
         });
 
-        const data = await res.json();
-        if (!data.success) {
-            throw new Error(data.error?.message || "Weekly plan generation failed.");
+        if (!response.ok) {
+            throw new Error(`Network response was not ok: ${response.statusText}`);
         }
         
-        setIdealPlan(data.data.plan);
-        setCache(cacheKey, data.data.plan, SUGGESTION_TTL_MS);
+        const result = await response.json();
+
+        if (!result.success || !result.data?.plan) {
+            const errorDetails = result.error ? `${result.error.stage}: ${result.error.message}` : 'No plan returned from function.';
+            throw new Error(`Plan generation failed: ${errorDetails}`);
+        }
+        
+        const plan = result.data.plan;
+        
+        if (!plan || !DAYS.every(day => plan[day]?.mittag && plan[day]?.abend)) {
+             throw new Error("AI returned an incomplete plan.");
+        }
+
+        setIdealPlan(plan);
+        setCache(cacheKey, plan, SUGGESTION_TTL_MS);
 
     } catch (err) {
       console.error("Error generating plan:", err);
