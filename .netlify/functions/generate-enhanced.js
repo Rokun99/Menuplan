@@ -1,6 +1,6 @@
 // Transpiled from user-provided TypeScript for compatibility, with Gemini API calls fixed to adhere to guidelines.
 import { createHash } from "crypto";
-import { GoogleGenAI, HarmCategory, HarmBlockThreshold } from "@google/genai";
+import { GoogleGenAI, HarmCategory, HarmBlockThreshold, Type } from "@google/genai";
 
 const CONFIG = {
   MODELS: {
@@ -117,15 +117,16 @@ const handlerImpl = async (event) => {
     if (event.httpMethod === "OPTIONS") return { statusCode: 204, headers: CORS_HEADERS, body: "" };
     if (event.httpMethod !== "POST") return err("METHOD_NOT_ALLOWED", "Method Not Allowed. Use POST.", "VALIDATION");
     if (!checkRateLimit(getClientIp(event))) return err("RATE_LIMIT_EXCEEDED", "Rate limit exceeded.", "RATE_LIMIT");
-
+    if (!process.env.API_KEY) return err("NO_API_KEY", "API key is not configured on the server.", "CONFIGURATION");
+    
     let body;
     try { body = JSON.parse(event.body || "{}"); } catch { return err("INVALID_JSON", "Invalid JSON body.", "VALIDATION"); }
 
-    const { promptObject, schema, modelPreference, useCache = true, existingItems = [], maxSuggestions = 8 } = body || {};
-    if (!promptObject) return err("MISSING_PROMPT", "Missing required field: promptObject", "VALIDATION");
+    const { promptString, schema, modelPreference, useCache = true, existingItems = [], maxSuggestions = 8 } = body || {};
+    if (!promptString) return err("MISSING_PROMPT", "Missing required field: promptString", "VALIDATION");
 
     const modelName = CONFIG.MODELS[(modelPreference?.toUpperCase())] || CONFIG.MODELS.FAST;
-    const cacheKey = hashKey({ modelName, promptObject, schema, maxSuggestions, existingItems });
+    const cacheKey = hashKey({ modelName, promptString, schema, maxSuggestions, existingItems });
     if (useCache) {
         const cached = getCache(cacheKey);
         if (cached) return ok({ ...cached, diagnostics: { ...cached.diagnostics, cacheHit: true } });
@@ -136,14 +137,8 @@ const handlerImpl = async (event) => {
     let lastError = null;
 
     for (let attempt = 1; attempt <= CONFIG.MAX_RETRIES; attempt++) {
-        const previousNote = previous.length > 0 ? `Do not repeat or closely resemble these items: ${previous.join(', ')}.` : "";
-        const diversityBoost = attempt > 1 ? "Provide highly diverse, non-repeating suggestions. Use different preparations and ingredients." : "Ensure each suggestion is unique.";
-        const userPrompt = `TASK:\n${JSON.stringify(promptObject, null, 2)}\n\nDirectives:\n- ${diversityBoost}\n- ${previousNote}`;
-        const systemInstruction = "You are a structured planner for a menu-planning platform. Output must be strict JSON following the schema. Do NOT compute totals. Use concise numbers; free-form text only in notes. If uncertain, omit optional fields or use safe defaults and add a short notes hint. Response MIME type is application/json. No extra prose.";
-
         try {
             const config = {
-                systemInstruction,
                 temperature: CONFIG.GENERATION.temperatureBase + (attempt - 1) * 0.1,
                 topP: CONFIG.GENERATION.topP, topK: CONFIG.GENERATION.topK,
                 maxOutputTokens: CONFIG.GENERATION.maxOutputTokens, responseMimeType: CONFIG.RESPONSE.mimeType,
@@ -151,7 +146,7 @@ const handlerImpl = async (event) => {
             };
 
             const result = await withTimeout(
-                ai.models.generateContent({ model: modelName, contents: userPrompt, config, safetySettings: CONFIG.SAFETY.settings }),
+                ai.models.generateContent({ model: modelName, contents: promptString, config, safetySettings: CONFIG.SAFETY.settings }),
                 CONFIG.TIMEOUT_MS
             );
             
@@ -161,7 +156,7 @@ const handlerImpl = async (event) => {
 
             const existing = new Set((existingItems || []).map(s => sanitizeString(s)));
             const collected = extractSuggestions(parsed).map(s => sanitizeString(s));
-            const unique = collected.filter(item => !existing.has(item) && !unique.some(u => similarity(u, item) >= 0.85));
+            const unique = collected.filter(item => !existing.has(item) && !previous.some(p => similarity(p, item) >= 0.9));
 
             const suggestions = unique.slice(0, Math.max(1, maxSuggestions));
 
