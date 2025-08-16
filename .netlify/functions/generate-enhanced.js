@@ -1,11 +1,11 @@
 // Transpiled from user-provided TypeScript for compatibility, with Gemini API calls fixed to adhere to guidelines.
 import { createHash } from "crypto";
-import { GoogleGenAI, HarmCategory, HarmBlockThreshold, Type } from "@google/genai";
+import { GoogleGenAI, HarmCategory, HarmBlockThreshold } from "@google/genai";
 
 const CONFIG = {
   MODELS: {
     FAST: "gemini-1.5-flash",
-    PRO: "gemini-2.0-flash", 
+    PRO: "gemini-1.5-flash", // Corrected: "gemini-2.0-flash" does not exist
   },
   GENERATION: {
     temperatureBase: 0.5,
@@ -132,25 +132,36 @@ const handlerImpl = async (event) => {
         if (cached) return ok({ ...cached, diagnostics: { ...cached.diagnostics, cacheHit: true } });
     }
 
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const ai = new GoogleGenAI(process.env.API_KEY);
     let previous = [];
     let lastError = null;
 
     for (let attempt = 1; attempt <= CONFIG.MAX_RETRIES; attempt++) {
         try {
-            const config = {
+            const generationConfig = {
                 temperature: CONFIG.GENERATION.temperatureBase + (attempt - 1) * 0.1,
-                topP: CONFIG.GENERATION.topP, topK: CONFIG.GENERATION.topK,
-                maxOutputTokens: CONFIG.GENERATION.maxOutputTokens, responseMimeType: CONFIG.RESPONSE.mimeType,
+                topP: CONFIG.GENERATION.topP, 
+                topK: CONFIG.GENERATION.topK,
+                maxOutputTokens: CONFIG.GENERATION.maxOutputTokens, 
+                responseMimeType: CONFIG.RESPONSE.mimeType,
                 responseSchema: schema || undefined,
             };
 
+            // Corrected: 1. Get the model with settings
+            const model = ai.getGenerativeModel({
+              model: modelName,
+              safetySettings: CONFIG.SAFETY.settings,
+              generationConfig
+            });
+
+            // Corrected: 2. Call generateContent on the model instance
             const result = await withTimeout(
-                ai.models.generateContent({ model: modelName, contents: promptString, config, safetySettings: CONFIG.SAFETY.settings }),
+                model.generateContent(promptString),
                 CONFIG.TIMEOUT_MS
             );
             
-            const rawText = cleanJsonResponse(result.text || "");
+            // Corrected: 3. Get the response text correctly
+            const rawText = cleanJsonResponse(result.response.text() || "");
             let parsed;
             try { parsed = JSON.parse(rawText); } catch { return err("PARSE_FAILED", "Invalid JSON from model.", "PARSE", { rawPreview: rawText.slice(0, 100) }); }
 
@@ -161,7 +172,7 @@ const handlerImpl = async (event) => {
             const suggestions = unique.slice(0, Math.max(1, maxSuggestions));
 
             if (suggestions.length > 0) {
-                const diagnostics = { model: modelName, usage: result.usageMetadata, cacheHit: false, attempt, parseFixed: false };
+                const diagnostics = { model: modelName, usage: result.response.usageMetadata, cacheHit: false, attempt, parseFixed: false };
                 const response = { success: true, data: { suggestions }, diagnostics };
                 if (useCache) setCache(cacheKey, response);
                 return ok(response);
